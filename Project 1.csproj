@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClientAddress.cs" />
+    <Compile Include="PersonAddress.cs" />
     <Compile Include="Contract.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="FieldWorker.cs" />

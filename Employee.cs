@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Project_1
 {
-    public abstract class Employee
+    public abstract class Employee : Person
     {
         private int employeeID, addressID;
-        private string name, surname;
 
-        protected Employee(int employeeID, int addressID, string name, string surname)
+
+        protected Employee(int employeeID, int addressID, string name, string surname) : base(name, surname)
         {
             this.EmployeeID = employeeID;
             this.AddressID = addressID;
@@ -21,7 +21,6 @@ namespace Project_1
 
         public int EmployeeID { get => employeeID; set => employeeID = value; }
         public int AddressID { get => addressID; set => addressID = value; }
-        public string Name { get => name; set => name = value; }
-        public string Surname { get => surname; set => surname = value; }
+
     }
 }

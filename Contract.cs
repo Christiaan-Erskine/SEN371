@@ -19,5 +19,10 @@ namespace Project_1
 
         public int ContractID { get => contractID; set => contractID = value; }
         public string Content { get => content; set => content = value; }
+
+        enum CONTRACT_TYPE
+        {
+            EMPLOYEE, CLIENT
+        }
     }
 }

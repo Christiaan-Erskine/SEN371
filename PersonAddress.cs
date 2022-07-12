@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Project_1
 {
-    public class ClientAddress
+    public class PersonAddress
     {
         private int addressID;
         private string address, suburb, city, country;
 
-        public ClientAddress(int addressID, string address, string suburb, string city, string country)
+        public PersonAddress(int addressID, string address, string suburb, string city, string country)
         {
             this.AddressID = addressID;
             this.Address = address;
@@ -19,7 +19,7 @@ namespace Project_1
             this.City = city;
             this.Country = country;
         }
-        public ClientAddress(string address, string suburb, string city, string country)
+        public PersonAddress(string address, string suburb, string city, string country)
         {
             this.Address = address;
             this.Suburb = suburb;
