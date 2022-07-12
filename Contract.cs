@@ -8,16 +8,16 @@ namespace Project_1
 {
     public class Contract
     {
-        private int contractID;
+        private int contractId;
         private string content;
 
-        public Contract(int contractID, string content)
+        public Contract(int contractId, string content)
         {
-            this.ContractID = contractID;
+            this.ContractID = contractId;
             this.Content = content;
         }
 
-        public int ContractID { get => contractID; set => contractID = value; }
+        public int ContractID { get => contractId; set => contractId = value; }
         public string Content { get => content; set => content = value; }
 
         enum CONTRACT_TYPE

@@ -8,12 +8,12 @@ namespace Project_1
 {
     public class PersonAddress
     {
-        private int addressID;
+        private int addressId;
         private string address, suburb, city, country;
 
-        public PersonAddress(int addressID, string address, string suburb, string city, string country)
+        public PersonAddress(int addressId, string address, string suburb, string city, string country)
         {
-            this.AddressID = addressID;
+            this.AddressID = addressId;
             this.Address = address;
             this.Suburb = suburb;
             this.City = city;
@@ -27,7 +27,7 @@ namespace Project_1
             this.Country = country;
         }
 
-        public int AddressID { get => addressID; set => addressID = value; }
+        public int AddressID { get => addressId; set => addressId = value; }
         public string Address { get => address; set => address = value; }
         public string Suburb { get => suburb; set => suburb = value; }
         public string City { get => city; set => city = value; }

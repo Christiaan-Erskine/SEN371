@@ -8,21 +8,20 @@ namespace Project_1
 {
     public class FieldWorker : Employee
     {
-        private int agentID, agreementID, contractID, employeeID, addressID;
+        private int agentId, agreementId, contractId, employeeId, addressId;
 
-        public FieldWorker(int agentID, int contractID, int employeeID, int addressID, string name, string surname) : base(employeeID, addressID, name, surname)
+        public FieldWorker(int agentId, int contractId, int employeeId, int addressId, string name, string surname) : base(employeeId, addressId, name, surname)
         {
-            this.agentID = agentID;
-            //this.agreementID = agreementID; Possible redundancy
-            this.contractID = contractID;
-            this.employeeID = employeeID;
-            this.addressID = addressID;
+            this.agentId = agentId;
+            this.contractId = contractId;
+            this.employeeId = employeeId;
+            this.addressId = addressId;
             this.name = name;
             this.surname = surname;
         }
 
-        public int AgentID { get => agentID; set => agentID = value; }
-        public int AgreementID { get => agreementID; set => agreementID = value; }
-        public int ContractID { get => contractID; set => contractID = value; }
+        public int AgentID { get => agentId; set => agentId = value; }
+        public int AgreementID { get => agreementId; set => agreementId = value; }
+        public int ContractID { get => contractId; set => contractId = value; }
     }
 }
