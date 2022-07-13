@@ -23,13 +23,13 @@ namespace Project_1
 
     public class CallAgent : Employee
     {
-        string agentId;
+        int agentId;
         string agentName;
         string agentSurname;
-        string adressId;
+        int adressId;
         string contractId;
 
-        public CallAgent(string agentId, string agentName, string agentSurname, string adressId, string contractId, string employeeID) : base(employeeID, adressId, agentName, agentSurname)
+        public CallAgent(int agentId, string agentName, string agentSurname, int adressId, string contractId, int employeeID) : base(employeeID, adressId, agentName, agentSurname)
         {
             this.agentId = agentId;
             this.agentName = agentName;
@@ -38,10 +38,10 @@ namespace Project_1
             this.contractId = contractId;
         }
 
-        public string AgentId { get => agentId; set => agentId = value; }
+        public int AgentId { get => agentId; set => agentId = value; }
         public string AgentName { get => agentName; set => agentName = value; }
         public string AgentSurname { get => agentSurname; set => agentSurname = value; }
-        public string AdressId { get => adressId; set => adressId = value; }
+        public int AdressId { get => adressId; set => adressId = value; }
         public string ContractId { get => contractId; set => contractId = value; }
     }
 
@@ -97,13 +97,13 @@ namespace Project_1
 
     public class ClientProblem
     {
-        string problemId;
-        string clientId;
+        int problemId;
+        int clientId;
         string description;
 
         List<int> callList;
 
-        public ClientProblem(string problemId, string clientId, string description, List<int> callList)
+        public ClientProblem(int problemId, int clientId, string description, List<int> callList)
         {
             this.ProblemId = problemId;
             this.ClientId = clientId;
@@ -111,8 +111,8 @@ namespace Project_1
             this.CallList = callList;
         }
 
-        public string ProblemId { get => problemId; set => problemId = value; }
-        public string ClientId { get => clientId; set => clientId = value; }
+        public int ProblemId { get => problemId; set => problemId = value; }
+        public int ClientId { get => clientId; set => clientId = value; }
         public string Description { get => description; set => description = value; }
         public List<int> CallList { get => callList; set => callList = value; }
 
@@ -124,19 +124,19 @@ namespace Project_1
 
     public class ServiceDepartment
     {
-        string problemId;
-        string employeId;
-        string clientId;
+        int problemId;
+        int employeId;
+        int clientId;
 
-        public ServiceDepartment(string problemId, string employeId, string clientId)
+        public ServiceDepartment(int problemId, int employeId, int clientId)
         {
             this.problemId = problemId;
             this.employeId = employeId;
             this.clientId = clientId;
         }
 
-        public string ProblemId { get => problemId; set => problemId = value; }
-        public string EmployeId { get => employeId; set => employeId = value; }
-        public string ClientId { get => clientId; set => clientId = value; }
+        public int ProblemId { get => problemId; set => problemId = value; }
+        public int EmployeId { get => employeId; set => employeId = value; }
+        public int ClientId { get => clientId; set => clientId = value; }
     }
 }
