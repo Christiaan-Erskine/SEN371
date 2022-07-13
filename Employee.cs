@@ -8,10 +8,10 @@ namespace Project_1
 {
     public abstract class Employee : Person
     {
-        private int employeeId, addressId;
+        private string employeeId, addressId;
 
 
-        protected Employee(int employeeId, int addressId, string name, string surname) : base(name, surname)
+        protected Employee(string employeeId, string addressId, string name, string surname) : base(name, surname)
         {
             this.EmployeeId = employeeId;
             this.AddressId = addressId;
@@ -19,8 +19,8 @@ namespace Project_1
             this.Surname = surname;
         }
 
-        public int EmployeeId { get => employeeId; set => employeeId = value; }
-        public int AddressId { get => addressId; set => addressId = value; }
+        public string EmployeeId { get => employeeId; set => employeeId = value; }
+        public string AddressId { get => addressId; set => addressId = value; }
 
     }
 }
