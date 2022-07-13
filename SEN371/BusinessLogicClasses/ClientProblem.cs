@@ -31,5 +31,10 @@ namespace Project_1.BusinessLogicClasses
         {
             PENDING, IN_PROGRES, RESOLVED
         }
+
+        public void SaveDetails()
+        {
+            //Used to record the details of an accepted agreement or service to an external location
+        }
     }
 }

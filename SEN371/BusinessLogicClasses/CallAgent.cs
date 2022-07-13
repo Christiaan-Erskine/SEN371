@@ -28,5 +28,16 @@ namespace Project_1.BusinessLogicClasses
         public string AgentSurname { get => agentSurname; set => agentSurname = value; }
         public string AdressId { get => adressId; set => adressId = value; }
         public string ContractId { get => contractId; set => contractId = value; }
+
+        public string Status()
+        {
+            //Will return the status of a specific Call Agent (Working, Idle, Done) based on assigned contracts
+            return "placeholder";
+        }
+
+        public void LogCallDetails()
+        {
+            //Will save the call details (client, duration) to an external object or location
+        }
     }
 }

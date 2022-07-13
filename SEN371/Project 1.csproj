@@ -51,7 +51,7 @@
     <Compile Include="BusinessLogicClasses\Client.cs" />
     <Compile Include="BusinessLogicClasses\ClientProblem.cs" />
     <Compile Include="BusinessLogicClasses\PersonAddress.cs" />
-    <Compile Include="BusinessLogicClasses\Contract.cs" />
+    <Compile Include="BusinessLogicClasses\ContractMaintanance.cs" />
     <Compile Include="BusinessLogicClasses\Employee.cs" />
     <Compile Include="BusinessLogicClasses\FieldWorker.cs" />
     <Compile Include="BusinessLogicClasses\ServiceDepartment.cs" />

@@ -34,5 +34,16 @@ namespace Project_1.BusinessLogicClasses
         {
             BUSINESS, INDIVIDUAL
         }
+
+        public override string ToString()
+        {
+            //Returns the details of a specific client, inherits from person, but different to employees
+            return "placeholder";
+        }
+
+        public void AcceptAgreement()
+        {
+            //Used to accept and confirm a service
+        }
     }
 }

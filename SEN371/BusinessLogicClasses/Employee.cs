@@ -22,5 +22,11 @@ namespace Project_1
         public string EmployeeId { get => employeeId; set => employeeId = value; }
         public string AddressId { get => addressId; set => addressId = value; }
 
+        public override string toString()
+        {
+            //Outputs details that all employees have in common
+            return "placeholder";
+        }
+
     }
 }

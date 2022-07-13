@@ -23,5 +23,10 @@ namespace Project_1
         public string AgentID { get => agentId; set => agentId = value; }
         public string AgreementID { get => agreementId; set => agreementId = value; }
         public string ContractID { get => contractId; set => contractId = value; }
+
+        public void StoreClientInfo()
+        {
+            //Saves all related client details to an external location, based on an assigned contract id
+        }
     }
 }

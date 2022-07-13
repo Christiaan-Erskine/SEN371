@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace Project_1
 {
-    public class Contract
+    public class ContractMaintanance
     {
+        //Renamed from "Contract" to be consistent with the Class Diagram
         private string contractId;
         private string content;
 
-        public Contract(string contractId, string content)
+        public ContractMaintanance(string contractId, string content)
         {
             this.ContractID = contractId;
             this.Content = content;

@@ -31,5 +31,10 @@ namespace Project_1
         public string Suburb { get => suburb; set => suburb = value; }
         public string City { get => city; set => city = value; }
         public string Country { get => country; set => country = value; }
+
+        public void DisplayInfo()
+        {
+            //Outputs a specific address for an employee or a client
+        }
     }
 }

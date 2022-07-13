@@ -25,5 +25,12 @@ namespace Project_1.BusinessLogicClasses
         public string AgentId { get => agentId; set => agentId = value; }
         public bool CallStarted { get => callStarted; set => callStarted = value; }
         public bool CallFinished { get => callFinished; set => callFinished = value; }
+
+        public double Duration()
+        {
+            //returns the call duration in seconds from callStarted to callFinished
+            //Result = callFinished - callStarted
+            return 0; 
+        }
     }
 }
