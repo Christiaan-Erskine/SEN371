@@ -46,15 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogicClasses\BusinessClient.cs" />
     <Compile Include="BusinessLogicClasses\Call.cs" />
     <Compile Include="BusinessLogicClasses\CallAgent.cs" />
+    <Compile Include="BusinessLogicClasses\CallCentre.cs" />
     <Compile Include="BusinessLogicClasses\Client.cs" />
+    <Compile Include="BusinessLogicClasses\ClientMaintanance.cs" />
     <Compile Include="BusinessLogicClasses\ClientProblem.cs" />
+    <Compile Include="BusinessLogicClasses\Contract.cs" />
+    <Compile Include="BusinessLogicClasses\Department.cs" />
     <Compile Include="BusinessLogicClasses\PersonAddress.cs" />
     <Compile Include="BusinessLogicClasses\ContractMaintanance.cs" />
     <Compile Include="BusinessLogicClasses\Employee.cs" />
     <Compile Include="BusinessLogicClasses\FieldWorker.cs" />
-    <Compile Include="BusinessLogicClasses\ServiceDepartment.cs" />
+    <Compile Include="BusinessLogicClasses\Service.cs" />
+    <Compile Include="BusinessLogicClasses\ServiceLevelAgreement.cs" />
+    <Compile Include="BusinessLogicClasses\WorkersContract.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
