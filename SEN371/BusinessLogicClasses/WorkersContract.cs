@@ -8,13 +8,22 @@ namespace Project_1.BusinessLogicClasses
 {
     public class WorkersContract : Contract
     {
-        private string wc; //content
+        private string wc; //content => workers contract
 
-        public WorkersContract(string content, bool signed, string wc) : base(content, signed)
+        public WorkersContract(string content, bool signed, string wc,string contractType) : base(contractType)
         {
             this.Wc = wc;
         }
 
         public string Wc { get => wc; set => wc = value; }
+
+        void AddInformation()
+        {
+            //Used to add aditional information to a stored contract
+        }
+        void GetInformation()
+        {
+            //returns contract information from an external location
+        }
     }
 }

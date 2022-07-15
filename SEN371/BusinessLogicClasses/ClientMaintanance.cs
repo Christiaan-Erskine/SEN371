@@ -10,18 +10,20 @@ namespace Project_1.BusinessLogicClasses
     {
         Client IndividualClient, BusinessClient;
         Contract ServiceAgreement;
-        ContractMaintanance ManagementInformation;
+        ContractMaintanance ManagementInformation;  // <--- Correct datatype?
 
-        public ClientMaintanance(string problemId, string employeId, string clientId, string serviceReq, Contract serviceAgreement, ContractMaintanance managementInformation) : base(problemId, employeId, clientId, serviceReq)
+        public ClientMaintanance(Client IndividualClient, Client BusinessClient, Contract serviceAgreement, ContractMaintanance managementInformation, string department) : base(department)
         {
-            ServiceAgreement1 = serviceAgreement;
-            ManagementInformation1 = managementInformation;
+            this.IndividualClient = IndividualClient;
+            this.BusinessClient = BusinessClient;
+            this.ServiceAgreement = serviceAgreement;
+            this.ManagementInformation = managementInformation;
         }
 
-        public Client IndividualClient1 { get => IndividualClient; set => IndividualClient = value; }
-        public Client BusinessClient1 { get => BusinessClient; set => BusinessClient = value; }
-        public Contract ServiceAgreement1 { get => ServiceAgreement; set => ServiceAgreement = value; }
-        public ContractMaintanance ManagementInformation1 { get => ManagementInformation; set => ManagementInformation = value; }
+        public Client individualClient { get => IndividualClient; set => IndividualClient = value; }
+        public Client businessClient1 { get => BusinessClient; set => BusinessClient = value; }
+        public Contract serviceAgreement { get => ServiceAgreement; set => ServiceAgreement = value; }
+        public ContractMaintanance managementInformation { get => ManagementInformation; set => ManagementInformation = value; }
 
         public void SubmitWorkRequest()
         {

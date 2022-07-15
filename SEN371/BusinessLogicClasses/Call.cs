@@ -9,28 +9,32 @@ namespace Project_1.BusinessLogicClasses
     public class Call
     {
         string callId;
+        DateTime callStarted;
+        DateTime callEnded;
         string agentId;
-        bool callStarted;
-        bool callFinished;
 
-        public Call(string callId, string agentId, bool callStarted, bool callFinished)
+        public Call(string callId, DateTime callStarted, DateTime callEnded, string agentId)
         {
             this.callId = callId;
-            this.agentId = agentId;
             this.callStarted = callStarted;
-            this.callFinished = callFinished;
+            this.callEnded = callEnded;
+            this.agentId = agentId;
         }
 
         public string CallId { get => callId; set => callId = value; }
+        public DateTime CallStarted { get => callStarted; set => callStarted = value; }
+        public DateTime CallEnded { get => callEnded; set => callEnded = value; }
         public string AgentId { get => agentId; set => agentId = value; }
-        public bool CallStarted { get => callStarted; set => callStarted = value; }
-        public bool CallFinished { get => callFinished; set => callFinished = value; }
 
-        public double Duration()
+        public void GetDuration()
         {
-            //returns the call duration in seconds from callStarted to callFinished
-            //Result = callFinished - callStarted
-            return 0; 
+            //may be a return type method as it will retrieve values from database
         }
+
+        public void StoreDuration()
+        {
+            //Store Values from database
+        }
+
     }
 }

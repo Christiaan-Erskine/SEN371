@@ -8,21 +8,14 @@ namespace Project_1.BusinessLogicClasses
 {
     public class Contract
     {
-        private string content;
-        private bool signed;
+        private string ContractType;
 
-        public Contract(string content, bool signed)
+        public Contract(string contractType)
         {
-            this.Content = content;
-            this.Signed = signed;
+            ContractType = contractType;
         }
 
-        public string Content { get => content; set => content = value; }
-        public bool Signed { get => signed; set => signed = value; }
+        public string ContractType1 { get => ContractType; set => ContractType = value; }
 
-        public void ClientMaintanance()
-        {
-            //Used to maintain and update client data
-        }
     }
 }

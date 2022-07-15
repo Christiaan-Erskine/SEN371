@@ -4,23 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project_1
+namespace Project_1.BusinessLogicClasses
 {
     public abstract class Employee : Person
     {
-        private string employeeId, addressId;
+        private string employeeId;
 
+        private string serviceDeoartmentId;
 
-        protected Employee(string employeeId, string addressId, string name, string surname) : base(name, surname)
+        protected Employee(string employeeId, string name, string surname, PersonAddress address) : base(name, surname, address)
         {
             this.EmployeeId = employeeId;
-            this.AddressId = addressId;
             this.Name = name;
             this.Surname = surname;
+            this.Address = address;
         }
 
         public string EmployeeId { get => employeeId; set => employeeId = value; }
-        public string AddressId { get => addressId; set => addressId = value; }
+        public string ServiceDeoartmentId { get => serviceDeoartmentId; set => serviceDeoartmentId = value; }
+        public PersonAddress AddressId { get => address; set => address = value; }
 
         public override string toString()
         {
@@ -28,5 +30,9 @@ namespace Project_1
             return "placeholder";
         }
 
+        public void SetDepartmentID(string id)
+        {
+            this.serviceDeoartmentId = id;            
+        }
     }
 }

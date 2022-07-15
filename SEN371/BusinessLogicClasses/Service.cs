@@ -8,21 +8,21 @@ namespace Project_1.BusinessLogicClasses
 {
     public class Service : Department
     {
-        string problemId;
-        string employeId;
-        string JobSpecification;
-        TimeSpan ExpectedDuration;
+        ServiceRequest serviceReq;
+        string jobSpecification;
+        TimeSpan expectedDuration;
 
-        public Service(string problemId, string employeId, string clientId, string serviceReq, string JobSpecification, TimeSpan ExpectedDuration) : base(problemId, employeId, clientId, serviceReq)
+        public Service(ServiceRequest serviceReq, string JobSpecification, TimeSpan ExpectedDuration, string department) : base(department)
         {
-            this.problemId = problemId;
-            this.employeId = employeId;
-            this.JobSpecification = JobSpecification;
-            this.ExpectedDuration = ExpectedDuration;
+            this.ServiceReq = serviceReq;
+            this.jobSpecification = JobSpecification;
+            this.expectedDuration = ExpectedDuration;
         }
 
-        public string ProblemId1 { get => problemId; set => problemId = value; }
-        public string EmployeId1 { get => employeId; set => employeId = value; }
+        public string JobSpecification1 { get => jobSpecification; set => jobSpecification = value; }
+        public TimeSpan ExpectedDuration1 { get => expectedDuration; set => expectedDuration = value; }
+        internal ServiceRequest ServiceReq { get => serviceReq; set => serviceReq = value; }
+
 
         public void AddRequest()
         {
@@ -36,7 +36,7 @@ namespace Project_1.BusinessLogicClasses
 
         public void CloseRequests()
         {
-            //
+            //Onse a request has been completed it can be closed and stored
         }
 
     }

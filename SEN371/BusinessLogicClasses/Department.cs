@@ -8,18 +8,17 @@ namespace Project_1.BusinessLogicClasses
 {
     public abstract class Department
     {
+        string dep; //identifies the department by name
 
-        string clientId;
-        string serviceReq;
-
-        public Department(string problemId, string employeId, string clientId, string serviceReq)
+        public Department(string department)
         {
-            this.clientId = clientId;
-            this.serviceReq = serviceReq;
+            this.dep = department;
         }
 
-
-        public string ClientId { get => clientId; set => clientId = value; }
-        public string ServiceReq { get => serviceReq; set => serviceReq = value; }
+        public string department
+        { 
+            get => dep; 
+            set => dep = value; 
+        }
     }
 }

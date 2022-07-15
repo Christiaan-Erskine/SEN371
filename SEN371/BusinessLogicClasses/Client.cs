@@ -7,33 +7,15 @@ using System.Threading.Tasks;
 namespace Project_1.BusinessLogicClasses
 {
     public class Client : Person
-    {
-        string clientName;
-        string ClientSurname;
+    {    
+        private string clientNumber;
 
-        string adressId;
-        string agentId;
-        string agreemendId;
-
-        public Client(string clientName, string clientSurname, string adressId, string agentId, string agreemendId) : base(clientName, clientSurname)
+        public Client(PersonAddress clientAddress, string Name, string Surname, string clientNumber) : base(Name, Surname, clientAddress)
         {
-            this.clientName = clientName;
-            ClientSurname = clientSurname;
-            this.adressId = adressId;
-            this.agentId = agentId;
-            this.agreemendId = agreemendId;
+            this.clientNumber = clientNumber;
         }
 
-        public string ClientName { get => clientName; set => clientName = value; }
-        public string ClientSurname1 { get => ClientSurname; set => ClientSurname = value; }
-        public string AdressId { get => adressId; set => adressId = value; }
-        public string AgentId { get => agentId; set => agentId = value; }
-        public string AgreemendId { get => agreemendId; set => agreemendId = value; }
-
-        enum CLIENT_TYPE
-        {
-            BUSINESS, INDIVIDUAL
-        }
+        public string ClientNumber { get => clientNumber; set => clientNumber = value; }
 
         public override string ToString()
         {

@@ -10,9 +10,9 @@ namespace Project_1.BusinessLogicClasses
     {
         private string CallRequest;
 
-        public CallCentre(string problemId, string employeId, string clientId, string serviceReq) : base(problemId, employeId, clientId, serviceReq)
+        public CallCentre(string CallRequest, string department) : base(department)
         {
-            CallRequest = problemId;
+            this.CallRequest = CallRequest;
         }
 
         public void ViewCustomerAgreement()

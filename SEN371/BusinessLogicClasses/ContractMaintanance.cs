@@ -4,24 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project_1
+namespace Project_1.BusinessLogicClasses
 {
-    public class ContractMaintanance
+    public class ContractMaintanance : Department
     {
         //Renamed from "Contract" to be consistent with the Class Diagram
-        private string contractId;
-        private string content;
-        private string availability;
+        private string contractAvailability;
 
-        public ContractMaintanance(string contractId, string content)
+        public ContractMaintanance(string contractAvailability, string department) : base(department)
         {
-            this.ContractID = contractId;
-            this.Content = content;
+            this.contractAvailability = contractAvailability;
         }
 
-        public string ContractID { get => contractId; set => contractId = value; }
-        public string Content { get => content; set => content = value; }
-        public string Availability { get => availability; set => availability = value; }
+        public string ContractAvailability { get => contractAvailability; set => contractAvailability = value; }
 
         enum CONTRACT_TYPE
         {
