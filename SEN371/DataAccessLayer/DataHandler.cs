@@ -9,35 +9,20 @@ using System.Diagnostics;
 
 namespace Project_1.DataAccessLayer
 {
-    public struct FieldValue
-    {       
-        public string Field { get; set; }
-        public string Value { get; set; }
-
-        public FieldValue(string field, string value)
-        {
-            this.Field = field;
-            this.Value = value;
-        }      
-    }
-
-
     internal class DataHandler
     {      
         public string ConnectionString { get; private set; }
 
         private SqlConnection sql_connection;
 
-
         public DataHandler(string ConnectionString)
         {
             this.ConnectionString = ConnectionString;
-
+          
             sql_connection = new SqlConnection(ConnectionString);
-     
         }
 
-        public SqlDataAdapter RetrieveData(string table)
+        public SqlDataAdapter RetrieveTable(string table)
         {       
             sql_connection.Open();
 
@@ -49,207 +34,76 @@ namespace Project_1.DataAccessLayer
             {
                 adapter = new SqlDataAdapter(query, sql_connection);
             }
-            catch (Exception ex)
+            catch (Exception error)
             {
-                MessageBox.Show("Error retrieving data: " + ex);
+                MessageBox.Show("Error retrieving data: " + error.Message);
             }
             finally
             {
                 sql_connection.Close();
             }
 
+            if (adapter == null) { }//raise excepetion or something here
+
             return adapter;
         }
 
-
-
-        public void Insert(string table, string[] fields, string[] values)
+        public void Insert(string table, (string Field, string Value)[] FieldValues)
         {         
             sql_connection.Open();
 
-            Debug.Assert(!(fields == null || values == null));
-            Debug.Assert(fields.Length == values.Length);
+            Debug.Assert(FieldValues == null);
 
             string FieldsConcat = "", ValuesConcat = "";
 
-            for (int i = 0; i < fields.Length; i++)
+            for (int i = 0; i < FieldValues.Length; i++)
             {
-                ValuesConcat += ("'" + values[i] + "'");
+                ValuesConcat += ("'" + FieldValues[i].Value + "'");
 
-                if (i == fields.Length - 1)               
-                    FieldsConcat += fields[i];
-                
+                if (i == FieldValues.Length - 1)               
+                    FieldsConcat += FieldValues[i].Field;         
                 else
                 {
-                    FieldsConcat += (fields[i] + ",");
+                    FieldsConcat += (FieldValues[i].Field + ",");
                     ValuesConcat += ",";
                 }
             }
 
             string query = $"INSERT INTO {table}({FieldsConcat}) VALUES({ValuesConcat})";
-
-            MessageBox.Show(query);
-
-
+           
             SqlCommand command = new SqlCommand(query, sql_connection);
             try
             {
                 command.ExecuteNonQuery();
-                MessageBox.Show("Values inserted");
+                //MessageBox.Show(query);
+                //MessageBox.Show("Values inserted");
+                Debug.WriteLine("Insert successful");
             }
-            catch (Exception erro)
+            catch (Exception error)
             {
-                MessageBox.Show(erro.Message);
-            }
-            finally
-            {
-                sql_connection.Close();
-            }
-
-            //return RetrieveData(table);
-        }
-
-
-        public void oldInsert(string table, string[] fields,string[] values)
-            {
-
-                
-            sql_connection.Open();
-
-
-            Debug.Assert(!(fields == null || values == null));
-            Debug.Assert(fields.Length == values.Length);
-          
-            string FieldsConcat = "", ValuesConcat = "";
-
-            for (int i = 0; i < fields.Length; i++)
-            {
-
-                ValuesConcat += ("'" + values[i] + "'");
-
-                if (i == fields.Length - 1)
-                {
-                    FieldsConcat += fields[i];
-
-                    
-                }
-                else
-                {
-                    FieldsConcat += (fields[i] + ",");
-
-                    ValuesConcat += ",";
-                }
-                
-            }
-
-                string insert = $"INSERT INTO {table}({FieldsConcat}) VALUES({ValuesConcat})";
-
-            SqlCommand command = new SqlCommand(insert, sql_connection);
-            try
-            {
-                command.ExecuteNonQuery();
-                MessageBox.Show("Values inserted");
-            }
-            catch (Exception erro)
-            {
-                MessageBox.Show(erro.Message);
+                MessageBox.Show("Insert Error: " + error.Message);              
             }
             finally
             {
                 sql_connection.Close();
-            }
+            }          
         }
-         
-        
-        public SqlDataAdapter viewallAddress()
-        {
-            string query = "SELECT * FROM Address";
-
-
-            SqlConnection connect = new SqlConnection(@"Data Source=software-engineering371.database.windows.net;Initial Catalog=PremierServiceSolutions;User ID=SEN371Database;Password=Christiaan,Kyle,Hanno,Shammah2022;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
-            connect.Open();
-                            
-            SqlDataAdapter adapter = new SqlDataAdapter(query, connect);
-
-            connect.Close();
-
-            return adapter;
-        }
-
-        /*
-                public SqlDataAdapter viewallContract()
-                {
-                    string query = "SELECT * FROM Contract";
-                    SqlConnection connect = new SqlConnection(Connection);
-                    connect.Open();
-                    SqlDataAdapter adapter = new SqlDataAdapter(query, connect);
-                    return adapter;
-                }
-
-                //view all employees
-                public SqlDataAdapter viewallEmployee()
-                {
-                    string query = "SELECT * FROM Employee";
-                    SqlConnection connect = new SqlConnection(Connection);
-                    connect.Open();
-                    SqlDataAdapter adapter = new SqlDataAdapter(query, connect);
-                    return adapter;
-                }
-
-                //view all clients
-                public SqlDataAdapter viewallClient()
-                {
-                    string query = "SELECT * FROM Client";
-                    SqlConnection connect = new SqlConnection(Connection);
-                    connect.Open();
-                    SqlDataAdapter adapter = new SqlDataAdapter(query, connect);
-                    return adapter;
-                }
-
-
-
-
-                public void Delete(int ClientID)
-                {
-                    SqlConnection connect = new SqlConnection(Connection);
-                    connect.Open();
-                    string Delete = "DELETE FROM Client WHERE Clientid = " + ClientID + "";
-                    SqlCommand command = new SqlCommand(Delete, connect);
-                    try
-                    {
-                        command.ExecuteNonQuery();
-                        MessageBox.Show("Value Deleted");
-                    }
-                    catch (Exception error)
-                    {
-                        MessageBox.Show(error.Message);
-                    }
-                    finally
-                    {
-                        connect.Close();
-                    }
-                }
-
-
-        */
-
-
-        //update client information
-        public void Update(string table, FieldValue[] fieldvalues, string condition = "")
+    
+        public void Update(string table, (string Field, string Value)[] FieldValues, string condition = "")
         {
             sql_connection.Open();
 
             string builder = "";
 
-            for (int i = 0; i < fieldvalues.Length; i++)
+            for (int i = 0; i < FieldValues.Length; i++)
             {
-                if(i == fieldvalues.Length - 1)              
-                    builder += $"{fieldvalues[i].Field} = '{fieldvalues[i].Value}'";           
+                if(i == FieldValues.Length - 1)              
+                    builder += $"{FieldValues[i].Field} = '{FieldValues[i].Value}'";           
                 else          
-                    builder += $"{fieldvalues[i].Field} = '{fieldvalues[i].Value}', ";                          
+                    builder += $"{FieldValues[i].Field} = '{FieldValues[i].Value}', ";                          
             }
 
-            string query = "";
+            string query;
 
             if (condition == "")
                 query = $"UPDATE {table} SET {builder}";
@@ -264,12 +118,13 @@ namespace Project_1.DataAccessLayer
             try
             {
                 command.ExecuteNonQuery();
-                MessageBox.Show(query);
-                MessageBox.Show("Value updated");
+                //MessageBox.Show(query);
+                //MessageBox.Show("Value updated");
+                Debug.WriteLine("Update successful");
             }
             catch (Exception error)
             {
-                MessageBox.Show("Update Error " + error.Message);
+                MessageBox.Show("Update Error: " + error.Message);
             }
             finally
             {
@@ -281,20 +136,21 @@ namespace Project_1.DataAccessLayer
         {
             sql_connection.Open();
 
-
-            string query = $"DELETE FROM {table} WHERE  {condition}";
+            string query = $"DELETE FROM {table} WHERE {condition}";
             MessageBox.Show(query);
 
             SqlCommand command = new SqlCommand(query, sql_connection);
+
             try
             {
                 command.ExecuteNonQuery();
                 //MessageBox.Show(query);
-                MessageBox.Show("Value deleted");
+                //MessageBox.Show("Value deleted");
+                Debug.WriteLine("Delete successful");
             }
             catch (Exception error)
             {
-                MessageBox.Show("Delete Error " + error.Message);
+                MessageBox.Show("Delete Error: " + error.Message);
             }
             finally
             {
