@@ -49,7 +49,7 @@ namespace Project_1
             //database.Update("Service", new[] { ("servicedescription", "Updated") }, "ServiceId = 5");
             //database.Delete("Service", "Serviceid = 3");
 
-            SqlDataAdapter adapter = database.RetrieveTable("Service");//Display Records
+            SqlDataAdapter adapter = database.RetrieveData("Service");//Display Records
             DataSet ds = new DataSet();
             adapter.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0]; ///// <------ Returned data

@@ -13,6 +13,7 @@ namespace Project_1.BusinessLogicClasses
         public Client(PersonAddress clientAddress, string Name, string Surname, string clientNumber) : base(Name, Surname, clientAddress)
         {
             this.clientNumber = clientNumber;
+       
         }
 
         public string ClientNumber { get => clientNumber; set => clientNumber = value; }

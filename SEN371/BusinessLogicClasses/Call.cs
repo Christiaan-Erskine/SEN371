@@ -35,6 +35,5 @@ namespace Project_1.BusinessLogicClasses
         {
             //Store Values from database
         }
-
     }
 }

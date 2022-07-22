@@ -22,12 +22,36 @@ namespace Project_1.DataAccessLayer
             sql_connection = new SqlConnection(ConnectionString);
         }
 
-        public SqlDataAdapter RetrieveTable(string table)
+
+        public SqlDataAdapter RetrieveObject(object Obj,int id)
+        {
+            string name = Obj.GetType().Name;
+
+            switch (name)
+            {
+                case nameof(BusinessLogicClasses.Client):
+                   return RetrieveData(nameof(BusinessLogicClasses.Client), $"WHERE id = {id}");
+                    
+                case nameof(BusinessLogicClasses.Call):
+                   return null;                               
+            }
+
+            return null;
+        }
+
+
+        public SqlDataAdapter RetrieveData(string table, string condition = "")
         {       
             sql_connection.Open();
 
-            string query = $"SELECT * FROM {table}";
+            string query;
 
+            if (condition == "")
+                query = $"SELECT * FROM {table}";
+            else
+                query = $"SELECT * FROM {table} WHERE {condition}";
+
+        
             SqlDataAdapter adapter = null;
 
             try
