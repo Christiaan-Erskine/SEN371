@@ -27,16 +27,20 @@ namespace Project_1.DataAccessLayer
         {
             string name = Obj.GetType().Name;
 
-            switch (name)
-            {
-                case nameof(BusinessLogicClasses.Client):
-                   return RetrieveData(nameof(BusinessLogicClasses.Client), $"WHERE id = {id}");
-                    
-                case nameof(BusinessLogicClasses.Call):
-                   return null;                               
-            }
+            return RetrieveData(name, $"WHERE id = {id}");
 
-            return null;
+            
+            //switch is propably unessecary
+            //switch (name)
+            //{
+            //    case nameof(BusinessLogicClasses.Client):
+            //       return RetrieveData(nameof(BusinessLogicClasses.Client), $"WHERE id = {id}");
+                    
+            //    case nameof(BusinessLogicClasses.Call):
+            //       return null;                               
+            //}
+
+            //return null;
         }
 
 
