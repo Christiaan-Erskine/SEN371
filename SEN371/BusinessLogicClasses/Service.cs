@@ -19,8 +19,8 @@ namespace Project_1.BusinessLogicClasses
             this.expectedDuration = ExpectedDuration;
         }
 
-        public string JobSpecification1 { get => jobSpecification; set => jobSpecification = value; }
-        public TimeSpan ExpectedDuration1 { get => expectedDuration; set => expectedDuration = value; }
+        public string JobSpecification { get => jobSpecification; set => jobSpecification = value; }
+        public TimeSpan ExpectedDuration { get => expectedDuration; set => expectedDuration = value; }
         internal ServiceRequest ServiceReq { get => serviceReq; set => serviceReq = value; }
 
 

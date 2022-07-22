@@ -48,6 +48,12 @@ namespace Project_1
             //database.Insert("Address", new[] { ("streetaddress", "10th_Vaenu"), ("suburb", "Edenvale"), ("City", "Gauteng"), ("country", "South-Africa") });
             //database.Update("Service", new[] { ("servicedescription", "Updated") }, "ServiceId = 5");
             //database.Delete("Service", "Serviceid = 3");
+           
+
+            var s = new BusinessLogicClasses.Service(new BusinessLogicClasses.ServiceRequest("","","",""), "CallManger", TimeSpan.FromSeconds(1), "HR");
+
+            database.InsertObject(s);
+
 
             SqlDataAdapter adapter = database.RetrieveData("Service");//Display Records
             DataSet ds = new DataSet();

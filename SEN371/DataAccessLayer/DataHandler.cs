@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;//important
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.Reflection;
+using System.Data;
 
 namespace Project_1.DataAccessLayer
 {
@@ -22,25 +24,45 @@ namespace Project_1.DataAccessLayer
             sql_connection = new SqlConnection(ConnectionString);
         }
 
+        public (string field, string value)[] GetFieldValues(object obj)
+        {           
+            IList<PropertyInfo> properties = new List<PropertyInfo>(obj.GetType().GetProperties());
 
-        public SqlDataAdapter RetrieveObject(object Obj,int id)
-        {
-            string name = Obj.GetType().Name;
+            var fieldValues = new List<(string field, string value)>();
 
-            return RetrieveData(name, $"WHERE id = {id}");
+            foreach (PropertyInfo property in properties)
+            {
+                object value = property.GetValue(obj, null);
 
-            
-            //switch is propably unessecary
-            //switch (name)
-            //{
-            //    case nameof(BusinessLogicClasses.Client):
-            //       return RetrieveData(nameof(BusinessLogicClasses.Client), $"WHERE id = {id}");
-                    
-            //    case nameof(BusinessLogicClasses.Call):
-            //       return null;                               
-            //}
+                MessageBox.Show($"Property: {property.Name} value: {value.ToString()}");
+                fieldValues.Add((property.Name, value.ToString()));
+            }
+            return fieldValues.ToArray();
+        }
 
-            //return null;
+        public object[] RetrieveObjects(object obj, string condition = "")
+        {         
+            DataSet ds = new DataSet();
+            var adaptor = RetrieveData(obj.GetType().Name, condition);
+            adaptor.Fill(ds);
+            DataTable table = ds.Tables[0];
+    
+            object[] results = new object[table.Rows.Count];
+
+            for(int i = 0; i < results.Length; i++)
+            {
+                var row = table.Rows[i].ItemArray;
+
+                MessageBox.Show(row[0].ToString());//need to check if this is a string value from db
+
+                results[i] = Activator.CreateInstance(obj.GetType(), row);//here we create a object by type and passing in values to its constructor
+            }
+            return results;
+        }
+
+        public void InsertObject(object obj)
+        {                     
+            Insert(obj.GetType().Name, GetFieldValues(obj));                
         }
 
 
