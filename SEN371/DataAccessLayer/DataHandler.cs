@@ -34,16 +34,16 @@ namespace Project_1.DataAccessLayer
             {
                 object value = property.GetValue(obj, null);
 
-                MessageBox.Show($"Property: {property.Name} value: {value.ToString()}");
+                //MessageBox.Show($"Property: {property.Name} value: {value.ToString()}");
                 fieldValues.Add((property.Name, value.ToString()));
             }
             return fieldValues.ToArray();
         }
 
-        public object[] RetrieveObjects(object obj, string condition = "")
+        public object[] RetrieveObjects(Type type, string condition = "")
         {         
             DataSet ds = new DataSet();
-            var adaptor = RetrieveData(obj.GetType().Name, condition);
+            var adaptor = RetrieveData(type.Name, condition);
             adaptor.Fill(ds);
             DataTable table = ds.Tables[0];
     
@@ -51,11 +51,39 @@ namespace Project_1.DataAccessLayer
 
             for(int i = 0; i < results.Length; i++)
             {
-                var row = table.Rows[i].ItemArray;
+                var row = table.Rows[i];
 
-                MessageBox.Show(row[0].ToString());//need to check if this is a string value from db
+                object[] args = new object[table.Columns.Count];
 
-                results[i] = Activator.CreateInstance(obj.GetType(), row);//here we create a object by type and passing in values to its constructor
+                for (int j = 0; j < args.Length; j++)
+                {
+                    var t = row[j].GetType();
+
+                    if (t.Name == "DBNull")
+                    {
+                        args[j] = null;
+                    }
+                    else if (t.Name == "String")
+                    {
+                        args[j] = row[j].ToString();
+                        //MessageBox.Show(row[j].ToString());
+                    }
+                    else if(t.Name == "Int32")
+                    {
+                        args[j] = row[j].ToString();//we use string for ids but in the database it is int
+                        //Convert.ToInt32(row[j].ToString());
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Undefined type with Name: {t.Name} returned from DB in RetrieveObjects");
+                    }                  
+                }
+
+                //MessageBox.Show(row[0].ToString());
+
+                results[i] = Activator.CreateInstance(type, args);
+                //here we create a object by type and passing in values to its constructor
+                //need to make sure that the order of the args matches the class constructor params
             }
             return results;
         }
@@ -102,7 +130,7 @@ namespace Project_1.DataAccessLayer
         {         
             sql_connection.Open();
 
-            Debug.Assert(FieldValues == null);
+            Debug.Assert(FieldValues != null);
 
             string FieldsConcat = "", ValuesConcat = "";
 
@@ -119,13 +147,14 @@ namespace Project_1.DataAccessLayer
                 }
             }
 
-            string query = $"INSERT INTO {table}({FieldsConcat}) VALUES({ValuesConcat})";
-           
+            string query = $"INSERT INTO {table}({FieldsConcat}) VALUES({ValuesConcat})";//.ToLower();
+            MessageBox.Show(query);
+
             SqlCommand command = new SqlCommand(query, sql_connection);
             try
             {
                 command.ExecuteNonQuery();
-                //MessageBox.Show(query);
+                
                 //MessageBox.Show("Values inserted");
                 Debug.WriteLine("Insert successful");
             }

@@ -30,7 +30,7 @@ namespace Project_1
 
             try
             {          
-                database = new DataAccessLayer.DataHandler(@"Data Source=software-engineering371.database.windows.net;Initial Catalog=PremierServiceSolutions;User ID=SEN371Database;Password=Christiaan,Kyle,Hanno,Shammah2022;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+                database = new DataAccessLayer.DataHandler(@"Server=tcp:sen371.database.windows.net,1433;Initial Catalog=PremierServiceSolutionsDB;Persist Security Info=False;User ID=SEN371Database;Password=Christiaan,Kyle,Hanno,Shammah2022;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
 
                 lblConnected.Text = "Connected to Database \u2713"; //Successfully connected + ASCII check mark
                 lblConnected.ForeColor = System.Drawing.Color.Green;
@@ -45,42 +45,26 @@ namespace Project_1
             }
 
             //tuple array of Field and Value
-            //database.Insert("Address", new[] { ("streetaddress", "10th_Vaenu"), ("suburb", "Edenvale"), ("City", "Gauteng"), ("country", "South-Africa") });
+            //database.Insert("Client", new[] { ("name", "Andy"),("surname","kennedy") });
+            //database.Insert("PersonAddress", new[] { ("streetaddress", "11th_Vaenu"), ("suburb", "Edenvale"), ("City", "Gauteng"), ("country", "South-Africa"), ("personid","1")});
+
             //database.Update("Service", new[] { ("servicedescription", "Updated") }, "ServiceId = 5");
             //database.Delete("Service", "Serviceid = 3");
-           
-
-            var s = new BusinessLogicClasses.Service(new BusinessLogicClasses.ServiceRequest("","","",""), "CallManger", TimeSpan.FromSeconds(1), "HR");
-
-            database.InsertObject(s);
 
 
-            SqlDataAdapter adapter = database.RetrieveData("Service");//Display Records
+
+            //Example demonstrating the use of objects:
+
+            //database.InsertObject(new BusinessLogicClasses.PersonAddress("9 FlowerStreet", "Edenvale", "Pretoria", "South-Africa", "1"));
+            //var results = database.RetrieveObjects(typeof(BusinessLogicClasses.PersonAddress));
+
+            
+            SqlDataAdapter adapter = database.RetrieveData("PersonAddress");//Display Records
             DataSet ds = new DataSet();
             adapter.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0]; ///// <------ Returned data
 
-
-            //Example
-            /*foreach (DataTable table in dataSet.Tables)
-            {
-                foreach (DataRow row in table.Rows)
-                {
-                    foreach (object item in row.ItemArray)
-                    {
-                        // read item
-                    }
-                }
-            }foreach (DataTable table in dataSet.Tables)
-            {
-                foreach (DataRow row in table.Rows)
-                {
-                    foreach (object item in row.ItemArray)
-                    {
-                        // read item
-                    }
-                }
-            }*/
+   
         }
 
         private void label1_Click(object sender, EventArgs e)

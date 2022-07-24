@@ -8,17 +8,18 @@ namespace Project_1.BusinessLogicClasses
 {
     public class PersonAddress
     {
-        private string address, suburb, city, country, PersonId;
+        private string streetAddress, suburb, city, country, personId;
 
-        public string Address { get => address; set => address = value; }
+        public string PersonId { get => personId; set => personId = value; }
+        public string StreetAddress { get => streetAddress; set => streetAddress = value; }
         public string Suburb { get => suburb; set => suburb = value; }
         public string City { get => city; set => city = value; }
         public string Country { get => country; set => country = value; }
-        public string PersonId1 { get => PersonId; set => PersonId = value; }
+       
 
-        public PersonAddress(string address, string suburb, string city, string country, string personId)
+        public PersonAddress(string personId, string streetAddress, string suburb, string city, string country)
         {
-            this.address = address;
+            this.streetAddress = streetAddress;
             this.suburb = suburb;
             this.city = city;
             this.country = country;
