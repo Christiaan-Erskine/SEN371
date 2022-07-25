@@ -23,6 +23,21 @@ namespace Project_1.DataAccessLayer
           
             sql_connection = new SqlConnection(ConnectionString);
         }
+        
+        
+                public DataHandler()
+        {
+            // update connection string
+            //this.ConnectionString = @"Data Source=software-engineering371.database.windows.net;Initial Catalog=PremierServiceSolutions;User ID=SEN371Database;Password=Christiaan,Kyle,Hanno,Shammah2022;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
+            sql_connection = new SqlConnection(ConnectionString);
+        }
+
+        /*~DataHandler()
+        {
+            sql_connection.Close();
+        }*/
+        
 
         public (string field, string value)[] GetFieldValues(object obj)
         {           
