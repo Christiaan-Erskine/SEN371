@@ -15,7 +15,7 @@ namespace Project_1.BusinessLogicClasses
         private SERVICE_CONTRACT_TYPE ServiceContractType;  //  <--- Populate
         private CONTRACT_STATE ContractState;               //  <--- Populate
 
-        public ContractManager(string contractID, string content,string employeeId,string managerName, string managerSurname) : base(employeeId, managerName, managerSurname)
+        public ContractManager(string contractID, string content,string employeeId,string managerName, string managerSurname, string employeeType, string cell, string email) : base(employeeId, managerName, managerSurname, employeeType, cell, email)
         {
             this.contractID = contractID;
             this.content = content;

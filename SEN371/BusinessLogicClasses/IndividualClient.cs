@@ -11,7 +11,7 @@ namespace Project_1.BusinessLogicClasses
     {
         private string clientType, clientInfo;
 
-        public IndividualClient(string clientType, string clientInfo, string clientName, string clientSurname, string clientNumber) : base(clientName, clientSurname, clientNumber)
+        public IndividualClient(string clientType, string clientInfo, string clientName, string clientSurname, string clientNumber, string clientEmail) : base(clientName, clientSurname, clientNumber, clientType, clientEmail)
         {
             this.clientType = clientType;
             this.clientInfo = clientInfo;

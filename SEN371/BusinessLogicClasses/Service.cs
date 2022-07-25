@@ -8,37 +8,46 @@ namespace Project_1.BusinessLogicClasses
 {
     public class Service : Department
     {
-        ServiceRequest serviceReq;
-        string jobSpecification;
-        TimeSpan expectedDuration;
+        DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
+        /*
+                ServiceRequest serviceReq;
+                string jobSpecification;
+                TimeSpan expectedDuration;
 
-        public Service(ServiceRequest serviceReq, string JobSpecification, TimeSpan ExpectedDuration, string department) : base(department)
+                public Service(ServiceRequest serviceReq, string JobSpecification, TimeSpan ExpectedDuration, string department) : base(department)
+                {
+                    this.ServiceReq = serviceReq;
+                    this.jobSpecification = JobSpecification;
+                    this.expectedDuration = ExpectedDuration;
+                }
+
+                public string JobSpecification { get => jobSpecification; set => jobSpecification = value; }
+                public TimeSpan ExpectedDuration { get => expectedDuration; set => expectedDuration = value; }
+                internal ServiceRequest ServiceReq { get => serviceReq; set => serviceReq = value; }
+        */
+        string description, serviceId;
+
+        public string Description { get => description; set => description = value; }
+        public string ServiceId { get => serviceId; set => serviceId = value; }
+
+        public Service(string description, string department) : base(department)
         {
-            this.ServiceReq = serviceReq;
-            this.jobSpecification = JobSpecification;
-            this.expectedDuration = ExpectedDuration;
+            this.Description = description;
         }
-
-        public string JobSpecification { get => jobSpecification; set => jobSpecification = value; }
-        public TimeSpan ExpectedDuration { get => expectedDuration; set => expectedDuration = value; }
-        internal ServiceRequest ServiceReq { get => serviceReq; set => serviceReq = value; }
 
 
         public void StoreService(string description)
-        {
-            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();   // Fix Person Id
+        {          
             database.Insert("Service", new[] { ("servicedescription", description) });
         }
 
-        public void UpdateService(string serviceId, string description)
-        {
-            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
-            database.Update("Service", new[] { ("serviceid", serviceId), ("servicedescription", description) }, ("ServiceId = " + serviceId));
+        public void UpdateService(string serviceId, string serviceDescription)
+        {         
+            database.Update("Service", new[] { ("servicedescription", serviceDescription) }, ("ServiceId = " + serviceId));
         }
 
         public void DeleteService(string id)
-        {
-            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
+        {          
             database.Delete("Service", ("ServiceId = " + id));
         }
 

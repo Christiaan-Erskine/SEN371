@@ -54,12 +54,6 @@ namespace Project_1.BusinessLogicClasses
             database.Update("Call", new[] { ("callstarttime", dateToString(start)), ("callendtime", dateToString(end)), ("problemdiscription", descrption), ("employeeid", agentId), ("clientid", clientId) }, ("CallId = " + callId));//Client?
         }
 
-        public void UpdateCall()
-        {
-            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
-            database.Update("Call", new[] { ("callstarttime", dateToString(this.callStarted)), ("callendtime", dateToString(this.callEnded)), ("problemdiscription", this.description), ("employeeid", this.agentId) }, ("CallId = " + this.callId));
-        }
-
         public SqlDataAdapter GetCallInfo()
         {
             //may be a return type method as it will retrieve values from database

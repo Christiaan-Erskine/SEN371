@@ -15,36 +15,35 @@ namespace Project_1.BusinessLogicClasses
 
 
 
-        public Technician(string employeeId, string name, string surname, string jobList) : base( employeeId, name, surname)
+        public Technician(string employeeId, string name, string surname, string jobList, string employeeType, string cell, string email) : base( employeeId, name, surname, employeeType, cell, email)
         {
             this.jobList = jobList;
         }
 
 
-
         //CRUD methods
-        public void CreateTechnitian(string name, string surname, string cellPhoneNumber, string email)
+        public void StoreTechnician(/*string employeeId,*/ string name, string surname, /*string jobList,*/ string cellPhoneNumber, string email)
         {
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
             database.Insert("Employee", new[] {("Name", name), ("Surname", surname), ("EmployeeType", "Technician"), ("CellPhoneNumber", cellPhoneNumber), ("Email", email) });
         }
 
-        public void UpdateTechnitian(string technicianId, string name, string surname, string cellPhoneNumber, string email)
+        public void UpdateTechnician(string technicianId, string name, string surname, string cellPhoneNumber, string email)
         {
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
             database.Update("Employee", new[] {("Name", name), ("Surname", surname), ("EmployeeType", "Technician"), ("CellPhoneNumber", cellPhoneNumber), ("Email", email) }, ("EmployeeId = " + technicianId));
         }
 
-        public void DeleteTechnitian(string technitianId)
+        public void DeleteTechnician(string technitianId)
         {
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
             database.Delete("Employee", ("EmployeeId = " + technitianId));
         }
 
-        public SqlDataAdapter getTechnitianInfo(string technitianId)
+        public SqlDataAdapter getTechnicianInfo(string technicianId)
         {
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
-            return database.RetrieveData("Employee", ("EmployeeId = " + technitianId));
+            return database.RetrieveData("Employee", ("EmployeeId = " + technicianId));
         }
         
         

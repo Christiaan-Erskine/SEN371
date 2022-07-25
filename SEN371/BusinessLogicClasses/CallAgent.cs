@@ -10,7 +10,7 @@ namespace Project_1.BusinessLogicClasses
     {
         string agentId;
         
-        public CallAgent(string agentId,string employeeId, string name, string surname) : base(employeeId, name, surname)
+        public CallAgent(string agentId,string employeeId, string employeeType, string name, string surname, string cell, string email) : base(employeeId, name, surname, employeeType, cell, email)
         {
             this.agentId = agentId;
 
@@ -18,7 +18,7 @@ namespace Project_1.BusinessLogicClasses
 
         public void StoreEmployee(string personId, string streetAddress, string suburb, string city, string country)
         {
-            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();   // Fix Person Id
+            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
             database.Insert("Employee", new[] { ("personid", personId), ("streetaddress", streetAddress), ("suburb", suburb), ("city", city), ("country", country) });
         }
 

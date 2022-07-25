@@ -9,19 +9,15 @@ namespace Project_1.BusinessLogicClasses
 {
     public class BusinessClient : Client
     {
-        private string clientType, clientInfo, businessName, clientEmail;
+        private string clientInfo, clientEmail;
 
-        public BusinessClient(string clientName, string clientSurname, string clientNumber, string clientType, string clientInfo, string clientEmail, string businessName) : base(clientName, clientSurname, clientNumber)
+        public BusinessClient(string clientName, string clientSurname, string clientNumber, string clientType, string clientInfo, string clientEmail) : base(clientName, clientSurname, clientNumber, clientType, clientEmail)
         {
-            this.clientType = clientType;
             this.clientInfo = clientInfo;
-            this.businessName = businessName;
             this.clientEmail = clientEmail;
         }
 
-        public string ClientType { get => clientType; set => clientType = value; }
         public string ClientInfo { get => clientInfo; set => clientInfo = value; }
-        public string BusinessName { get => businessName; set => businessName = value; }
 
         public void StoreClientInfo(string Name, string Surname, string Cellphone, string Email)
         {

@@ -15,7 +15,7 @@ namespace Project_1.BusinessLogicClasses
         public string Service { get => service; set => service = value; }
         public string EmployeeID { get => employeeID; set => employeeID = value; }
 
-        public ServiceManager(string service, string employeeID, string employeeId, string managerName, string managerSurname) : base(employeeId, managerName, managerSurname)
+        public ServiceManager(string service, string employeeID, string employeeId, string managerName, string managerSurname, string employeeType, string cell, string email) : base(employeeId, managerName, managerSurname, employeeType, cell, email)
         {
             this.service = service;
             this.EmployeeID = employeeID;

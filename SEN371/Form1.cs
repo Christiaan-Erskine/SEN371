@@ -21,10 +21,6 @@ namespace Project_1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //ToDo
-            //return record as object
-            //Object -> Database record
-            //Database record -> Object (x21 for each class)
 
             DataAccessLayer.DataHandler database;
 
@@ -44,49 +40,50 @@ namespace Project_1
                 return;
             }
 
-            BusinessLogicClasses.PersonAddress address = new BusinessLogicClasses.PersonAddress("4", "123 Teststreet", "Validation Ville", "Certtain City", "Fakeland");
-            address.Country = "South Africa";
+            BusinessLogicClasses.PersonAddress address = new BusinessLogicClasses.PersonAddress("4", "123 Teststreet", "Validation Ville", "Certain City", "Fakeland");
+            //address.Country = "South Africa";
+            //database.InsertObject(address);
+            //address.StoreAddress(address.PersonId, address.StreetAddress, address.Suburb, address.City, address.Country);
+            //address.UpdateAddress(address.PersonId, address.StreetAddress, address.Suburb,"Johannesburg", address.Country, address.PersonId);
 
-           // database.InsertObject(address);
-
-           //address.StoreAddress(address.PersonId, address.StreetAddress, address.Suburb, address.City, address.Country);
-
-            address.UpdateAddress(address.PersonId, address.StreetAddress, address.Suburb,"Johannesburg", address.Country, address.PersonId);
-
-            //where [Store No] is null
-
-            BusinessLogicClasses.BusinessClient client = new BusinessLogicClasses.BusinessClient("John", "Smith", "5", "Business Client", "is a client", "jon@vodamail.co.za", "JohnsKoekeisbak");
-            client.ClientNumber = "123 123 1234";
+            BusinessLogicClasses.BusinessClient client = new BusinessLogicClasses.BusinessClient("John", "Smith", "5", "Business Client", "is a client", "jon@vodamail.co.za");
+            //client.ClientNumber = "123 123 1234";
             //client.DeleteClient("2");
             //client.DeleteClient("3");
-            client.UpdateClientInfo( "John", "Smith", "089 422 2312", "jon@vodamail.co.za", "4");
-
-
-
+            //client.UpdateClientInfo( "John", "Smith", "089 422 2312", "jon@vodamail.co.za", "4");
             //client.StoreClientInfo();
 
-
-            //tuple array of Field and Value
-            //database.Insert("Client", new[] { ("name", "Andy"),("surname","kennedy") });
-            //database.Insert("PersonAddress", new[] { ("streetaddress", "11th_Vaenu"), ("suburb", "Edenvale"), ("City", "Gauteng"), ("country", "South-Africa"), ("personid","1")});
-
-            //database.Update("Service", new[] { ("servicedescription", "Updated") }, "ServiceId = 5");
-            //database.Delete("Service", "Serviceid = 3");
-
+           BusinessLogicClasses.Service service = new BusinessLogicClasses.Service("Test Discription","Service Department");
+            //service.ServiceId = "3";
+            //database.InsertObject(service);
+            //service.StoreService(service.Description);
+            //service.UpdateService("1", "This has been updated");
+            //database.Delete("3");
 
 
-            //Example demonstrating the use of objects:
+            //add new department to database
+            BusinessLogicClasses.CallCentre callCenter = new BusinessLogicClasses.CallCentre("request no 1", "Human Resources");
+            //callCenter.StoreDepartment(callCenter.DepartmentName);
+            //callCenter.UpdateDepartment("New Human Resources", "1");
 
-            //database.InsertObject(new BusinessLogicClasses.PersonAddress("9 FlowerStreet", "Edenvale", "Pretoria", "South-Africa", "1"));
-            //var results = database.RetrieveObjects(typeof(BusinessLogicClasses.PersonAddress));
+
+            //add new technician
+            BusinessLogicClasses.Technician technician = new BusinessLogicClasses.Technician("1", "Sarah", "MC-dairmond", "send reports", "Technician", "123 123 123", "tech1@yahoo.com");
+            //callCenter.StoreDepartment(callCenter.DepartmentName);
+            //technician.CreateTechnician(technician.Name, technician.Surname, "0836454569", "technician@1.co.za");
+            //technician.StoreTechnician(technician.Name, technician.Surname, technician.Cell, technician.Email);
+            //technician.StoreEmployee(technician.Name, technician.Surname, technician.EmployeeType, technician.Cell, technician.Email);
+
+            BusinessLogicClasses.IndividualClient iclient = new BusinessLogicClasses.IndividualClient("Individual Client", "is a client", "Jack", "Surname", "6", "test@gmail.com");
+
+            //BusinessLogicClasses.Service service = new BusinessLogicClasses.Service("Test Discription")
 
 
-            SqlDataAdapter adapter = database.RetrieveData("PersonAddress");//Display Records
+            SqlDataAdapter adapter = database.RetrieveData("Service");//    <------ Returned data
             DataSet ds = new DataSet();
             adapter.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0]; ///// <------ Returned data
-
-   
+ 
         }
 
         private void label1_Click(object sender, EventArgs e)
