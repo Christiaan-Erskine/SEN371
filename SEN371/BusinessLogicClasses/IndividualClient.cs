@@ -63,8 +63,5 @@ namespace Project_1.BusinessLogicClasses
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
             return database.RetrieveData("Client", ("ClientId = " + clientId));
         }  
-
-      
-        }
+    }
 }
-
