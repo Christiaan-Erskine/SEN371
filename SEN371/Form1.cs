@@ -44,12 +44,26 @@ namespace Project_1
                 return;
             }
 
-            BusinessLogicClasses.PersonAddress address = new BusinessLogicClasses.PersonAddress("5", "123 Teststreet", "Validation Ville", "Certtain City", "Fakeland");
+            BusinessLogicClasses.PersonAddress address = new BusinessLogicClasses.PersonAddress("4", "123 Teststreet", "Validation Ville", "Certtain City", "Fakeland");
             address.Country = "South Africa";
-            address.StoreAddress(address.PersonId, address.StreetAddress, address.Suburb, address.City, address.Country);
+
+           // database.InsertObject(address);
+
+           //address.StoreAddress(address.PersonId, address.StreetAddress, address.Suburb, address.City, address.Country);
+
             address.UpdateAddress(address.PersonId, address.StreetAddress, address.Suburb,"Johannesburg", address.Country, address.PersonId);
 
-            BusinessLogicClasses.IndividualClient client = new BusinessLogicClasses.IndividualClient("John", "Smith", "5", "Business Client", "is a client", "jon@vodamail.co.za", "John's Koekeis bak");
+            //where [Store No] is null
+
+            BusinessLogicClasses.BusinessClient client = new BusinessLogicClasses.BusinessClient("John", "Smith", "5", "Business Client", "is a client", "jon@vodamail.co.za", "JohnsKoekeisbak");
+            client.ClientNumber = "123 123 1234";
+            //client.DeleteClient("2");
+            //client.DeleteClient("3");
+            client.UpdateClientInfo( "John", "Smith", "089 422 2312", "jon@vodamail.co.za", "4");
+
+
+
+            //client.StoreClientInfo();
 
 
             //tuple array of Field and Value

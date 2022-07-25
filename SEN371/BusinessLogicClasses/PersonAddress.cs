@@ -36,7 +36,7 @@ namespace Project_1.BusinessLogicClasses
         public void UpdateAddress(string perosnId, string streetAddress, string suburb, string city, string country, string id)
         {
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
-            database.Update("PersonAddress", new[] { ("personid", personId), ("streetaddress", streetAddress), ("suburb", suburb), ("city", city), ("country", country) }, ("ClientId = " + id) );
+            database.Update("PersonAddress", new[] { ("personid", personId), ("streetaddress", streetAddress), ("suburb", suburb), ("city", city), ("country", country) }, ("PersonId = " + id) );
         }
 
         public void DeleteAddress(string id)

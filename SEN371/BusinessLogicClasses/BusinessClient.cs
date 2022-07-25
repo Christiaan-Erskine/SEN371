@@ -35,22 +35,15 @@ namespace Project_1.BusinessLogicClasses
             database.Insert("Client", new[] { ("Name", this.Name), ("Surname", this.Surname), ("CellPhoneNumber", this.ClientNumber), ("Email", this.clientEmail), ("ClientType", "BusinessClient") });
 
             //more generic => database.InsertObject(this);
-
         }
 
         public void UpdateClientInfo(string Name, string Surname, string Cellphone, string Email, string ClientId)  //
         {
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
-            database.Update("Client", new[] { ("Name", Name), ("Surname", Surname), ("CellPhoneNumber", Cellphone), ("Email", Email), ("ClientType", "BusinessClient") }, ("BusinessName = " + ClientId));
+            database.Update("Client", new[] { ("Name", Name), ("Surname", Surname), ("CellPhoneNumber", Cellphone), ("Email", Email), ("ClientType", "BusinessClient") }, ("ClientId = " + ClientId));
         }
 
-        public void UpdateClientInfo()
-        {
-            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
-            database.Update("Client", new[] { ("Name", this.Name), ("Surname", this.Surname), ("CellPhoneNumber", this.ClientNumber), ("Email", this.clientEmail), ("ClientType", "BusinessClient") }, ("ClientId = " + this.businessName));
-        }
-
-        public void DeleteAddress(string clientId)
+        public void DeleteClient(string clientId)
         {
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
             database.Delete("Client", ("ClientId = " + clientId));
