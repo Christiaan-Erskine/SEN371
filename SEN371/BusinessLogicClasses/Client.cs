@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace Project_1.BusinessLogicClasses
 {
-    public class Client : Person
+    public abstract class Client : Person
     {    
         private string clientNumber;
 
-        public Client(PersonAddress clientAddress, string Name, string Surname, string clientNumber) : base(Name, Surname, clientAddress)
+        public Client(string Name, string Surname, string clientNumber) : base(Name, Surname)
         {
             this.clientNumber = clientNumber;
-       
         }
 
         public string ClientNumber { get => clientNumber; set => clientNumber = value; }
@@ -24,9 +23,6 @@ namespace Project_1.BusinessLogicClasses
             return "placeholder";
         }
 
-        public void AcceptAgreement()
-        {
-            //Used to accept and confirm a service
-        }
+        public abstract void AcceptAgreement();
     }
 }

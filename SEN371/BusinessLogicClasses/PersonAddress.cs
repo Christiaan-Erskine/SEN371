@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;//import this to all classes so you can return a sql adapter
 
 namespace Project_1.BusinessLogicClasses
 {
@@ -28,31 +29,31 @@ namespace Project_1.BusinessLogicClasses
 
         public void StoreAddress(string personId, string streetAddress, string suburb, string city, string country)
         {
-            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
+            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();   // Fix Person Id
             database.Insert("PersonAddress", new[] { ("personid", personId), ("streetaddress", streetAddress), ("suburb", suburb), ("city", city), ("country", country) });
         }
 
-        public void UpdateAddress(string streetAddress, string suburb, string city, string country, string id)
+        public void UpdateAddress(string perosnId, string streetAddress, string suburb, string city, string country, string id)
         {
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
-            database.Update("PersonAddress", new[] { ("streetaddress", streetAddress), ("suburb", suburb), ("city", city), ("country", country) }, ("ClientId = " + id) );
+            database.Update("PersonAddress", new[] { ("personid", personId), ("streetaddress", streetAddress), ("suburb", suburb), ("city", city), ("country", country) }, ("ClientId = " + id) );
         }
 
         public void DeleteAddress(string id)
         {
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
-            database.Delete("PersonAddress", ("ClientId = " + id) );
+            database.Delete("PersonAddress", ("PersonId = " + id));
         }
         
-        public void DisplayInfo()//||Getinfo
+        public SqlDataAdapter DisplayInfo(string id)//||Getinfo
         {
             //Outputs a specific address for an employee or a client
+            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
+            return database.RetrieveData("PersonAddress", ("PersonId = " + id));
         }
         public void SetInfo(string address, string suburb, string city, string country, string personId)
         {
             //set employee information
-        }
-        
-        
+        }           
     }
 }

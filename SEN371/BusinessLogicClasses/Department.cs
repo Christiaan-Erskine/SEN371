@@ -8,17 +8,32 @@ namespace Project_1.BusinessLogicClasses
 {
     public abstract class Department
     {
-        string dep; //identifies the department by name
+        DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
 
-        public Department(string department)
+        string depName; //identifies the department by name
+        string depId;
+
+        public Department(string departmentName)
         {
-            this.dep = department;
+            this.depName = departmentName;
         }
 
-        public string department
-        { 
-            get => dep; 
-            set => dep = value; 
+        public string DepartmentName { get => depName; set => depName = value; }
+
+
+        public void StoreDepartment(string depName)
+        {
+            database.Insert("Department", new[] { ("DepartmentName", depName) });
+        }
+
+        public void UpdateDepartment(string depName,string depId)
+        {       
+            database.Update("Department", new[] { ("DepartmentName", depName) }, "DepartmentId = " + depId);
+        }
+
+        public void DeleteDepartment(string id)
+        {
+            database.Delete("Department", "DepartmentId = " + depId);
         }
     }
 }

@@ -12,17 +12,15 @@ namespace Project_1.BusinessLogicClasses
 
         private string serviceDeoartmentId;
 
-        protected Employee(string employeeId, string name, string surname, PersonAddress address) : base(name, surname, address)
+        protected Employee(string employeeId, string name, string surname) : base(name, surname)
         {
             this.EmployeeId = employeeId;
             this.Name = name;
             this.Surname = surname;
-            this.Address = address;
         }
 
         public string EmployeeId { get => employeeId; set => employeeId = value; }
         public string ServiceDeoartmentId { get => serviceDeoartmentId; set => serviceDeoartmentId = value; }
-        public PersonAddress AddressId { get => address; set => address = value; }
 
         public override string toString()
         {

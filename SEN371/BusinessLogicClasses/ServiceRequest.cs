@@ -8,20 +8,42 @@ namespace Project_1.BusinessLogicClasses
 {
     public class ServiceRequest
     {
-        string agentId, addressId, agreementId, contractId;
+        DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
 
-        public string AgentId { get => agentId; set => agentId = value; }
-        public string AddressId { get => addressId; set => addressId = value; }
-        public string AgreementId { get => agreementId; set => agreementId = value; }
-        public string ContractId { get => contractId; set => contractId = value; }
+        string clientId, callAgentId, technicianId, callId, jobStatus;
 
-        public ServiceRequest(string agentId, string addressId, string agreementId, string contractId)
+        public string ClientId { get => clientId; set => clientId = value; }
+        public string CallAgentId { get => callAgentId; set => callAgentId = value; }
+        public string TechnicianId { get => technicianId; set => technicianId = value; }
+        public string CallId { get => callId; set => callId = value; }
+        public string JobStatus { get => jobStatus; set => jobStatus = value; }
+
+        public ServiceRequest(string clientId, string callAgentId, string technicianId, string callId, string jobStatus)
         {
-            this.AgentId = agentId;
-            this.AddressId = addressId;
-            this.AgreementId = agreementId;
-            this.ContractId = contractId;
+            this.clientId = clientId;
+            this.callAgentId = callAgentId;
+            this.technicianId = technicianId;
+            this.callId = callId;
+            this.jobStatus = jobStatus;
         }
+
+
+        public void StoreServiceRequest(string clientId,string callAgentId, string technicianId, string callId,string jobStatus)
+        {        
+            database.Insert("ServiceRequest", new[] { ("clientid", clientId), ("callagentid", callAgentId), ("technicianid", technicianId), ("callid", callId), ("jobstatus", jobStatus) });
+        }
+
+        public void UpdateServiceRequest(string clientId, string callAgentId, string technicianId, string callId, string jobStatus,string requestId)
+        {
+            database.Update("ServiceRequest", new[] { ("clientid", clientId), ("callagentid", callAgentId), ("technicianid", technicianId), ("callid", callId), ("jobstatus", jobStatus) }, "RequestId = " + requestId);
+        }
+
+        public void DeleteServiceRequest(string id)
+        {       
+            database.Delete("ServiceRequest", ("RequestId = " + id));
+        }
+
+
 
 
         public void CloseRequest() 

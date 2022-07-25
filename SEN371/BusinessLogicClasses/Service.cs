@@ -24,6 +24,26 @@ namespace Project_1.BusinessLogicClasses
         internal ServiceRequest ServiceReq { get => serviceReq; set => serviceReq = value; }
 
 
+        public void StoreService(string description)
+        {
+            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();   // Fix Person Id
+            database.Insert("Service", new[] { ("servicedescription", description) });
+        }
+
+        public void UpdateService(string serviceId, string description)
+        {
+            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
+            database.Update("Service", new[] { ("serviceid", serviceId), ("servicedescription", description) }, ("ServiceId = " + serviceId));
+        }
+
+        public void DeleteService(string id)
+        {
+            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
+            database.Delete("Service", ("ServiceId = " + id));
+        }
+
+
+
         public void AddRequest()
         {
             //Ads a new request

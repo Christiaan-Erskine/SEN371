@@ -35,7 +35,7 @@ namespace Project_1
                 lblConnected.Text = "Connected to Database \u2713"; //Successfully connected + ASCII check mark
                 lblConnected.ForeColor = System.Drawing.Color.Green;
             }
-            catch(Exception error)
+            catch (Exception error)
             {
                 MessageBox.Show(error.Message);
                 lblConnected.Text = "Not Connected to Database \u2717"; //n\Not connected + ASCII ballot cross
@@ -47,6 +47,9 @@ namespace Project_1
             BusinessLogicClasses.PersonAddress address = new BusinessLogicClasses.PersonAddress("5", "123 Teststreet", "Validation Ville", "Certtain City", "Fakeland");
             address.Country = "South Africa";
             address.StoreAddress(address.PersonId, address.StreetAddress, address.Suburb, address.City, address.Country);
+            address.UpdateAddress(address.PersonId, address.StreetAddress, address.Suburb,"Johannesburg", address.Country, address.PersonId);
+
+            BusinessLogicClasses.IndividualClient client = new BusinessLogicClasses.IndividualClient("John", "Smith", "5", "Business Client", "is a client", "jon@vodamail.co.za", "John's Koekeis bak");
 
 
             //tuple array of Field and Value

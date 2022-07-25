@@ -10,12 +10,33 @@ namespace Project_1.BusinessLogicClasses
     {
         string agentId;
         
-        public CallAgent(string agentId,string employeeId, string name, string surname, PersonAddress address) : base(employeeId, name, surname, address)
+        public CallAgent(string agentId,string employeeId, string name, string surname) : base(employeeId, name, surname)
         {
             this.agentId = agentId;
 
         }
-     
+
+        public void StoreEmployee(string personId, string streetAddress, string suburb, string city, string country)
+        {
+            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();   // Fix Person Id
+            database.Insert("Employee", new[] { ("personid", personId), ("streetaddress", streetAddress), ("suburb", suburb), ("city", city), ("country", country) });
+        }
+
+        public void UpdateEmployee(string employeeId, string name, string surname, string employeeType, string cell, string email)
+        {
+            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
+            database.Update("Employee", new[] { ("employeeid", employeeId), ("name", name), ("surname", surname), ("employeetype", employeeType), ("cellphonenumber", cell), ("email", email) }, ("EmployeeId = " + employeeId));
+        }
+
+        public void DeleteEmployee(string id)
+        {
+            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
+            database.Delete("PersonAddress", ("EmployeeId = " + id));
+        }
+
+
+
+
         public string Status()
         {
             //Will return the status of a specific Call Agent (Working, Idle, Done) based on assigned contracts
