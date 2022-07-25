@@ -44,19 +44,14 @@ namespace Project_1.BusinessLogicClasses
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
             database.Delete("Client", ("ClientId = " + clientId));
         }
-
-        public SqlDataAdapter GetClientInfo()
+  
+        public SqlDataAdapter GetInfo()
         {
-            //Used to access client data
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
-
-            //a way to get client as a object from db can also pass condition (not nessecary for now)
-            //database.RetrieveObjects(this.GetType());
-
-            return database.RetrieveData("Client");
+            return database.RetrieveData(this.GetType().Name);
         }
 
-        public SqlDataAdapter GetClientInfo(string clientid)
+        public SqlDataAdapter GetInfo(string clientid)
         {
             //Used to access client data
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();

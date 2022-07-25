@@ -51,6 +51,12 @@ namespace Project_1.BusinessLogicClasses
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
             return database.RetrieveData("PersonAddress", ("PersonId = " + id));
         }
+        public SqlDataAdapter DisplayInfo()//||Getinfo
+        {
+            //Outputs a specific address for an employee or a client
+            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
+            return database.RetrieveData(this.GetType().Name);
+        }
         public void SetInfo(string address, string suburb, string city, string country, string personId)
         {
             //set employee information

@@ -35,7 +35,22 @@ namespace Project_1.BusinessLogicClasses
             database.Update("Client", new[] { ("Name", Name), ("Surname", Surname), ("CellPhoneNumber", Cellphone), ("Email", Email), ("ClientType", "IndividualClient") }, ("ClientId = " + clientId));
         }
 
-        public SqlDataAdapter GetClientInfo(string clientId)
+        public void DeleteClient(string clientId)
+        {
+            //Used to access client data
+            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
+            database.RetrieveData("Client", ("ClientId = " + clientId));
+        }   
+
+        //needs implementation
+        public override void AcceptAgreement()
+        {
+
+        }
+
+
+
+        public SqlDataAdapter GetInfo(string clientId)
         {
             //Used to access client data
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
@@ -49,18 +64,7 @@ namespace Project_1.BusinessLogicClasses
             return database.RetrieveData("Client");
         }
 
-        public void DeleteClient(string clientId)
-        {
-            //Used to access client data
-            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
-            database.RetrieveData("Client", ("ClientId = " + clientId));
-        }
-
-
-        //needs implementation
-        public override void AcceptAgreement()
-        {
-
+      
         }
     }
 }

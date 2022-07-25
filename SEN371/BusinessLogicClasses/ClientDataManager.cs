@@ -58,15 +58,7 @@ namespace Project_1.BusinessLogicClasses
             //
             database.Delete("Client", "ClientId = " + clientId);
         }
-        public SqlDataAdapter GetClientStatus()
-        {
-            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
-
-            //a way to get client as a object from db can also pass condition (not nessecary for now)
-            //database.RetrieveObjects(this.GetType());
-
-            return database.RetrieveData("ClientManagementInformation");
-        }
+       
         public void UpdateClientStatus(string ClientId, string ClientStatus)
         {
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
@@ -85,15 +77,21 @@ namespace Project_1.BusinessLogicClasses
 
             database.Delete("ClientManagementInformation", "ClientId = " + clientId);
         }
-        public SqlDataAdapter GetClientStatus(string clientId)
-        {
-            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
 
-            //a way to get client as a object from db can also pass condition (not nessecary for now)
-            //database.RetrieveObjects(this.GetType());
 
-            return database.RetrieveData("ClientManagementInformation", ("ClientId = " + clientId));
-        }
+        //public SqlDataAdapter GetInfo()
+        //{
+        //    DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
+        //    return database.RetrieveData(this.GetType().Name);
+        //}
+
+
+        //public SqlDataAdapter GetInfo(string clientDataManagerId)
+        //{
+        //    DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
+        //    return database.RetrieveData(this.GetType().Name, ("ClientDataManagerId = " + clientDataManagerId));
+        //}
+
     }
         
     

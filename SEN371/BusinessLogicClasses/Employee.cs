@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace Project_1.BusinessLogicClasses
 {
@@ -63,6 +64,21 @@ namespace Project_1.BusinessLogicClasses
         {
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
             database.Delete("Employee", ("EmployeeId = " + Id));
+        }
+
+
+
+
+        public SqlDataAdapter GetInfo()
+        {
+            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
+            return database.RetrieveData(this.GetType().Name);
+        }
+
+        public SqlDataAdapter GetInfo(string employeeId)
+        {
+            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
+            return database.RetrieveData(this.GetType().Name, ("employeeId = " + employeeId));
         }
 
     }

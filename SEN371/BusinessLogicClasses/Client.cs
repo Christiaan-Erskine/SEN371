@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace Project_1.BusinessLogicClasses
 {
     public abstract class Client : Person
     {    
-        private string clientNumber, clientType, email;
+        private string clientNumber, clientType, email, clientId;
 
         public Client(string Name, string Surname,string clientType, string clientNumber, string email) : base(Name, Surname)
         {
@@ -20,6 +21,7 @@ namespace Project_1.BusinessLogicClasses
         public string ClientNumber { get => clientNumber; set => clientNumber = value; }
         public string ClientType { get => clientType; set => clientType = value; }
         public string Email { get => email; set => email = value; }
+        public string ClientId { get => clientId; set => clientId = value; }
 
 
 
@@ -36,7 +38,7 @@ namespace Project_1.BusinessLogicClasses
 
         }
 
-        public void UpdateClient(string Name, string Surname, string Cellphone, string Email, string ClientId)  //
+        public void UpdateClient(string Name, string Surname, string Cellphone, string Email, string ClientId) 
         {
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
             database.Update("Client", new[] { ("Name", Name), ("Surname", Surname), ("CellPhoneNumber", Cellphone), ("Email", Email), ("ClientType", clientType) }, ("ClientId = " + ClientId));
@@ -47,6 +49,21 @@ namespace Project_1.BusinessLogicClasses
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
             database.Delete("Client", ("ClientId = " + clientId));
         }
+
+
+        public SqlDataAdapter GetInfo()
+        {
+            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
+            return database.RetrieveData(this.GetType().Name);
+        }
+
+
+        public SqlDataAdapter GetInfo(string clientId)
+        {
+            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
+            return database.RetrieveData(this.GetType().Name, ("ClientId = " + clientId));
+        }
+
 
 
         public override string ToString()

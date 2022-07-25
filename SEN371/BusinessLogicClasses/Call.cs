@@ -30,6 +30,7 @@ namespace Project_1.BusinessLogicClasses
         public DateTime CallStarted { get => callStarted; set => callStarted = value; }
         public DateTime CallEnded { get => callEnded; set => callEnded = value; }
         public string AgentId { get => agentId; set => agentId = value; }
+        public string Description { get => description; set => description = value; }
 
         public string dateToString(DateTime date) // C# DateTime to a string in correct SQL format for DateTime
         {
@@ -39,22 +40,30 @@ namespace Project_1.BusinessLogicClasses
         public void StoreCall(DateTime start, DateTime end, string descrption, string agentId, string clientId)
         {
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
-            database.Insert("Call", new[] { ("callstarttime", dateToString(start)), ("callendtime", dateToString(end)), ("problemdiscription", descrption), ("employeeid", agentId), ("clientid", clientId) });
+            database.Insert("Call", new[] { ("callstarttime", dateToString(start)), ("callendtime", dateToString(end)), ("problemdescription", descrption), ("employeeid", agentId), ("clientid", clientId) });
         }
 
         public void StoreCall()
         {
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
-            database.Insert("Call", new[] { ("callstarttime", dateToString(this.callStarted)), ("callendtime", dateToString(this.callEnded)), ("problemdiscription", this.description), ("employeeid", this.agentId) });
+            database.Insert("Call", new[] { ("callstarttime", dateToString(this.callStarted)), ("callendtime", dateToString(this.callEnded)), ("problemdescription", this.description), ("employeeid", this.agentId) });
         }
 
         public void UpdateCall(DateTime start, DateTime end, string descrption, string agentId, string clientId, string callId)
         {
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
-            database.Update("Call", new[] { ("callstarttime", dateToString(start)), ("callendtime", dateToString(end)), ("problemdiscription", descrption), ("employeeid", agentId), ("clientid", clientId) }, ("CallId = " + callId));//Client?
+            database.Update("Call", new[] { ("callstarttime", dateToString(start)), ("callendtime", dateToString(end)), ("problemdescription", descrption), ("employeeid", agentId), ("clientid", clientId) }, ("CallId = " + callId));//Client?
         }
 
-        public SqlDataAdapter GetCallInfo()
+        
+        public SqlDataAdapter GetInfo()
+        {
+            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
+            return database.RetrieveData(this.GetType().Name);
+        }
+
+
+        public SqlDataAdapter GetInfo(string callid)
         {
             //may be a return type method as it will retrieve values from database
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
@@ -62,18 +71,7 @@ namespace Project_1.BusinessLogicClasses
             //a way to get client as a object from db can also pass condition (not nessecary for now)
             //database.RetrieveObjects(this.GetType());
 
-            return database.RetrieveData("Call");
-        }
-
-        public SqlDataAdapter GetCallInfo(string callid)
-        {
-            //may be a return type method as it will retrieve values from database
-            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
-
-            //a way to get client as a object from db can also pass condition (not nessecary for now)
-            //database.RetrieveObjects(this.GetType());
-
-            return database.RetrieveData("Call", ("ClientId = " + callid));
+            return database.RetrieveData(this.GetType().Name, ("CallId = " + callid));
         }
     }
 }

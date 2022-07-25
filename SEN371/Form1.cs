@@ -14,6 +14,8 @@ namespace Project_1
 {
     public partial class Form1 : Form
     {
+        //ToDo
+        //Contract, Worker, Sla
         public Form1()
         {
             InitializeComponent();
@@ -39,6 +41,8 @@ namespace Project_1
 
                 return;
             }
+            
+
 
             BusinessLogicClasses.PersonAddress address = new BusinessLogicClasses.PersonAddress("4", "123 Teststreet", "Validation Ville", "Certain City", "Fakeland");
             //address.Country = "South Africa";
@@ -53,8 +57,7 @@ namespace Project_1
             //client.UpdateClientInfo( "John", "Smith", "089 422 2312", "jon@vodamail.co.za", "4");
             //client.StoreClientInfo();
 
-           BusinessLogicClasses.Service service = new BusinessLogicClasses.Service("Test Discription","Service Department");
-            //service.ServiceId = "3";
+            BusinessLogicClasses.Service service = new BusinessLogicClasses.Service("Newly Created Department","Service Department");
             //database.InsertObject(service);
             //service.StoreService(service.Description);
             //service.UpdateService("1", "This has been updated");
@@ -62,7 +65,7 @@ namespace Project_1
 
 
             //add new department to database
-            BusinessLogicClasses.CallCentre callCenter = new BusinessLogicClasses.CallCentre("request no 1", "Human Resources");
+             BusinessLogicClasses.CallCentre callCenter = new BusinessLogicClasses.CallCentre("request no 1", "Human Resources");
             //callCenter.StoreDepartment(callCenter.DepartmentName);
             //callCenter.UpdateDepartment("New Human Resources", "1");
 
@@ -74,18 +77,34 @@ namespace Project_1
             //technician.StoreTechnician(technician.Name, technician.Surname, technician.Cell, technician.Email);
             //technician.StoreEmployee(technician.Name, technician.Surname, technician.EmployeeType, technician.Cell, technician.Email);
 
-            BusinessLogicClasses.IndividualClient iclient = new BusinessLogicClasses.IndividualClient("Individual Client", "is a client", "Jack", "Surname", "6", "test@gmail.com");
+            BusinessLogicClasses.IndividualClient iclient = new BusinessLogicClasses.IndividualClient("Client", "individual", "Jack", "Surname", "6", "test@gmail.com");
+            //iclient.StoreClient(iclient.Name, iclient.Surname, iclient.ClientNumber, iclient.Email, iclient.ClientType);
+            //iclient.UpdateClient("FirstName", iclient.Surname, iclient.ClientNumber, iclient.Email, "1");
 
-            //BusinessLogicClasses.Service service = new BusinessLogicClasses.Service("Test Discription")
+            BusinessLogicClasses.Call call = new BusinessLogicClasses.Call("1", DateTime.Now, DateTime.Today.AddDays(1), "1", "This is a call");
+            //call.StoreCall(call.CallStarted, call.CallEnded, call.Description, call.AgentId, call.CallId);
 
 
-            SqlDataAdapter adapter = database.RetrieveData("Service");//    <------ Returned data
+            SqlDataAdapter adapter = database.RetrieveData("Call");//    <------ Returned data
+           //SqlDataAdapter adapter = contract.DisplayInfo();//    <------ Returned data
             DataSet ds = new DataSet();
             adapter.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0]; ///// <------ Returned data
- 
-        }
 
+
+
+            //generic retrieve
+            //public SqlDataAdapter DisplayInfo()
+            //{            
+            //    DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
+            //    return database.RetrieveData(this.GetType().Name);
+            //}
+        }
+        // Form implentation:
+        BusinessLogicClasses.Contract contract = new BusinessLogicClasses.Contract("1", "Worker", "4");
+        //contract.StoreContract(contract.ContractType, contract.UserId);
+        //contract.UpdateContract(contract.ContractId, "Worker", "1");
+        //contract.DeleteContract(contract.ContractId);
         private void label1_Click(object sender, EventArgs e)
         {
 

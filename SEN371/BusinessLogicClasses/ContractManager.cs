@@ -46,13 +46,7 @@ namespace Project_1.BusinessLogicClasses
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
             database.Delete("Employee", ("EmployeeId = " + contractManagerId));
         }
-
-        public SqlDataAdapter getContractManagerInfo(string contractManagerId)
-        {
-            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
-            return database.RetrieveData("Employee", ("EmployeeId = " + contractManagerId));
-        }
-
+     
         public enum SERVICE_CONTRACT_TYPE { };
         public enum CONTRACT_STATE { };
 
@@ -68,6 +62,14 @@ namespace Project_1.BusinessLogicClasses
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
             database.Insert("ContractType", new[] { ("ContractTypeId", ContractTypeId), ("ContractTypeDescription", ContractTypeDescription), ("AvailabilityStatus", Availability) });
         }
+      
+        public void DeleteContractData(string ContractId)
+        {
+            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
+            database.Delete("ContractType",  ("ClientTypeId = " + ContractId) );
+        }
+
+
 
         public SqlDataAdapter GetContractTypeData()
         {
@@ -79,11 +81,13 @@ namespace Project_1.BusinessLogicClasses
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
             return database.RetrieveData("ContractServices");
         }
-        public void DeleteContractData(string ContractId)
+        public SqlDataAdapter getContractManagerInfo(string contractManagerId)
         {
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
-            database.Delete("ContractType",  ("ClientTypeId = " + ContractId) );
+            return database.RetrieveData("Employee", ("EmployeeId = " + contractManagerId));
         }
+
+
     }
 
 
