@@ -50,12 +50,6 @@ namespace Project_1.BusinessLogicClasses
 
 
 
-        public SqlDataAdapter GetInfo(string clientId)
-        {
-            //Used to access client data
-            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
-            return database.RetrieveData("Client", ("ClientId = " + clientId));
-        }
 
         public SqlDataAdapter GetClientInfo()
         {
@@ -63,8 +57,14 @@ namespace Project_1.BusinessLogicClasses
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
             return database.RetrieveData("Client");
         }
+        public SqlDataAdapter GetInfo(string clientId)
+        {
+            //Used to access client data
+            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
+            return database.RetrieveData("Client", ("ClientId = " + clientId));
+        }  
 
       
         }
-    }
 }
+
