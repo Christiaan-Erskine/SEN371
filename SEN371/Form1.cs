@@ -29,9 +29,9 @@ namespace Project_1
             DataAccessLayer.DataHandler database;
 
             try
-            {          
-                database = new DataAccessLayer.DataHandler(@"Server=tcp:sen371.database.windows.net,1433;Initial Catalog=PremierServiceSolutionsDB;Persist Security Info=False;User ID=SEN371Database;Password=Christiaan,Kyle,Hanno,Shammah2022;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
-
+            {
+                //database = new DataAccessLayer.DataHandler(@"Server=tcp:sen371.database.windows.net,1433;Initial Catalog=PremierServiceSolutionsDB;Persist Security Info=False;User ID=SEN371Database;Password=Christiaan,Kyle,Hanno,Shammah2022;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+                database = new DataAccessLayer.DataHandler();
                 lblConnected.Text = "Connected to Database \u2713"; //Successfully connected + ASCII check mark
                 lblConnected.ForeColor = System.Drawing.Color.Green;
             }
@@ -44,9 +44,9 @@ namespace Project_1
                 return;
             }
 
-            BusinessLogicClasses.PersonAddress address = new BusinessLogicClasses.PersonAddress("123 Teststreet", "Validation Ville", "string", "Certtain City", "Fakeland");
+            BusinessLogicClasses.PersonAddress address = new BusinessLogicClasses.PersonAddress("5", "123 Teststreet", "Validation Ville", "Certtain City", "Fakeland");
             address.Country = "South Africa";
-            address.StoreAddress(address.StreetAddress, address.Suburb, address.City, address.Country);
+            address.StoreAddress(address.PersonId, address.StreetAddress, address.Suburb, address.City, address.Country);
 
 
             //tuple array of Field and Value
