@@ -39,11 +39,22 @@ namespace Project_1.BusinessLogicClasses
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
             database.Delete("Employee", ("EmployeeId = " + serviceManagerId));
         }
-        public SqlDataAdapter getServiceManagerInfo(string serviceManagerId)
+       
+
+        public SqlDataAdapter GetInfo()
+        {
+            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
+            return database.RetrieveData("Contract");
+        }
+        public SqlDataAdapter GetInfo(string serviceManagerId)
         {
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
             return database.RetrieveData("Employee", ("EmployeeId = " + serviceManagerId));
         }
+
+
+
+
 
 
         public void GetServiceStatus()
