@@ -24,12 +24,11 @@ namespace Project_1.DataAccessLayer
             sql_connection = new SqlConnection(ConnectionString);
         }
         
-        
-                public DataHandler()
+       //Default constructor to be used by business logic layer classes 
+        public DataHandler()
         {
             // update connection string
-            //this.ConnectionString = @"Data Source=software-engineering371.database.windows.net;Initial Catalog=PremierServiceSolutions;User ID=SEN371Database;Password=Christiaan,Kyle,Hanno,Shammah2022;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-
+            this.ConnectionString = @"DataServer=tcp:sen371.database.windows.net,1433;Initial Catalog=PremierServiceSolutionsDB;Persist Security Info=False;User ID=SEN371Database;Password=Christiaan,Kyle,Hanno,Shammah2022;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30";
             sql_connection = new SqlConnection(ConnectionString);
         }
 

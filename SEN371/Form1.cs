@@ -44,6 +44,11 @@ namespace Project_1
                 return;
             }
 
+            BusinessLogicClasses.PersonAddress address = new BusinessLogicClasses.PersonAddress("123 Teststreet", "Validation Ville", "string", "Certtain City", "Fakeland");
+            address.Country = "South Africa";
+            address.StoreAddress(address.StreetAddress, address.Suburb, address.City, address.Country);
+
+
             //tuple array of Field and Value
             //database.Insert("Client", new[] { ("name", "Andy"),("surname","kennedy") });
             //database.Insert("PersonAddress", new[] { ("streetaddress", "11th_Vaenu"), ("suburb", "Edenvale"), ("City", "Gauteng"), ("country", "South-Africa"), ("personid","1")});
@@ -58,7 +63,7 @@ namespace Project_1
             //database.InsertObject(new BusinessLogicClasses.PersonAddress("9 FlowerStreet", "Edenvale", "Pretoria", "South-Africa", "1"));
             //var results = database.RetrieveObjects(typeof(BusinessLogicClasses.PersonAddress));
 
-            
+
             SqlDataAdapter adapter = database.RetrieveData("PersonAddress");//Display Records
             DataSet ds = new DataSet();
             adapter.Fill(ds);
