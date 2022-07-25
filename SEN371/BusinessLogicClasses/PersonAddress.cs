@@ -26,7 +26,24 @@ namespace Project_1.BusinessLogicClasses
             PersonId = personId;
         }
 
+        public void StoreAddress(string streetAddress, string suburb, string city, string country)
+        {
+            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
+            database.Insert("Address", new[] { ("streetaddress", streetAddress), ("suburb", suburb), ("city", city), ("country", country) });
+        }
 
+        public void UpdateAddress(string streetAddress, string suburb, string city, string country, string id)
+        {
+            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
+            database.Update("Address", new[] { ("streetaddress", streetAddress), ("suburb", suburb), ("city", city), ("country", country) }, ("ClientId = " + id) );
+        }
+
+        public void DeleteAddress(string id)
+        {
+            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
+            database.Delete("Address", ("ClientId = " + id) );
+        }
+        
         public void DisplayInfo()//||Getinfo
         {
             //Outputs a specific address for an employee or a client
@@ -35,5 +52,7 @@ namespace Project_1.BusinessLogicClasses
         {
             //set employee information
         }
+        
+        
     }
 }
