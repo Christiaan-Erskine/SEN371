@@ -45,18 +45,18 @@ namespace Project_1.BusinessLogicClasses
             database.Delete("PersonAddress", ("PersonId = " + id));
         }
         
-        public SqlDataAdapter DisplayInfo(string id)//||Getinfo
-        {
-            //Outputs a specific address for an employee or a client
-            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
-            return database.RetrieveData("PersonAddress", ("PersonId = " + id));
-        }
-        public SqlDataAdapter DisplayInfo()//||Getinfo
-        {
-            //Outputs a specific address for an employee or a client
+        public SqlDataAdapter GetInfo()
+        {      
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
             return database.RetrieveData(this.GetType().Name);
         }
+        public SqlDataAdapter GetInfo(string personId)
+        {
+            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
+            return database.RetrieveData(this.GetType().Name, ("personId = " + personId));
+        }
+
+
         public void SetInfo(string address, string suburb, string city, string country, string personId)
         {
             //set employee information

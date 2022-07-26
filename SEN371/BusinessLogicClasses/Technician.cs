@@ -45,8 +45,21 @@ namespace Project_1.BusinessLogicClasses
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
             return database.RetrieveData("Employee", ("EmployeeId = " + technicianId));
         }
-        
-        
+
+
+
+        public SqlDataAdapter GetInfo()
+        {
+            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
+            return database.RetrieveData(this.GetType().Name);
+        }
+        public SqlDataAdapter GetInfo(string technicianId)
+        {
+            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
+            return database.RetrieveData(this.GetType().Name, ("technicianId = " + technicianId));
+        }
+
+
 
         public void AssignJobRequest(string requestId, string technicianId)
         {

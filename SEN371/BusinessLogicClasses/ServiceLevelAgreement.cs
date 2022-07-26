@@ -39,5 +39,18 @@ namespace Project_1.BusinessLogicClasses
         {       
             database.Delete("ContractType", ("ContractTypeId = " + id));
         }
+
+
+        public SqlDataAdapter GetInfo()
+        {
+            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
+            return database.RetrieveData("Contract");
+        }
+        public SqlDataAdapter GetInfo(string contractId)
+        {
+            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
+            return database.RetrieveData("Contract", ("ContractId = " + contractId));
+        }
+
     }
 }
