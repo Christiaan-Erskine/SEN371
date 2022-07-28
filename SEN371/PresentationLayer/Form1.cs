@@ -41,14 +41,15 @@ namespace Project_1
 
                 return;
             }
-            
 
+            PresentationLayer.ClientDataManager form2 = new PresentationLayer.ClientDataManager();
+            form2.Show();
 
-            BusinessLogicClasses.PersonAddress address = new BusinessLogicClasses.PersonAddress("4", "123 Teststreet", "Validation Ville", "Certain City", "Fakeland");
+            BusinessLogicClasses.PersonAddress address = new BusinessLogicClasses.PersonAddress("4", "123 Demo Demo", "Validation Ville", "Certain City", "Fakeland");
             //address.Country = "South Africa";
             //database.InsertObject(address);
             //address.StoreAddress(address.PersonId, address.StreetAddress, address.Suburb, address.City, address.Country);
-            //address.UpdateAddress(address.PersonId, address.StreetAddress, address.Suburb,"Johannesburg", address.Country, address.PersonId);
+            //address.UpdateAddress(address.PersonId, address.StreetAddress, address.Suburb,"Tswane", address.Country, address.PersonId);
 
             BusinessLogicClasses.BusinessClient client = new BusinessLogicClasses.BusinessClient("John", "Smith", "5", "Business Client", "is a client", "jon@vodamail.co.za");
             //client.ClientNumber = "123 123 1234";
