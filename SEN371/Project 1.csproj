@@ -97,6 +97,12 @@
     <Compile Include="PresentationLayer\ClientDataManager.Designer.cs">
       <DependentUpon>ClientDataManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\Problem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Problem.Designer.cs">
+      <DependentUpon>Problem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PresentationLayer\Form1.resx">
@@ -104,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\ClientDataManager.resx">
       <DependentUpon>ClientDataManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Problem.resx">
+      <DependentUpon>Problem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
