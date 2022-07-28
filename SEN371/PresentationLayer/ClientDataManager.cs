@@ -19,7 +19,7 @@ namespace Project_1.PresentationLayer
 
         private void ClientDataManager_Load(object sender, EventArgs e)
         {
-            
+           
         }
     }
 }
