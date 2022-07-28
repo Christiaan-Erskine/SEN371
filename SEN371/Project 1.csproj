@@ -103,6 +103,12 @@
     <Compile Include="PresentationLayer\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\ManageCall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\ManageCall.Designer.cs">
+      <DependentUpon>ManageCall.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\Problem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\ManageCall.resx">
+      <DependentUpon>ManageCall.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Problem.resx">
       <DependentUpon>Problem.cs</DependentUpon>
