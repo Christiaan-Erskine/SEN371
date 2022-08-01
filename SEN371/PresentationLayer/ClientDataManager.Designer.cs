@@ -69,11 +69,11 @@
             // dgvOutput
             // 
             this.dgvOutput.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOutput.Location = new System.Drawing.Point(603, 142);
+            this.dgvOutput.Location = new System.Drawing.Point(545, 142);
             this.dgvOutput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvOutput.Name = "dgvOutput";
             this.dgvOutput.RowHeadersWidth = 62;
-            this.dgvOutput.Size = new System.Drawing.Size(922, 797);
+            this.dgvOutput.Size = new System.Drawing.Size(980, 793);
             this.dgvOutput.TabIndex = 0;
             // 
             // panel1
@@ -96,7 +96,7 @@
             this.panel1.Location = new System.Drawing.Point(21, 142);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(571, 793);
+            this.panel1.Size = new System.Drawing.Size(502, 793);
             this.panel1.TabIndex = 1;
             // 
             // label6
@@ -181,7 +181,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(411, 751);
+            this.btnAdd.Location = new System.Drawing.Point(377, 749);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(112, 35);
@@ -191,7 +191,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(290, 751);
+            this.btnDelete.Location = new System.Drawing.Point(256, 749);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(112, 35);
@@ -201,7 +201,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(168, 751);
+            this.btnSave.Location = new System.Drawing.Point(134, 749);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(112, 35);
@@ -211,7 +211,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(46, 751);
+            this.btnUpdate.Location = new System.Drawing.Point(12, 749);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(112, 35);
@@ -244,7 +244,12 @@
             // 
             this.cbbDepartment.AllowDrop = true;
             this.cbbDepartment.FormattingEnabled = true;
-            this.cbbDepartment.Location = new System.Drawing.Point(453, 100);
+            this.cbbDepartment.Items.AddRange(new object[] {
+            "View Service",
+            "View Call Centre",
+            "View Contract Maintenance",
+            "View Client Maintenance"});
+            this.cbbDepartment.Location = new System.Drawing.Point(448, 52);
             this.cbbDepartment.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbbDepartment.Name = "cbbDepartment";
             this.cbbDepartment.Size = new System.Drawing.Size(132, 28);
@@ -255,7 +260,13 @@
             // 
             this.cbbManagement.AllowDrop = true;
             this.cbbManagement.FormattingEnabled = true;
-            this.cbbManagement.Location = new System.Drawing.Point(310, 100);
+            this.cbbManagement.Items.AddRange(new object[] {
+            "View Call Agent",
+            "View Technician",
+            "View Services Manager",
+            "View Contract Manager",
+            "View Client Data Manager"});
+            this.cbbManagement.Location = new System.Drawing.Point(305, 52);
             this.cbbManagement.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbbManagement.Name = "cbbManagement";
             this.cbbManagement.Size = new System.Drawing.Size(132, 28);
@@ -266,7 +277,11 @@
             // 
             this.cbbReq.AllowDrop = true;
             this.cbbReq.FormattingEnabled = true;
-            this.cbbReq.Location = new System.Drawing.Point(168, 100);
+            this.cbbReq.Items.AddRange(new object[] {
+            "View All Contracts",
+            "View All Clients",
+            "View All Employees"});
+            this.cbbReq.Location = new System.Drawing.Point(163, 52);
             this.cbbReq.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbbReq.Name = "cbbReq";
             this.cbbReq.Size = new System.Drawing.Size(132, 28);
@@ -277,7 +292,12 @@
             // 
             this.cbbView.AllowDrop = true;
             this.cbbView.FormattingEnabled = true;
-            this.cbbView.Location = new System.Drawing.Point(26, 100);
+            this.cbbView.Items.AddRange(new object[] {
+            "View Business Clients",
+            "View Individual Clients",
+            "View Service level agreements",
+            "View Wrokers Contract"});
+            this.cbbView.Location = new System.Drawing.Point(21, 52);
             this.cbbView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbbView.Name = "cbbView";
             this.cbbView.Size = new System.Drawing.Size(132, 28);
@@ -386,7 +406,7 @@
             // 
             // btnLog
             // 
-            this.btnLog.Location = new System.Drawing.Point(1545, 926);
+            this.btnLog.Location = new System.Drawing.Point(1545, 890);
             this.btnLog.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLog.Name = "btnLog";
             this.btnLog.Size = new System.Drawing.Size(160, 45);
