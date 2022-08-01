@@ -115,6 +115,12 @@
     <Compile Include="PresentationLayer\Problem.Designer.cs">
       <DependentUpon>Problem.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Registration.Designer.cs">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\RunQuery.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Problem.resx">
       <DependentUpon>Problem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\RunQuery.resx">
       <DependentUpon>RunQuery.cs</DependentUpon>
