@@ -16,5 +16,30 @@ namespace Project_1.PresentationLayer
         {
             InitializeComponent();
         }
+
+        private void Search_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbbFields_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbbTable_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbxSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -43,16 +43,20 @@
             this.button3 = new System.Windows.Forms.Button();
             this.btnSQL = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOutput)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cbbDepartment
             // 
             this.cbbDepartment.AllowDrop = true;
             this.cbbDepartment.FormattingEnabled = true;
-            this.cbbDepartment.Location = new System.Drawing.Point(297, 23);
+            this.cbbDepartment.Location = new System.Drawing.Point(441, 52);
+            this.cbbDepartment.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbbDepartment.Name = "cbbDepartment";
-            this.cbbDepartment.Size = new System.Drawing.Size(89, 21);
+            this.cbbDepartment.Size = new System.Drawing.Size(132, 28);
             this.cbbDepartment.TabIndex = 24;
             this.cbbDepartment.Text = "Department";
             // 
@@ -60,9 +64,10 @@
             // 
             this.cbbManagement.AllowDrop = true;
             this.cbbManagement.FormattingEnabled = true;
-            this.cbbManagement.Location = new System.Drawing.Point(202, 23);
+            this.cbbManagement.Location = new System.Drawing.Point(301, 52);
+            this.cbbManagement.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbbManagement.Name = "cbbManagement";
-            this.cbbManagement.Size = new System.Drawing.Size(89, 21);
+            this.cbbManagement.Size = new System.Drawing.Size(132, 28);
             this.cbbManagement.TabIndex = 23;
             this.cbbManagement.Text = "Management";
             // 
@@ -70,9 +75,10 @@
             // 
             this.cbbReq.AllowDrop = true;
             this.cbbReq.FormattingEnabled = true;
-            this.cbbReq.Location = new System.Drawing.Point(107, 23);
+            this.cbbReq.Location = new System.Drawing.Point(161, 52);
+            this.cbbReq.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbbReq.Name = "cbbReq";
-            this.cbbReq.Size = new System.Drawing.Size(89, 21);
+            this.cbbReq.Size = new System.Drawing.Size(132, 28);
             this.cbbReq.TabIndex = 22;
             this.cbbReq.Text = "Requests";
             // 
@@ -80,18 +86,20 @@
             // 
             this.cbbView.AllowDrop = true;
             this.cbbView.FormattingEnabled = true;
-            this.cbbView.Location = new System.Drawing.Point(12, 23);
+            this.cbbView.Location = new System.Drawing.Point(21, 52);
+            this.cbbView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbbView.Name = "cbbView";
-            this.cbbView.Size = new System.Drawing.Size(89, 21);
+            this.cbbView.Size = new System.Drawing.Size(132, 28);
             this.cbbView.TabIndex = 21;
             this.cbbView.Text = "View";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(482, 59);
+            this.label1.Location = new System.Drawing.Point(764, 77);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 13);
+            this.label1.Size = new System.Drawing.Size(187, 20);
             this.label1.TabIndex = 20;
             this.label1.Text = "Logged-In as: Technician";
             // 
@@ -99,9 +107,10 @@
             // 
             this.lblLogo.AutoSize = true;
             this.lblLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogo.Location = new System.Drawing.Point(430, 13);
+            this.lblLogo.Location = new System.Drawing.Point(633, 14);
+            this.lblLogo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLogo.Name = "lblLogo";
-            this.lblLogo.Size = new System.Drawing.Size(325, 31);
+            this.lblLogo.Size = new System.Drawing.Size(480, 46);
             this.lblLogo.TabIndex = 19;
             this.lblLogo.Text = "Premier Service Solutions";
             // 
@@ -109,104 +118,140 @@
             // 
             this.comboBox1.AllowDrop = true;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 68);
+            this.comboBox1.Location = new System.Drawing.Point(17, 11);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(105, 21);
+            this.comboBox1.Size = new System.Drawing.Size(464, 28);
             this.comboBox1.TabIndex = 63;
             this.comboBox1.Text = "Set Job Status";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(13, 106);
+            this.textBox1.Location = new System.Drawing.Point(17, 69);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(464, 26);
             this.textBox1.TabIndex = 64;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // dgvOutput
             // 
             this.dgvOutput.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOutput.Location = new System.Drawing.Point(195, 89);
+            this.dgvOutput.Location = new System.Drawing.Point(545, 142);
+            this.dgvOutput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvOutput.Name = "dgvOutput";
-            this.dgvOutput.Size = new System.Drawing.Size(487, 323);
+            this.dgvOutput.RowHeadersWidth = 62;
+            this.dgvOutput.Size = new System.Drawing.Size(980, 793);
             this.dgvOutput.TabIndex = 65;
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(12, 415);
+            this.btnUpdate.Location = new System.Drawing.Point(17, 749);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.Size = new System.Drawing.Size(112, 35);
             this.btnUpdate.TabIndex = 84;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(93, 415);
+            this.button1.Location = new System.Drawing.Point(137, 749);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 23);
+            this.button1.Size = new System.Drawing.Size(140, 35);
             this.button1.TabIndex = 85;
             this.button1.Text = "Close Request";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(757, 196);
+            this.button2.Location = new System.Drawing.Point(1365, 52);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 29);
+            this.button2.Size = new System.Drawing.Size(160, 45);
             this.button2.TabIndex = 88;
             this.button2.Text = "Run Query";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(757, 150);
+            this.button3.Location = new System.Drawing.Point(1545, 197);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(107, 29);
+            this.button3.Size = new System.Drawing.Size(160, 45);
             this.button3.TabIndex = 87;
             this.button3.Text = "View All Requests";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // btnSQL
             // 
-            this.btnSQL.Location = new System.Drawing.Point(757, 101);
+            this.btnSQL.Location = new System.Drawing.Point(1545, 142);
+            this.btnSQL.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSQL.Name = "btnSQL";
-            this.btnSQL.Size = new System.Drawing.Size(107, 29);
+            this.btnSQL.Size = new System.Drawing.Size(160, 45);
             this.btnSQL.TabIndex = 86;
             this.btnSQL.Text = "See Job Status";
             this.btnSQL.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(757, 395);
+            this.button4.Location = new System.Drawing.Point(1545, 890);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(107, 29);
+            this.button4.Size = new System.Drawing.Size(160, 45);
             this.button4.TabIndex = 89;
             this.button4.Text = "Log Problem";
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnUpdate);
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Location = new System.Drawing.Point(21, 142);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(502, 793);
+            this.panel1.TabIndex = 90;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 44);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(117, 20);
+            this.label2.TabIndex = 86;
+            this.label2.Text = "Job List Details";
+            // 
             // Technician
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(889, 450);
+            this.ClientSize = new System.Drawing.Size(1724, 989);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnSQL);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.dgvOutput);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.cbbDepartment);
             this.Controls.Add(this.cbbManagement);
             this.Controls.Add(this.cbbReq);
             this.Controls.Add(this.cbbView);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblLogo);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Technician";
             this.Text = "Technician";
             ((System.ComponentModel.ISupportInitialize)(this.dgvOutput)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,5 +274,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnSQL;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
     }
 }
