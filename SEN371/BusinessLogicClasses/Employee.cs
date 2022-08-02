@@ -9,7 +9,7 @@ namespace Project_1.BusinessLogicClasses
 {
     public abstract class Employee : Person
     {
-        private string employeeId, employeeType, cell, email;
+        private string employeeId, cell, email;
 
         private string serviceDeoartmentId;
 
@@ -18,7 +18,6 @@ namespace Project_1.BusinessLogicClasses
             string employeeId,
             string name,
             string surname,
-            string employeeType,
             string cell,
             string email) : base(name, surname)
         {
@@ -26,14 +25,12 @@ namespace Project_1.BusinessLogicClasses
             this.Name = name;
             this.Surname = surname;
             this.email = email;
-            this.EmployeeType = employeeType;
             this.Cell = cell;
         }
 
         public string EmployeeId { get => EmployeeId1; set => EmployeeId1 = value; }
         public string ServiceDeoartmentId { get => serviceDeoartmentId; set => serviceDeoartmentId = value; }
         public string EmployeeId1 { get => employeeId; set => employeeId = value; }
-        public string EmployeeType { get => employeeType; set => employeeType = value; }
         public string Cell { get => cell; set => cell = value; }
         public string Email { get => email; set => email = value; }
 
@@ -48,16 +45,16 @@ namespace Project_1.BusinessLogicClasses
             this.serviceDeoartmentId = id;            
         }
 
-        public void StoreEmployee(string name, string surname, string employeeType, string cellPhoneNumber, string email)
+        public void StoreEmployee(string name, string surname, string cellPhoneNumber, string email)
         {
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
-            database.Insert("Employee", new[] { ("Name", name), ("Surname", surname), ("EmployeeType", employeeType), ("CellPhoneNumber", cellPhoneNumber), ("Email", email) });
+            database.Insert("Employee", new[] { ("Name", name), ("Surname", surname), ("CellPhoneNumber", cellPhoneNumber), ("Email", email) });
         }
 
-        public void UpdateEmployee(string technicianId, string name, string surname, string employeeType, string cellPhoneNumber, string email)
+        public void UpdateEmployee(string technicianId, string name, string surname, string cellPhoneNumber, string email)
         {
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
-            database.Update("Employee", new[] { ("Name", name), ("Surname", surname), ("EmployeeType", employeeType), ("CellPhoneNumber", cellPhoneNumber), ("Email", email) }, ("EmployeeId = " + technicianId));
+            database.Update("Employee", new[] { ("Name", name), ("Surname", surname), ("CellPhoneNumber", cellPhoneNumber), ("Email", email) }, ("EmployeeId = " + technicianId));
         }
 
         public void DeleteEmployee(string Id)

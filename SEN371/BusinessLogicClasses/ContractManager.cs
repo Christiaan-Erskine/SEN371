@@ -15,7 +15,7 @@ namespace Project_1.BusinessLogicClasses
         private SERVICE_CONTRACT_TYPE ServiceContractType;  //  <--- Populate
         private CONTRACT_STATE ContractState;               //  <--- Populate
 
-        public ContractManager(string contractID, string content,string employeeId,string managerName, string managerSurname, string employeeType, string cell, string email) : base(employeeId, managerName, managerSurname, employeeType, cell, email)
+        public ContractManager(string contractID, string content,string employeeId,string managerName, string managerSurname, string cell, string email) : base(employeeId, managerName, managerSurname, cell, email)
         {
             this.contractID = contractID;
             this.content = content;
@@ -32,13 +32,13 @@ namespace Project_1.BusinessLogicClasses
         public void CreateContractManager(string name, string surname, string cellPhoneNumber, string email)
         {
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
-            database.Insert("Employee", new[] {("Name", name), ("Surname", surname), ("EmployeeType", "ContractManager"), ("CellPhoneNumber", cellPhoneNumber), ("Email", email) });
+            database.Insert("Employee", new[] {("Name", name), ("Surname", surname),  ("CellPhoneNumber", cellPhoneNumber), ("Email", email) });
         }
 
         public void UpdateContractManager(string contractManagerId, string name, string surname, string cellPhoneNumber, string email)
         {
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
-            database.Update("Employee", new[] {("Name", name), ("Surname", surname), ("EmployeeType", "ContractManager"), ("CellPhoneNumber", cellPhoneNumber), ("Email", email) }, ("EmployeeId = " + contractManagerId));
+            database.Update("Employee", new[] {("Name", name), ("Surname", surname), ("CellPhoneNumber", cellPhoneNumber), ("Email", email) }, ("EmployeeId = " + contractManagerId));
         }
 
         public void DeleteContractManager(string contractManagerId)

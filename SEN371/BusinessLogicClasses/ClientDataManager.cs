@@ -13,7 +13,7 @@ namespace Project_1.BusinessLogicClasses
 
         DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
 
-        public ClientDataManager(string employeeId, string name, string surname, string clientId, string employeeType, string cell, string email) : base(employeeId, name, surname, employeeType, cell, email)
+        public ClientDataManager(string employeeId, string name, string surname, string clientId, string cell, string email) : base(employeeId, name, surname, cell, email)
         {
             this.ClientId = clientId;
         }

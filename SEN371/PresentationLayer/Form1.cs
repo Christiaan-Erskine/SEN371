@@ -45,11 +45,11 @@ namespace Project_1
             PresentationLayer.Login form2 = new PresentationLayer.Login();
             form2.Show();
 
-            BusinessLogicClasses.PersonAddress address = new BusinessLogicClasses.PersonAddress("4", "123 Demo Demo", "Validation Ville", "Certain City", "Fakeland");
+            BusinessLogicClasses.PersonAddress address = new BusinessLogicClasses.PersonAddress("4", "123 Demo Demo", "0188", "Certain City", "Fakeland");
             //address.Country = "South Africa";
             //database.InsertObject(address);
-            //address.StoreAddress(address.PersonId, address.StreetAddress, address.Suburb, address.City, address.Country);
-            //address.UpdateAddress(address.PersonId, address.StreetAddress, address.Suburb,"Tswane", address.Country, address.PersonId);
+            //address.StoreAddress(address.PersonId, address.StreetAddress, address.postalCode, address.City, address.Country);
+            //address.UpdateAddress(address.PersonId, address.StreetAddress, address.postalCode,"Tswane", address.Country, address.PersonId);
 
             BusinessLogicClasses.BusinessClient client = new BusinessLogicClasses.BusinessClient("John", "Smith", "5", "Business Client", "is a client", "jon@vodamail.co.za");
             //client.ClientNumber = "123 123 1234";
@@ -76,7 +76,7 @@ namespace Project_1
             //callCenter.StoreDepartment(callCenter.DepartmentName);
             //technician.CreateTechnician(technician.Name, technician.Surname, "0836454569", "technician@1.co.za");
             //technician.StoreTechnician(technician.Name, technician.Surname, technician.Cell, technician.Email);
-            //technician.StoreEmployee(technician.Name, technician.Surname, technician.EmployeeType, technician.Cell, technician.Email);
+            //technician.StoreEmployee(technician.Name, technician.Surname, technician.Cell, technician.Email);
 
             BusinessLogicClasses.IndividualClient iclient = new BusinessLogicClasses.IndividualClient("Client", "individual", "Jack", "Surname", "6", "test@gmail.com");
             //iclient.StoreClient(iclient.Name, iclient.Surname, iclient.ClientNumber, iclient.Email, iclient.ClientType);

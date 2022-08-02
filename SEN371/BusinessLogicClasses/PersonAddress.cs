@@ -9,34 +9,34 @@ namespace Project_1.BusinessLogicClasses
 {
     public class PersonAddress
     {
-        private string streetAddress, suburb, city, country, personId;
+        private string streetAddress, postalCode, city, country, personId;
 
         public string PersonId { get => personId; set => personId = value; }
         public string StreetAddress { get => streetAddress; set => streetAddress = value; }
-        public string Suburb { get => suburb; set => suburb = value; }
+        public string postalCode { get => postalCode; set => postalCode = value; }
         public string City { get => city; set => city = value; }
         public string Country { get => country; set => country = value; }
        
 
-        public PersonAddress(string personId, string streetAddress, string suburb, string city, string country)
+        public PersonAddress(string personId, string streetAddress, string postalCode, string city, string country)
         {
             this.streetAddress = streetAddress;
-            this.suburb = suburb;
+            this.postalCode = postalCode;
             this.city = city;
             this.country = country;
             PersonId = personId;
         }
 
-        public void StoreAddress(string personId, string streetAddress, string suburb, string city, string country)
+        public void StoreAddress(string personId, string streetAddress, string postalCode, string city, string country)
         {
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();   // Fix Person Id
-            database.Insert("PersonAddress", new[] { ("personid", personId), ("streetaddress", streetAddress), ("suburb", suburb), ("city", city), ("country", country) });
+            database.Insert("PersonAddress", new[] { ("personid", personId), ("streetaddress", streetAddress), ("postalCode", postalCode), ("city", city), ("country", country) });
         }
 
-        public void UpdateAddress(string perosnId, string streetAddress, string suburb, string city, string country, string id)
+        public void UpdateAddress(string perosnId, string streetAddress, string postalCode, string city, string country, string id)
         {
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
-            database.Update("PersonAddress", new[] { ("personid", personId), ("streetaddress", streetAddress), ("suburb", suburb), ("city", city), ("country", country) }, ("PersonId = " + id) );
+            database.Update("PersonAddress", new[] { ("personid", personId), ("streetaddress", streetAddress), ("postalCode", postalCode), ("city", city), ("country", country) }, ("PersonId = " + id) );
         }
 
         public void DeleteAddress(string id)
@@ -57,7 +57,7 @@ namespace Project_1.BusinessLogicClasses
         }
 
 
-        public void SetInfo(string address, string suburb, string city, string country, string personId)
+        public void SetInfo(string address, string postalCode, string city, string country, string personId)
         {
             //set employee information
         }           

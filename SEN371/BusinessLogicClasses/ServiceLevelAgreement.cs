@@ -28,7 +28,7 @@ namespace Project_1.BusinessLogicClasses
 
         public void UpdateService(string serviceId, string description)
         {        
-            database.Update("ContractType", new[] { ("serviceid", serviceId), ("servicedescription", description) }, ("ServiceId = " + serviceId));
+            database.Update("ContractType", new[] { ("serviceId", serviceId), ("serviceDescription", description) }, ("ServiceId = " + serviceId));
         }
         public SqlDataAdapter GetInformation()
         {
