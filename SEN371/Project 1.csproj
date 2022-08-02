@@ -153,6 +153,7 @@
     <Compile Include="PresentationLayer\Technician.designer.cs">
       <DependentUpon>Technician.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\Timer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PresentationLayer\CallCenterEmployee.resx">

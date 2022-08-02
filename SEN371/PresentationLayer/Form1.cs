@@ -85,9 +85,9 @@ namespace Project_1
             BusinessLogicClasses.Call call = new BusinessLogicClasses.Call("1", DateTime.Now, DateTime.Today.AddDays(1), "1", "This is a call");
             //call.StoreCall(call.CallStarted, call.CallEnded, call.Description, call.AgentId, call.CallId);
 
-
+            
             SqlDataAdapter adapter = database.RetrieveData("Call");//    <------ Returned data
-           //SqlDataAdapter adapter = contract.DisplayInfo();//    <------ Returned data
+            //SqlDataAdapter adapter = contract.DisplayInfo();//    <------ Returned data
             DataSet ds = new DataSet();
             adapter.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0]; ///// <------ Returned data
