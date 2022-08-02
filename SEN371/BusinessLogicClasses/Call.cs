@@ -23,6 +23,11 @@ namespace Project_1.BusinessLogicClasses
             this.agentId = agentId;
             this.description = description;
         }
+
+        public Call()
+        {
+        }
+
         //TO DO:
         //Convert DateTime to string in format DB uses
 
