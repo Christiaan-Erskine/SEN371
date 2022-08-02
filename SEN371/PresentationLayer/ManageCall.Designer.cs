@@ -268,6 +268,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ManageCall";
             this.Text = "ManageCall";
+            this.Load += new System.EventHandler(this.ManageCall_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

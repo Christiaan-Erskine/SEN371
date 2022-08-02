@@ -7,14 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Project_1.PresentationLayer
 {
     public partial class Search : Form
     {
+        public string activeTable = "Client";
         public Search()
         {
             InitializeComponent();
+
+            DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
+            SqlDataAdapter adapter = dh.RetrieveData("Client");
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dgvOutput.DataSource = ds.Tables[0]; // On start form shows client table
         }
 
         private void Search_Load(object sender, EventArgs e)

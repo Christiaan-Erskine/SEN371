@@ -110,9 +110,7 @@
             "Call Centre Employee",
             "Technician",
             "Call Centre Manager",
-            "Client Data Manager",
-            "Services Manager",
-            "Contract Manager"});
+            "Client Data Manager"});
             this.cmbEmplType.Location = new System.Drawing.Point(330, 161);
             this.cmbEmplType.Margin = new System.Windows.Forms.Padding(2);
             this.cmbEmplType.Name = "cmbEmplType";

@@ -38,9 +38,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cbxAddress = new System.Windows.Forms.CheckBox();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.btnSave = new System.Windows.Forms.Button();
@@ -98,9 +97,8 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.radioButton3);
-            this.panel1.Controls.Add(this.checkBox1);
+            this.panel1.Controls.Add(this.cbxAddress);
             this.panel1.Controls.Add(this.btnAdd);
-            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.radioButton2);
             this.panel1.Controls.Add(this.btnSave);
@@ -112,7 +110,7 @@
             this.panel1.Controls.Add(this.textBox6);
             this.panel1.Controls.Add(this.textBox5);
             this.panel1.Location = new System.Drawing.Point(10, 96);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(336, 517);
             this.panel1.TabIndex = 110;
@@ -180,15 +178,15 @@
             this.radioButton3.Text = "Client";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // cbxAddress
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(14, 239);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 73;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbxAddress.AutoSize = true;
+            this.cbxAddress.Location = new System.Drawing.Point(14, 239);
+            this.cbxAddress.Name = "cbxAddress";
+            this.cbxAddress.Size = new System.Drawing.Size(172, 17);
+            this.cbxAddress.TabIndex = 73;
+            this.cbxAddress.Text = "Person already has an Address";
+            this.cbxAddress.UseVisualStyleBackColor = true;
             // 
             // btnAdd
             // 
@@ -198,15 +196,6 @@
             this.btnAdd.TabIndex = 86;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(95, 239);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(153, 13);
-            this.label8.TabIndex = 74;
-            this.label8.Text = "Person already has an Address";
             // 
             // btnDelete
             // 
@@ -220,7 +209,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(14, 302);
+            this.radioButton2.Location = new System.Drawing.Point(14, 299);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(71, 17);
             this.radioButton2.TabIndex = 76;
@@ -241,7 +230,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(11, 257);
+            this.label9.Location = new System.Drawing.Point(7, 264);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(118, 13);
             this.label9.TabIndex = 77;
@@ -471,9 +460,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox cbxAddress;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Button btnSave;

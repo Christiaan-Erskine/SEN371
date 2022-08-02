@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Project_1.PresentationLayer
 {
     public partial class CallCenterEmployee : Form
     {
+        public string activeTable = "Client"; //The active table will be used to CRUD with the correct table, can be used for dynamic fields with on click if statement
         public CallCenterEmployee()
         {
             InitializeComponent();
@@ -40,6 +42,16 @@ namespace Project_1.PresentationLayer
             DataSet ds = new DataSet();
             adapter.Fill(ds);
             dgvOutput.DataSource = ds.Tables[0]; */
+        }
+
+        private void clientInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
+            SqlDataAdapter adapter = dh.RetrieveData("Client");
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dgvOutput.DataSource = ds.Tables[0];
+            activeTable = "Client";
         }
     }
 }

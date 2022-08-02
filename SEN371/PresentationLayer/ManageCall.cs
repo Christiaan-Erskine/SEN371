@@ -95,5 +95,10 @@ namespace Project_1.PresentationLayer
         {
             TextBoxTimer.Text = new DateTime(DateTime.Now.Ticks - starTime).ToString("HH:mm:ss:ff");                                       
         }
+
+        private void ManageCall_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

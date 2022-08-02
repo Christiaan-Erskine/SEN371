@@ -112,20 +112,6 @@ namespace Project_1.PresentationLayer
                         callCenterManager.Show();
                         break;
                     }
-                case "Contract Manager": // NO SERVICES MANAGER CLASS FORM
-                    {
-                        this.Hide();
-                        PresentationLayer.CallCenterManager callCenterManager = new PresentationLayer.CallCenterManager();
-                        callCenterManager.Show();
-                        break;
-                    }
-                case "Services Manager": // NO SERVICES MANAGER CLASS FORM
-                    {
-                        this.Hide();
-                        PresentationLayer.CallCenterManager callCenterManager = new PresentationLayer.CallCenterManager();
-                        callCenterManager.Show();
-                        break;
-                    }
             }
 
         }
