@@ -15,7 +15,7 @@ namespace Project_1.BusinessLogicClasses
 
 
 
-        public Technician(string employeeId, string name, string surname, string jobList, string employeeType, string cell, string email) : base( employeeId, name, surname, employeeType, cell, email)
+        public Technician(string employeeId, string name, string surname, string jobList, string cell, string email) : base( employeeId, name, surname, cell, email)
         {
             this.jobList = jobList;
         }
@@ -25,13 +25,13 @@ namespace Project_1.BusinessLogicClasses
         public void StoreTechnician(/*string employeeId,*/ string name, string surname, /*string jobList,*/ string cellPhoneNumber, string email)
         {
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
-            database.Insert("Employee", new[] {("Name", name), ("Surname", surname), ("EmployeeType", "Technician"), ("CellPhoneNumber", cellPhoneNumber), ("Email", email) });
+            database.Insert("Employee", new[] {("Name", name), ("Surname", surname), ("CellPhoneNumber", cellPhoneNumber), ("Email", email) });
         }
 
         public void UpdateTechnician(string technicianId, string name, string surname, string cellPhoneNumber, string email)
         {
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
-            database.Update("Employee", new[] {("Name", name), ("Surname", surname), ("EmployeeType", "Technician"), ("CellPhoneNumber", cellPhoneNumber), ("Email", email) }, ("EmployeeId = " + technicianId));
+            database.Update("Employee", new[] {("Name", name), ("Surname", surname), ("CellPhoneNumber", cellPhoneNumber), ("Email", email) }, ("EmployeeId = " + technicianId));
         }
 
         public void DeleteTechnician(string technitianId)

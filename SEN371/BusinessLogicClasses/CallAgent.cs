@@ -11,22 +11,22 @@ namespace Project_1.BusinessLogicClasses
     {
         string agentId;
         
-        public CallAgent(string agentId,string employeeId, string employeeType, string name, string surname, string cell, string email) : base(employeeId, name, surname, employeeType, cell, email)
+        public CallAgent(string agentId,string employeeId, string name, string surname, string cell, string email) : base(employeeId, name, surname, cell, email)
         {
             this.agentId = agentId;
 
         }
 
-        public void StoreEmployee(string personId, string streetAddress, string suburb, string city, string country)
+        public void StoreEmployee(string personId, string streetAddress, string city, string country)
         {
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
-            database.Insert("Employee", new[] { ("personid", personId), ("streetaddress", streetAddress), ("suburb", suburb), ("city", city), ("country", country) });
+            database.Insert("Employee", new[] { ("personid", personId), ("streetaddress", streetAddress), ("city", city), ("country", country) });
         }
 
-        public void UpdateEmployee(string employeeId, string name, string surname, string employeeType, string cell, string email)
+        public void UpdateEmployee(string employeeId, string name, string surname, string cell, string email)
         {
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
-            database.Update("Employee", new[] { ("employeeid", employeeId), ("name", name), ("surname", surname), ("employeetype", employeeType), ("cellphonenumber", cell), ("email", email) }, ("EmployeeId = " + employeeId));
+            database.Update("Employee", new[] { ("employeeid", employeeId), ("name", name), ("surname", surname), ("cellphonenumber", cell), ("email", email) }, ("EmployeeId = " + employeeId));
         }
 
         public void DeleteEmployee(string id)
