@@ -38,15 +38,34 @@ namespace Project_1.DataAccessLayer
             //lines = new string[0];
         }
 
-        //Writes the list of users to txt, overwrites existing content
+        //Appends new user to the file
+        public void AddNewUser(BusinessLogicClasses.User newUser)
+        {
+            TextWriter tw = new StreamWriter(path);
+            string newline = newUser.Username + "," + newUser.Password + "," + newUser.EmployeeType;
+            tw.WriteLine(newline);
+            tw.Close();
+
+        }
+
+        //Writes the list of users to txt, appends to existing content
         public void WriteToFile()
         {
             TextWriter tw = new StreamWriter(path);
-            foreach (BusinessLogicClasses.User user in users)
+
+           foreach (BusinessLogicClasses.User user in users)
             {
-                string newline = user.Username + "," + user.Password + "," + user.Password;
+                string newline = user.Username + "," + user.Password + "," + user.EmployeeType;
                 tw.WriteLine(newline);
             }
+
+            for(int i = 0; i < counter; i++)
+            {
+                BusinessLogicClasses.User user = users[i];
+                string newline = user.Username + "," + user.Password + "," + user.EmployeeType;
+                tw.WriteLine(newline);
+            }
+            tw.Close();
         }
 
 
