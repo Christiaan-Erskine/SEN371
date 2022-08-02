@@ -14,12 +14,15 @@ namespace Project_1.PresentationLayer
     {
         public Login()
         {
-            InitializeComponent();  
-            
+            InitializeComponent();
+
             DataAccessLayer.txtFileHandler txt = new DataAccessLayer.txtFileHandler();
-            string user = txt.users[1].Username + " " + txt.users[1].Password + " " + txt.users[1].EmployeeType;
-            MessageBox.Show(user);
+            //    string user = txt.users[0].Username + " " + txt.users[0].Password + " " + txt.users[0].EmployeeType;
+            //    MessageBox.Show(user);
+            BusinessLogicClasses.User newuser = new BusinessLogicClasses.User("3", "fsADFFSJK4%^E#&%^", "Call Manager");
+            BusinessLogicClasses.User newuser1 = new BusinessLogicClasses.User("1", "5ecurePassword!", "Client Data Manager");
             txt.WriteToFile();
+
         }
 
         private void label1_Click(object sender, EventArgs e)

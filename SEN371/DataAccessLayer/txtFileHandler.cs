@@ -27,15 +27,15 @@ namespace Project_1.DataAccessLayer
 
                 //Splits lines by comma as delimmeter into different paramaters
                 string username = cut.Split(',')[0];
-                cut = line.Remove(0, username.Length+1);
+                cut = line.Remove(0, username.Length +1);
                 string password = cut.Split(',')[0];
-                cut = line.Remove(0, password.Length+1);
+                cut = line.Remove(0, password.Length +1 +1 +1); // <------- Some logic error occurred, needs +3 too position before it sees a comma?
                 string type = cut.Split(',')[0];
 
                 //Create new user object from every line in text file
                 users.Add(new BusinessLogicClasses.User(username, password, type));
             }
-            lines = new string[0];
+            //lines = new string[0];
         }
 
         //Writes the list of users to txt, overwrites existing content
