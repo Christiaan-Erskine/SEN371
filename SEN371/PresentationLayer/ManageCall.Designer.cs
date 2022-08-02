@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.Cancel = new System.Windows.Forms.Button();
+            this.StartRecording = new System.Windows.Forms.Button();
+            this.StopRecording = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.OpenRecording = new System.Windows.Forms.Button();
+            this.SaveRecording = new System.Windows.Forms.Button();
+            this.StartCall = new System.Windows.Forms.Button();
+            this.Disconnect = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.ProblemDescriptionTextBox = new System.Windows.Forms.RichTextBox();
+            this.Save = new System.Windows.Forms.Button();
+            this.ChooseClient = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -60,33 +60,34 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Manage Call";
             // 
-            // button1
+            // Cancel
             // 
-            this.button1.Location = new System.Drawing.Point(522, 302);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Cancel";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Cancel.Location = new System.Drawing.Point(522, 302);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(75, 23);
+            this.Cancel.TabIndex = 8;
+            this.Cancel.Text = "Cancel";
+            this.Cancel.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // StartRecording
             // 
-            this.button3.Location = new System.Drawing.Point(27, 71);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(111, 23);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Start Recording";
-            this.button3.UseVisualStyleBackColor = true;
+            this.StartRecording.Location = new System.Drawing.Point(27, 71);
+            this.StartRecording.Name = "StartRecording";
+            this.StartRecording.Size = new System.Drawing.Size(111, 23);
+            this.StartRecording.TabIndex = 15;
+            this.StartRecording.Text = "Start Recording";
+            this.StartRecording.UseVisualStyleBackColor = true;
+           
             // 
-            // button4
+            // StopRecording
             // 
-            this.button4.Location = new System.Drawing.Point(27, 135);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(111, 23);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "Stop Recording";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.StopRecording.Location = new System.Drawing.Point(27, 135);
+            this.StopRecording.Name = "StopRecording";
+            this.StopRecording.Size = new System.Drawing.Size(111, 23);
+            this.StopRecording.TabIndex = 16;
+            this.StopRecording.Text = "Stop Recording";
+            this.StopRecording.UseVisualStyleBackColor = true;
+            this.StopRecording.Click += new System.EventHandler(this.button4_Click);
             // 
             // textBox3
             // 
@@ -98,44 +99,44 @@
             this.textBox3.Text = "00:00";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // button5
+            // OpenRecording
             // 
-            this.button5.Location = new System.Drawing.Point(27, 200);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(111, 23);
-            this.button5.TabIndex = 18;
-            this.button5.Text = "Open Recording";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.OpenRecording.Location = new System.Drawing.Point(27, 200);
+            this.OpenRecording.Name = "OpenRecording";
+            this.OpenRecording.Size = new System.Drawing.Size(111, 23);
+            this.OpenRecording.TabIndex = 18;
+            this.OpenRecording.Text = "Open Recording";
+            this.OpenRecording.UseVisualStyleBackColor = true;
+            this.OpenRecording.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button6
+            // SaveRecording
             // 
-            this.button6.Location = new System.Drawing.Point(27, 239);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(111, 23);
-            this.button6.TabIndex = 19;
-            this.button6.Text = "Save Recording";
-            this.button6.UseVisualStyleBackColor = true;
+            this.SaveRecording.Location = new System.Drawing.Point(27, 239);
+            this.SaveRecording.Name = "SaveRecording";
+            this.SaveRecording.Size = new System.Drawing.Size(111, 23);
+            this.SaveRecording.TabIndex = 19;
+            this.SaveRecording.Text = "Save Recording";
+            this.SaveRecording.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // StartCall
             // 
-            this.button2.Location = new System.Drawing.Point(216, 255);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 70);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "Start Call";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.StartCall.Location = new System.Drawing.Point(216, 255);
+            this.StartCall.Name = "StartCall";
+            this.StartCall.Size = new System.Drawing.Size(75, 70);
+            this.StartCall.TabIndex = 20;
+            this.StartCall.Text = "Start Call";
+            this.StartCall.UseVisualStyleBackColor = true;
+            this.StartCall.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button7
+            // Disconnect
             // 
-            this.button7.Location = new System.Drawing.Point(333, 255);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 70);
-            this.button7.TabIndex = 21;
-            this.button7.Text = "Disconnect";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.Disconnect.Location = new System.Drawing.Point(333, 255);
+            this.Disconnect.Name = "Disconnect";
+            this.Disconnect.Size = new System.Drawing.Size(75, 70);
+            this.Disconnect.TabIndex = 21;
+            this.Disconnect.Text = "Disconnect";
+            this.Disconnect.UseVisualStyleBackColor = true;
+            this.Disconnect.Click += new System.EventHandler(this.button7_Click);
             // 
             // label2
             // 
@@ -146,31 +147,31 @@
             this.label2.TabIndex = 23;
             this.label2.Text = "Problem description";
             // 
-            // richTextBox1
+            // ProblemDescriptionTextBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(181, 71);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(203, 152);
-            this.richTextBox1.TabIndex = 24;
-            this.richTextBox1.Text = "";
+            this.ProblemDescriptionTextBox.Location = new System.Drawing.Point(181, 71);
+            this.ProblemDescriptionTextBox.Name = "ProblemDescriptionTextBox";
+            this.ProblemDescriptionTextBox.Size = new System.Drawing.Size(203, 152);
+            this.ProblemDescriptionTextBox.TabIndex = 24;
+            this.ProblemDescriptionTextBox.Text = "";
             // 
-            // button8
+            // Save
             // 
-            this.button8.Location = new System.Drawing.Point(27, 278);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(111, 47);
-            this.button8.TabIndex = 25;
-            this.button8.Text = "Save";
-            this.button8.UseVisualStyleBackColor = true;
+            this.Save.Location = new System.Drawing.Point(27, 278);
+            this.Save.Name = "Save";
+            this.Save.Size = new System.Drawing.Size(111, 47);
+            this.Save.TabIndex = 25;
+            this.Save.Text = "Save";
+            this.Save.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // ChooseClient
             // 
-            this.button9.Location = new System.Drawing.Point(499, 161);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(99, 39);
-            this.button9.TabIndex = 26;
-            this.button9.Text = "Choose Client";
-            this.button9.UseVisualStyleBackColor = true;
+            this.ChooseClient.Location = new System.Drawing.Point(499, 161);
+            this.ChooseClient.Name = "ChooseClient";
+            this.ChooseClient.Size = new System.Drawing.Size(99, 39);
+            this.ChooseClient.TabIndex = 26;
+            this.ChooseClient.Text = "Choose Client";
+            this.ChooseClient.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -244,19 +245,19 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.ChooseClient);
+            this.Controls.Add(this.Save);
+            this.Controls.Add(this.ProblemDescriptionTextBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.Disconnect);
+            this.Controls.Add(this.StartCall);
+            this.Controls.Add(this.SaveRecording);
+            this.Controls.Add(this.OpenRecording);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.StopRecording);
+            this.Controls.Add(this.StartRecording);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Cancel);
             this.Name = "ManageCall";
             this.Text = "ManageCall";
             this.ResumeLayout(false);
@@ -266,18 +267,18 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button Cancel;
+        private System.Windows.Forms.Button StartRecording;
+        private System.Windows.Forms.Button StopRecording;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button OpenRecording;
+        private System.Windows.Forms.Button SaveRecording;
+        private System.Windows.Forms.Button StartCall;
+        private System.Windows.Forms.Button Disconnect;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.RichTextBox ProblemDescriptionTextBox;
+        private System.Windows.Forms.Button Save;
+        private System.Windows.Forms.Button ChooseClient;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;

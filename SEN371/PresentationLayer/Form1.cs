@@ -72,7 +72,7 @@ namespace Project_1
 
 
             //add new technician
-            BusinessLogicClasses.Technician technician = new BusinessLogicClasses.Technician("1", "Sarah", "MC-dairmond", "send reports", "Technician", "123 123 123", "tech1@yahoo.com");
+            //BusinessLogicClasses.Technician technician = new BusinessLogicClasses.Technician("1", "Sarah", "MC-dairmond", "send reports", "Technician", "123 123 123", "tech1@yahoo.com");
             //callCenter.StoreDepartment(callCenter.DepartmentName);
             //technician.CreateTechnician(technician.Name, technician.Surname, "0836454569", "technician@1.co.za");
             //technician.StoreTechnician(technician.Name, technician.Surname, technician.Cell, technician.Email);
@@ -85,9 +85,9 @@ namespace Project_1
             BusinessLogicClasses.Call call = new BusinessLogicClasses.Call("1", DateTime.Now, DateTime.Today.AddDays(1), "1", "This is a call");
             //call.StoreCall(call.CallStarted, call.CallEnded, call.Description, call.AgentId, call.CallId);
 
-
+            
             SqlDataAdapter adapter = database.RetrieveData("Call");//    <------ Returned data
-           //SqlDataAdapter adapter = contract.DisplayInfo();//    <------ Returned data
+            //SqlDataAdapter adapter = contract.DisplayInfo();//    <------ Returned data
             DataSet ds = new DataSet();
             adapter.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0]; ///// <------ Returned data
