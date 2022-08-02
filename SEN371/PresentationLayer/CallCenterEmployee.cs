@@ -13,10 +13,16 @@ namespace Project_1.PresentationLayer
 {
     public partial class CallCenterEmployee : Form
     {
-        public string activeTable = "Client"; //The active table will be used to CRUD with the correct table, can be used for dynamic fields with on click if statement
+        public string activeTable = "Call"; //The active table will be used to CRUD with the correct table, can be used for dynamic fields with on click if statement
         public CallCenterEmployee()
         {
             InitializeComponent();
+
+            BusinessLogicClasses.Call call = new BusinessLogicClasses.Call();
+            SqlDataAdapter adapter = call.GetInfo();
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dgvOutput.DataSource = ds.Tables[0];
         }
 
         private void label12_Click(object sender, EventArgs e)
@@ -36,12 +42,13 @@ namespace Project_1.PresentationLayer
         }
 
         private void callHistoryToolStripMenuItem_Click(object sender, EventArgs e)
-        {/*
+        {
             BusinessLogicClasses.Call call = new BusinessLogicClasses.Call();
-            SqlDataAdapter call = bclient.GetInfo();
+            SqlDataAdapter adapter = call.GetInfo();
             DataSet ds = new DataSet();
             adapter.Fill(ds);
-            dgvOutput.DataSource = ds.Tables[0]; */
+            dgvOutput.DataSource = ds.Tables[0];
+            activeTable = "Call";
         }
 
         private void clientInformationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -52,6 +59,17 @@ namespace Project_1.PresentationLayer
             adapter.Fill(ds);
             dgvOutput.DataSource = ds.Tables[0];
             activeTable = "Client";
+        }
+
+        private void CallCenterEmployee_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSQL_Click(object sender, EventArgs e)
+        {
+            PresentationLayer.ManageCall callManager = new PresentationLayer.ManageCall();
+            callManager.Show();
         }
     }
 }

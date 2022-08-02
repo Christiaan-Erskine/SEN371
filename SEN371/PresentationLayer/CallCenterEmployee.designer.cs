@@ -64,14 +64,14 @@
             this.label12 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStripManagement = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripDepartment = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripView = new System.Windows.Forms.ToolStripMenuItem();
             this.callHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStriRequests = new System.Windows.Forms.ToolStripMenuItem();
             this.callCentreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serviceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripManagement = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripDepartment = new System.Windows.Forms.ToolStripComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOutput)).BeginInit();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -304,6 +304,7 @@
             this.btnSQL.TabIndex = 56;
             this.btnSQL.Text = "Manage Call";
             this.btnSQL.UseVisualStyleBackColor = true;
+            this.btnSQL.Click += new System.EventHandler(this.btnSQL_Click);
             // 
             // dgvOutput
             // 
@@ -407,7 +408,7 @@
             this.panel1.Controls.Add(this.textBox6);
             this.panel1.Controls.Add(this.textBox5);
             this.panel1.Location = new System.Drawing.Point(14, 92);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(336, 517);
             this.panel1.TabIndex = 92;
@@ -426,20 +427,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(1149, 25);
             this.menuStrip1.TabIndex = 93;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // toolStripManagement
-            // 
-            this.toolStripManagement.Enabled = false;
-            this.toolStripManagement.Name = "toolStripManagement";
-            this.toolStripManagement.Size = new System.Drawing.Size(82, 23);
-            this.toolStripManagement.Text = "Management";
-            // 
-            // toolStripDepartment
-            // 
-            this.toolStripDepartment.Enabled = false;
-            this.toolStripDepartment.Name = "toolStripDepartment";
-            this.toolStripDepartment.Size = new System.Drawing.Size(82, 23);
-            this.toolStripDepartment.Text = "Department";
             // 
             // toolStripView
             // 
@@ -476,14 +463,28 @@
             // callCentreToolStripMenuItem
             // 
             this.callCentreToolStripMenuItem.Name = "callCentreToolStripMenuItem";
-            this.callCentreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.callCentreToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.callCentreToolStripMenuItem.Text = "Call Centre";
             // 
             // serviceToolStripMenuItem
             // 
             this.serviceToolStripMenuItem.Name = "serviceToolStripMenuItem";
-            this.serviceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.serviceToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.serviceToolStripMenuItem.Text = "Service";
+            // 
+            // toolStripManagement
+            // 
+            this.toolStripManagement.Enabled = false;
+            this.toolStripManagement.Name = "toolStripManagement";
+            this.toolStripManagement.Size = new System.Drawing.Size(82, 23);
+            this.toolStripManagement.Text = "Management";
+            // 
+            // toolStripDepartment
+            // 
+            this.toolStripDepartment.Enabled = false;
+            this.toolStripDepartment.Name = "toolStripDepartment";
+            this.toolStripDepartment.Size = new System.Drawing.Size(82, 23);
+            this.toolStripDepartment.Text = "Department";
             // 
             // CallCenterEmployee
             // 
@@ -507,6 +508,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Name = "CallCenterEmployee";
             this.Text = "CallCenterEmployee";
+            this.Load += new System.EventHandler(this.CallCenterEmployee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOutput)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
