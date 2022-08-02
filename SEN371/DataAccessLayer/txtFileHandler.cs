@@ -38,6 +38,7 @@ namespace Project_1.DataAccessLayer
             lines = new string[0];
         }
 
+        //Writes the list of users to txt, overwrites existing content
         public void WriteToFile()
         {
             TextWriter tw = new StreamWriter(path);

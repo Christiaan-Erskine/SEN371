@@ -13,7 +13,7 @@ namespace Project_1.BusinessLogicClasses
 
         public string PersonId { get => personId; set => personId = value; }
         public string StreetAddress { get => streetAddress; set => streetAddress = value; }
-        public string postalCode { get => postalCode; set => postalCode = value; }
+        public string PostalCode { get => postalCode; set => postalCode = value; }
         public string City { get => city; set => city = value; }
         public string Country { get => country; set => country = value; }
        

@@ -19,6 +19,7 @@ namespace Project_1.PresentationLayer
             DataAccessLayer.txtFileHandler txt = new DataAccessLayer.txtFileHandler();
             string user = txt.users[1].Username + " " + txt.users[1].Password + " " + txt.users[1].EmployeeType;
             MessageBox.Show(user);
+            txt.WriteToFile();
         }
 
         private void label1_Click(object sender, EventArgs e)
