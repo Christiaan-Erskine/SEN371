@@ -36,6 +36,9 @@ namespace Project_1.BusinessLogicClasses
             this.Description = description;
         }
 
+        public Service()
+        {
+        }
 
         public void StoreService(string description)
         {          

@@ -13,6 +13,7 @@ namespace Project_1.PresentationLayer
 {
     public partial class ClientDataManager : Form
     {
+        public string activeTable = "Client"; //The active table will be used to CRUD with the correct table, can be used for dynamic fields with on click if statement
         public ClientDataManager()
         {
             InitializeComponent();
@@ -49,10 +50,12 @@ namespace Project_1.PresentationLayer
         private void businessClientsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
-            SqlDataAdapter adapter = dh.RetrieveData("Client WHERE ClienType = Business Client"); // RetrieveData(string table, string condition = "")
+            BusinessLogicClasses.BusinessClient bclient = new BusinessLogicClasses.BusinessClient();
+            SqlDataAdapter adapter = bclient.GetInfo();
             DataSet ds = new DataSet();
             adapter.Fill(ds);
             dgvOutput.DataSource = ds.Tables[0];
+            activeTable = "Client";
         }
 
         private void clientsTableToolStripMenuItem_Click(object sender, EventArgs e)
@@ -62,15 +65,17 @@ namespace Project_1.PresentationLayer
             DataSet ds = new DataSet();
             adapter.Fill(ds);
             dgvOutput.DataSource = ds.Tables[0];
+            activeTable = "Client";
         }
 
         private void individualClientsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
-            SqlDataAdapter adapter = dh.RetrieveData("Client WHERE ClienType = Individual Client"); // RetrieveData(string table, string condition = "")
+            BusinessLogicClasses.IndividualClient iclient = new BusinessLogicClasses.IndividualClient();
+            SqlDataAdapter adapter = iclient.GetInfo();
             DataSet ds = new DataSet();
             adapter.Fill(ds);
             dgvOutput.DataSource = ds.Tables[0];
+            activeTable = "Client";
         }
 
         private void employeeTableToolStripMenuItem_Click(object sender, EventArgs e)
@@ -80,6 +85,47 @@ namespace Project_1.PresentationLayer
             DataSet ds = new DataSet();
             adapter.Fill(ds);
             dgvOutput.DataSource = ds.Tables[0];
+            activeTable = "Employee";
+        }
+
+        private void contractsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
+            SqlDataAdapter adapter = dh.RetrieveData("Contract");
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dgvOutput.DataSource = ds.Tables[0];
+            activeTable = "Contract";
+        }
+
+        private void servicesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BusinessLogicClasses.Service service = new BusinessLogicClasses.Service();
+            SqlDataAdapter adapter = service.GetInfo();
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dgvOutput.DataSource = ds.Tables[0];
+            activeTable = "Service";
+        }
+
+        private void btnContracts_Click(object sender, EventArgs e)
+        {
+            DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
+            SqlDataAdapter adapter = dh.RetrieveData("Contract"); //can't use contract parent object
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dgvOutput.DataSource = ds.Tables[0];
+            activeTable = "Contract";
+        }
+
+        private void btnService_Click(object sender, EventArgs e)
+        {
+            BusinessLogicClasses.Service service = new BusinessLogicClasses.Service();
+            SqlDataAdapter adapter = service.GetInfo();
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dgvOutput.DataSource = ds.Tables[0];
+            activeTable = "Service";
         }
 
         private void toolStripView_Click(object sender, EventArgs e)

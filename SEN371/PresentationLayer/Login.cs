@@ -51,6 +51,8 @@ namespace Project_1.PresentationLayer
             string username = txtUsername.Text;
             string password = txtPass.Text;
             string employeeType = "";
+            string tempName = "";
+            bool flagName = false, flagValid = false;
 
             DataAccessLayer.txtFileHandler txt = new DataAccessLayer.txtFileHandler();
 
@@ -61,16 +63,23 @@ namespace Project_1.PresentationLayer
                     MessageBox.Show("Success, welcome valued " + txt.users[i].EmployeeType +", \n" + "Have a great day!");
                     employeeType = txt.users[i].EmployeeType;
                     this.currentUser = txt.users[i];
+                    flagValid = true;
                     break;
                 }
                 else if (txt.users[i].Username == username && txt.users[i].Password != password)
                 {
-                    MessageBox.Show("Please enter correct password for user #" + username);
+                    flagName = true;
+                    tempName = txt.users[i].Username;
                 }
-                else //more validation
-                {
-                    //MessageBox.Show("Please enter valid credentials");
-                }
+                
+            }
+            if (flagValid == false && flagName == true)
+            {
+                MessageBox.Show("Please enter correct password for user #" + tempName);
+            }
+            else if (flagValid == false && flagValid == false)
+            {
+                MessageBox.Show("Please enter valid credentials");
             }
 
             switch(employeeType)
