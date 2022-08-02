@@ -17,39 +17,49 @@ namespace Project_1.PresentationLayer
             InitializeComponent();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnStartRecording_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void btnStopRecording_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnOpenRecording_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void btnSaveRecording_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void btnStartCall_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnDisconnect_Click(object sender, EventArgs e)
         {
-            this.Close();
+
+        }
+
+        private void btnChooseClient_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnnCancel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
