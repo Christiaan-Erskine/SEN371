@@ -82,8 +82,10 @@
     <Compile Include="BusinessLogicClasses\ServiceManager.cs" />
     <Compile Include="BusinessLogicClasses\ServiceRequest.cs" />
     <Compile Include="BusinessLogicClasses\Technician.cs" />
+    <Compile Include="BusinessLogicClasses\User.cs" />
     <Compile Include="BusinessLogicClasses\WorkersContract.cs" />
     <Compile Include="DataAccessLayer\DataHandler.cs" />
+    <Compile Include="DataAccessLayer\txtFileHandler.cs" />
     <Compile Include="PresentationLayer\CallCenterEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,8 +222,9 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="DataLayer\" />
+    <Content Include="DataLayer\Users.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

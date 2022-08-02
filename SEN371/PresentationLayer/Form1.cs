@@ -42,7 +42,7 @@ namespace Project_1
                 return;
             }
 
-            PresentationLayer.ClientDataManager form2 = new PresentationLayer.ClientDataManager();
+            PresentationLayer.Login form2 = new PresentationLayer.Login();
             form2.Show();
 
             BusinessLogicClasses.PersonAddress address = new BusinessLogicClasses.PersonAddress("4", "123 Demo Demo", "Validation Ville", "Certain City", "Fakeland");

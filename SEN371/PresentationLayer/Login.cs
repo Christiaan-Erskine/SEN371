@@ -14,8 +14,11 @@ namespace Project_1.PresentationLayer
     {
         public Login()
         {
-            InitializeComponent();    
-
+            InitializeComponent();  
+            
+            DataAccessLayer.txtFileHandler txt = new DataAccessLayer.txtFileHandler();
+            string user = txt.users[1].Username + " " + txt.users[1].Password + " " + txt.users[1].EmployeeType;
+            MessageBox.Show(user);
         }
 
         private void label1_Click(object sender, EventArgs e)
