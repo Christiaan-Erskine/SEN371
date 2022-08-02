@@ -59,14 +59,22 @@
             this.btnLog = new System.Windows.Forms.Button();
             this.lblLogOut = new System.Windows.Forms.LinkLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStriRequests = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripManagement = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripDepartment = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripView = new System.Windows.Forms.ToolStripMenuItem();
             this.businessClientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.individualClientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientsTableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeeTableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStriRequests = new System.Windows.Forms.ToolStripMenuItem();
+            this.contractsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.servicesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripManagement = new System.Windows.Forms.ToolStripMenuItem();
+            this.callAgentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contractMaintananceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.serviceMaintananceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.technicianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripDepartment = new System.Windows.Forms.ToolStripMenuItem();
+            this.callCentreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contractMaintananceToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOutput)).BeginInit();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -266,6 +274,7 @@
             this.btnContracts.TabIndex = 9;
             this.btnContracts.Text = "Show Contracts";
             this.btnContracts.UseVisualStyleBackColor = true;
+            this.btnContracts.Click += new System.EventHandler(this.btnContracts_Click);
             // 
             // btnUpdtSelecct
             // 
@@ -338,6 +347,7 @@
             this.btnService.TabIndex = 17;
             this.btnService.Text = "View Service History";
             this.btnService.UseVisualStyleBackColor = true;
+            this.btnService.Click += new System.EventHandler(this.btnService_Click);
             // 
             // btnLog
             // 
@@ -371,38 +381,9 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(1149, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(1149, 24);
             this.menuStrip1.TabIndex = 94;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // toolStriRequests
-            // 
-            this.toolStriRequests.Items.AddRange(new object[] {
-            "Services",
-            "Contract"});
-            this.toolStriRequests.Name = "toolStriRequests";
-            this.toolStriRequests.Size = new System.Drawing.Size(82, 23);
-            this.toolStriRequests.Text = "Requests";
-            // 
-            // toolStripManagement
-            // 
-            this.toolStripManagement.Items.AddRange(new object[] {
-            "Call Agent",
-            "Services Manager",
-            "Contract Manager",
-            "Technician"});
-            this.toolStripManagement.Name = "toolStripManagement";
-            this.toolStripManagement.Size = new System.Drawing.Size(82, 23);
-            this.toolStripManagement.Text = "Management";
-            // 
-            // toolStripDepartment
-            // 
-            this.toolStripDepartment.Items.AddRange(new object[] {
-            "Contract Maintenance",
-            "Call Centre"});
-            this.toolStripDepartment.Name = "toolStripDepartment";
-            this.toolStripDepartment.Size = new System.Drawing.Size(82, 23);
-            this.toolStripDepartment.Text = "Department";
             // 
             // toolStripView
             // 
@@ -412,36 +393,115 @@
             this.clientsTableToolStripMenuItem,
             this.employeeTableToolStripMenuItem});
             this.toolStripView.Name = "toolStripView";
-            this.toolStripView.Size = new System.Drawing.Size(44, 23);
+            this.toolStripView.Size = new System.Drawing.Size(44, 22);
             this.toolStripView.Text = "View";
             // 
             // businessClientsToolStripMenuItem
             // 
             this.businessClientsToolStripMenuItem.Name = "businessClientsToolStripMenuItem";
-            this.businessClientsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.businessClientsToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.businessClientsToolStripMenuItem.Text = "Business Clients";
             this.businessClientsToolStripMenuItem.Click += new System.EventHandler(this.businessClientsToolStripMenuItem_Click);
             // 
             // individualClientsToolStripMenuItem
             // 
             this.individualClientsToolStripMenuItem.Name = "individualClientsToolStripMenuItem";
-            this.individualClientsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.individualClientsToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.individualClientsToolStripMenuItem.Text = "Individual Clients";
             this.individualClientsToolStripMenuItem.Click += new System.EventHandler(this.individualClientsToolStripMenuItem_Click);
             // 
             // clientsTableToolStripMenuItem
             // 
             this.clientsTableToolStripMenuItem.Name = "clientsTableToolStripMenuItem";
-            this.clientsTableToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clientsTableToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.clientsTableToolStripMenuItem.Text = "Clients Table";
             this.clientsTableToolStripMenuItem.Click += new System.EventHandler(this.clientsTableToolStripMenuItem_Click);
             // 
             // employeeTableToolStripMenuItem
             // 
             this.employeeTableToolStripMenuItem.Name = "employeeTableToolStripMenuItem";
-            this.employeeTableToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.employeeTableToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.employeeTableToolStripMenuItem.Text = "Employee Table";
             this.employeeTableToolStripMenuItem.Click += new System.EventHandler(this.employeeTableToolStripMenuItem_Click);
+            // 
+            // toolStriRequests
+            // 
+            this.toolStriRequests.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.contractsToolStripMenuItem,
+            this.servicesToolStripMenuItem});
+            this.toolStriRequests.Name = "toolStriRequests";
+            this.toolStriRequests.Size = new System.Drawing.Size(66, 22);
+            this.toolStriRequests.Text = "Requests";
+            // 
+            // contractsToolStripMenuItem
+            // 
+            this.contractsToolStripMenuItem.Name = "contractsToolStripMenuItem";
+            this.contractsToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.contractsToolStripMenuItem.Text = "Contracts";
+            this.contractsToolStripMenuItem.Click += new System.EventHandler(this.contractsToolStripMenuItem_Click);
+            // 
+            // servicesToolStripMenuItem
+            // 
+            this.servicesToolStripMenuItem.Name = "servicesToolStripMenuItem";
+            this.servicesToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.servicesToolStripMenuItem.Text = "Services";
+            this.servicesToolStripMenuItem.Click += new System.EventHandler(this.servicesToolStripMenuItem_Click);
+            // 
+            // toolStripManagement
+            // 
+            this.toolStripManagement.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.callAgentToolStripMenuItem,
+            this.contractMaintananceToolStripMenuItem,
+            this.serviceMaintananceToolStripMenuItem,
+            this.technicianToolStripMenuItem});
+            this.toolStripManagement.Name = "toolStripManagement";
+            this.toolStripManagement.Size = new System.Drawing.Size(90, 22);
+            this.toolStripManagement.Text = "Management";
+            // 
+            // callAgentToolStripMenuItem
+            // 
+            this.callAgentToolStripMenuItem.Name = "callAgentToolStripMenuItem";
+            this.callAgentToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.callAgentToolStripMenuItem.Text = "Call Agent";
+            // 
+            // contractMaintananceToolStripMenuItem
+            // 
+            this.contractMaintananceToolStripMenuItem.Name = "contractMaintananceToolStripMenuItem";
+            this.contractMaintananceToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.contractMaintananceToolStripMenuItem.Text = "Contract Maintanance";
+            // 
+            // serviceMaintananceToolStripMenuItem
+            // 
+            this.serviceMaintananceToolStripMenuItem.Name = "serviceMaintananceToolStripMenuItem";
+            this.serviceMaintananceToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.serviceMaintananceToolStripMenuItem.Text = "Service Maintanance";
+            // 
+            // technicianToolStripMenuItem
+            // 
+            this.technicianToolStripMenuItem.Name = "technicianToolStripMenuItem";
+            this.technicianToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.technicianToolStripMenuItem.Text = "Technician";
+            // 
+            // toolStripDepartment
+            // 
+            this.toolStripDepartment.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.callCentreToolStripMenuItem,
+            this.contractMaintananceToolStripMenuItem1});
+            this.toolStripDepartment.Name = "toolStripDepartment";
+            this.toolStripDepartment.Size = new System.Drawing.Size(82, 22);
+            this.toolStripDepartment.Text = "Department";
+            // 
+            // callCentreToolStripMenuItem
+            // 
+            this.callCentreToolStripMenuItem.Name = "callCentreToolStripMenuItem";
+            this.callCentreToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.callCentreToolStripMenuItem.Text = "Call Centre";
+            // 
+            // contractMaintananceToolStripMenuItem1
+            // 
+            this.contractMaintananceToolStripMenuItem1.Name = "contractMaintananceToolStripMenuItem1";
+            this.contractMaintananceToolStripMenuItem1.Size = new System.Drawing.Size(192, 22);
+            this.contractMaintananceToolStripMenuItem1.Text = "Contract Maintanance";
             // 
             // ClientDataManager
             // 
@@ -511,13 +571,21 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripComboBox toolStriRequests;
-        private System.Windows.Forms.ToolStripComboBox toolStripManagement;
-        private System.Windows.Forms.ToolStripComboBox toolStripDepartment;
         private System.Windows.Forms.ToolStripMenuItem toolStripView;
         private System.Windows.Forms.ToolStripMenuItem businessClientsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem individualClientsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientsTableToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem employeeTableToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStriRequests;
+        private System.Windows.Forms.ToolStripMenuItem contractsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem servicesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripManagement;
+        private System.Windows.Forms.ToolStripMenuItem callAgentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem contractMaintananceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem serviceMaintananceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem technicianToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripDepartment;
+        private System.Windows.Forms.ToolStripMenuItem callCentreToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem contractMaintananceToolStripMenuItem1;
     }
 }

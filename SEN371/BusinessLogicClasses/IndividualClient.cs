@@ -17,6 +17,10 @@ namespace Project_1.BusinessLogicClasses
             this.clientInfo = clientInfo;
         }
 
+        public IndividualClient()
+        {
+        }
+
         public string ClientType { get => clientType; set => clientType = value; }
         public string ClientInfo { get => clientInfo; set => clientInfo = value; }
 
@@ -48,20 +52,17 @@ namespace Project_1.BusinessLogicClasses
 
         }
 
-
-
-
         public SqlDataAdapter GetClientInfo()
         {
             //Used to access all clients data
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
             return database.RetrieveData("Client");
         }
-        public SqlDataAdapter GetInfo(string clientId)
+        public SqlDataAdapter GetInfo()
         {
             //Used to access client data
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
-            return database.RetrieveData("Client", ("ClientId = " + clientId));
+            return database.RetrieveData("Client", ("ClientType = 'Individual Client'"));
         }  
     }
 }

@@ -18,6 +18,11 @@ namespace Project_1.BusinessLogicClasses
             this.email = email;
         }
 
+        public Client() : base()
+        {
+
+        }
+
         public string ClientNumber { get => clientNumber; set => clientNumber = value; }
         public string ClientType { get => clientType; set => clientType = value; }
         public string Email { get => email; set => email = value; }

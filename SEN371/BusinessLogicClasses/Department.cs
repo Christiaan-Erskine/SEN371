@@ -20,6 +20,11 @@ namespace Project_1.BusinessLogicClasses
             this.depName = departmentName;
         }
 
+        public Department()
+        {
+            
+        }
+
         public string DepartmentName { get => depName; set => depName = value; }
 
 

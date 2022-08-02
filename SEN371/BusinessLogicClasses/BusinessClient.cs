@@ -17,6 +17,10 @@ namespace Project_1.BusinessLogicClasses
             this.clientEmail = clientEmail;
         }
 
+        public BusinessClient()
+        {
+        }
+
         public string ClientInfo { get => clientInfo; set => clientInfo = value; }
 
         public void StoreClientInfo(string Name, string Surname, string Cellphone, string Email)
@@ -48,7 +52,7 @@ namespace Project_1.BusinessLogicClasses
         public SqlDataAdapter GetInfo()
         {
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
-            return database.RetrieveData(this.GetType().Name);
+            return database.RetrieveData("Client WHERE ClientType = 'Business Client'");
         }
 
         public SqlDataAdapter GetInfo(string clientid)

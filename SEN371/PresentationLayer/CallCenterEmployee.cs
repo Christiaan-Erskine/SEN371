@@ -32,5 +32,14 @@ namespace Project_1.PresentationLayer
             Problem problem = new Problem();
             problem.Show();
         }
+
+        private void callHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {/*
+            BusinessLogicClasses.Call call = new BusinessLogicClasses.Call();
+            SqlDataAdapter call = bclient.GetInfo();
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dgvOutput.DataSource = ds.Tables[0]; */
+        }
     }
 }

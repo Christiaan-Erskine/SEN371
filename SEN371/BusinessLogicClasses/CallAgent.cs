@@ -38,7 +38,7 @@ namespace Project_1.BusinessLogicClasses
         public SqlDataAdapter GetInfo()
         {
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
-            return database.RetrieveData(this.GetType().Name);
+            return database.RetrieveData("Employee");
         }
 
 
