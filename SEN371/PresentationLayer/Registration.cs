@@ -48,8 +48,11 @@ namespace Project_1.PresentationLayer
             {
                 MessageBox.Show(error.Message);
             }
-            finally
-            {/*
+            finally //Errors about NULL dields even if everything has been filled, disabled for testing
+            {
+                
+                
+                /*
                 if(userType == "Call centre")
                 {
                     CallCenterEmployee callCenterEmployee = new CallCenterEmployee();

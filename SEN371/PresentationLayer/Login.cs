@@ -12,6 +12,7 @@ namespace Project_1.PresentationLayer
 {
     public partial class Login : Form
     {
+        public BusinessLogicClasses.User currentUser; // The current user information (such as EployeeId) can be passed to different forms
         public Login()
         {
             InitializeComponent();
@@ -59,15 +60,16 @@ namespace Project_1.PresentationLayer
                 {
                     MessageBox.Show("Success, welcome valued " + txt.users[i].EmployeeType +", \n" + "Have a great day!");
                     employeeType = txt.users[i].EmployeeType;
+                    this.currentUser = txt.users[i];
                     break;
                 }
                 else if (txt.users[i].Username == username && txt.users[i].Password != password)
                 {
                     MessageBox.Show("Please enter correct password for user #" + username);
                 }
-                else
+                else //more validation
                 {
-                    MessageBox.Show("Please enter valid credentials");
+                    //MessageBox.Show("Please enter valid credentials");
                 }
             }
 
@@ -115,24 +117,14 @@ namespace Project_1.PresentationLayer
                         callCenterManager.Show();
                         break;
                     }
-
-
             }
 
         }
-        /*
-         
-
-
-
-
-
-         */
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             PresentationLayer.Registration Register = new PresentationLayer.Registration();
-            Register.Show();
+            Register.Show(); // Only a popup, Does not close Login
         }
     }
 }

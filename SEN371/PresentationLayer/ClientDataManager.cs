@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Project_1.PresentationLayer
 {
@@ -19,7 +20,11 @@ namespace Project_1.PresentationLayer
 
         private void ClientDataManager_Load(object sender, EventArgs e)
         {
-           
+            DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
+            SqlDataAdapter adapter = dh.RetrieveData("Client");
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dgvOutput.DataSource = ds.Tables[0]; // On start form shows client table
         }
 
         private void btnLog_Click(object sender, EventArgs e)
