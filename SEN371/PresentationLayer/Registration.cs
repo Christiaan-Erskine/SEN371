@@ -37,7 +37,10 @@ namespace Project_1.PresentationLayer
                 }
                 else
                 {
-                    //Store values in some form of strage
+                    BusinessLogicClasses.User newUser = new BusinessLogicClasses.User(txtUsername.Text,txtPass.Text,cmbEmplType.Text);
+                    DataAccessLayer.txtFileHandler th = new DataAccessLayer.txtFileHandler();
+                    th.users.Add(newUser);
+                    th.WriteToFile();
                 }
                 
             }
@@ -46,7 +49,7 @@ namespace Project_1.PresentationLayer
                 MessageBox.Show(error.Message);
             }
             finally
-            {
+            {/*
                 if(userType == "Call centre")
                 {
                     CallCenterEmployee callCenterEmployee = new CallCenterEmployee();
@@ -83,7 +86,7 @@ namespace Project_1.PresentationLayer
                 //if (userType == "Contract Manager")
                 //{
 
-                //}
+                //}*/
             }
             
         }

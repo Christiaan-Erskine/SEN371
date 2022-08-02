@@ -47,8 +47,9 @@ namespace Project_1.PresentationLayer
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string username = textBox1.Text;
-            string password = textBox2.Text;
+            string username = txtUsername.Text;
+            string password = txtPass.Text;
+            string employeeType = "";
 
             DataAccessLayer.txtFileHandler txt = new DataAccessLayer.txtFileHandler();
 
@@ -57,6 +58,7 @@ namespace Project_1.PresentationLayer
                 if (txt.users[i].Username == username && txt.users[i].Password == password)
                 {
                     MessageBox.Show("Success, welcome valued " + txt.users[i].EmployeeType +", \n" + "Have a great day!");
+                    employeeType = txt.users[i].EmployeeType;
                     break;
                 }
                 else if (txt.users[i].Username == username && txt.users[i].Password != password)
@@ -69,7 +71,63 @@ namespace Project_1.PresentationLayer
                 }
             }
 
+            switch(employeeType)
+            {
+                case "Call Centre Employee":
+                    {
+                        this.Hide();
+                        PresentationLayer.CallCenterEmployee callCenterEmployee = new PresentationLayer.CallCenterEmployee();
+                        callCenterEmployee.Show();
+                        break;
+                    }
+                case "Call Centre Manager":
+                    {
+                        this.Hide();
+                        PresentationLayer.CallCenterManager callCenterManager = new PresentationLayer.CallCenterManager();
+                        callCenterManager.Show();
+                        break;
+                    }
+                case "Technician":
+                    {
+                        this.Hide();
+                        PresentationLayer.Technician technician = new PresentationLayer.Technician();
+                        technician.Show();
+                        break;
+                    }
+                case "Client Data Manager":
+                    {
+                        this.Hide();
+                        PresentationLayer.ClientDataManager callCenterManager = new PresentationLayer.ClientDataManager();
+                        callCenterManager.Show();
+                        break;
+                    }
+                case "Contract Manager": // NO SERVICES MANAGER CLASS FORM
+                    {
+                        this.Hide();
+                        PresentationLayer.CallCenterManager callCenterManager = new PresentationLayer.CallCenterManager();
+                        callCenterManager.Show();
+                        break;
+                    }
+                case "Services Manager": // NO SERVICES MANAGER CLASS FORM
+                    {
+                        this.Hide();
+                        PresentationLayer.CallCenterManager callCenterManager = new PresentationLayer.CallCenterManager();
+                        callCenterManager.Show();
+                        break;
+                    }
+
+
+            }
+
         }
+        /*
+         
+
+
+
+
+
+         */
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

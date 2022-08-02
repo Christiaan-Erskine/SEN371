@@ -43,6 +43,7 @@ namespace Project_1.DataAccessLayer
         {
             TextWriter tw = new StreamWriter(path);
             string newline = newUser.Username + "," + newUser.Password + "," + newUser.EmployeeType;
+
             tw.WriteLine(newline);
             tw.Close();
 
@@ -65,6 +66,24 @@ namespace Project_1.DataAccessLayer
                 string newline = user.Username + "," + user.Password + "," + user.EmployeeType;
                 tw.WriteLine(newline);
             }
+
+            tw.Close();
+        }
+
+        public void MockData()
+        {
+            TextWriter tw = new StreamWriter(path);
+
+            BusinessLogicClasses.User newuser1 = new BusinessLogicClasses.User("1", "5ecurePassword!", "Client Data Manager");
+            BusinessLogicClasses.User newuser2 = new BusinessLogicClasses.User("2", "jim1982", "Technician");
+            BusinessLogicClasses.User newuser3 = new BusinessLogicClasses.User("3", "Dave1234", "Callcentre Employee");
+
+            users.Add(newuser1);
+            users.Add(newuser2);
+            users.Add(newuser3);
+
+            WriteToFile();
+
             tw.Close();
         }
 
