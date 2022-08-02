@@ -35,11 +35,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSurname = new System.Windows.Forms.TextBox();
+            this.txtType = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtCellPhone = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -88,6 +88,7 @@
             this.dgvOutput.RowHeadersWidth = 62;
             this.dgvOutput.Size = new System.Drawing.Size(653, 515);
             this.dgvOutput.TabIndex = 0;
+            this.dgvOutput.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOutput_CellContentClick);
             // 
             // panel1
             // 
@@ -97,11 +98,11 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtSurname);
+            this.panel1.Controls.Add(this.txtType);
+            this.panel1.Controls.Add(this.txtEmail);
+            this.panel1.Controls.Add(this.txtCellPhone);
+            this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnSave);
@@ -161,45 +162,45 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "Name";
             // 
-            // textBox5
+            // txtSurname
             // 
-            this.textBox5.Location = new System.Drawing.Point(5, 60);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(322, 20);
-            this.textBox5.TabIndex = 12;
+            this.txtSurname.Location = new System.Drawing.Point(5, 60);
+            this.txtSurname.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(322, 20);
+            this.txtSurname.TabIndex = 12;
             // 
-            // textBox4
+            // txtType
             // 
-            this.textBox4.Location = new System.Drawing.Point(5, 94);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(322, 20);
-            this.textBox4.TabIndex = 11;
+            this.txtType.Location = new System.Drawing.Point(5, 94);
+            this.txtType.Margin = new System.Windows.Forms.Padding(2);
+            this.txtType.Name = "txtType";
+            this.txtType.Size = new System.Drawing.Size(322, 20);
+            this.txtType.TabIndex = 11;
             // 
-            // textBox3
+            // txtEmail
             // 
-            this.textBox3.Location = new System.Drawing.Point(5, 127);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(322, 20);
-            this.textBox3.TabIndex = 10;
+            this.txtEmail.Location = new System.Drawing.Point(5, 127);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(322, 20);
+            this.txtEmail.TabIndex = 10;
             // 
-            // textBox2
+            // txtCellPhone
             // 
-            this.textBox2.Location = new System.Drawing.Point(5, 161);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(322, 20);
-            this.textBox2.TabIndex = 9;
+            this.txtCellPhone.Location = new System.Drawing.Point(5, 161);
+            this.txtCellPhone.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCellPhone.Name = "txtCellPhone";
+            this.txtCellPhone.Size = new System.Drawing.Size(322, 20);
+            this.txtCellPhone.TabIndex = 9;
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.Location = new System.Drawing.Point(5, 26);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(322, 20);
-            this.textBox1.TabIndex = 8;
+            this.txtName.Location = new System.Drawing.Point(5, 26);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(322, 20);
+            this.txtName.TabIndex = 8;
             // 
             // btnAdd
             // 
@@ -567,11 +568,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSurname;
+        private System.Windows.Forms.TextBox txtType;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtCellPhone;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripView;
         private System.Windows.Forms.ToolStripMenuItem businessClientsToolStripMenuItem;

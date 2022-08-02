@@ -145,6 +145,21 @@ namespace Project_1.PresentationLayer
                 bclient.Email = dgvOutput.CurrentRow.Cells[4].Value.ToString();
                 bclient.ClientType = dgvOutput.CurrentRow.Cells[5].Value.ToString();
                 MessageBox.Show("Newly Created Client Object:\n" + bclient.ClientId + " " + bclient.Name + " " + bclient.Surname + " " + bclient.ClientNumber + " " + bclient.Email + " " + bclient.ClientType);
+
+            }
+        }
+
+        private void dgvOutput_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (activeTable == "Client")
+            {
+                BusinessLogicClasses.BusinessClient bclient = new BusinessLogicClasses.BusinessClient();
+                bclient.ClientId = dgvOutput.CurrentRow.Cells[0].Value.ToString();
+                txtName.Text = bclient.Name = dgvOutput.CurrentRow.Cells[1].Value.ToString();
+                txtSurname.Text = bclient.Surname = dgvOutput.CurrentRow.Cells[2].Value.ToString();
+                txtCellPhone.Text = bclient.ClientNumber = dgvOutput.CurrentRow.Cells[3].Value.ToString();
+                txtEmail.Text = bclient.Email = dgvOutput.CurrentRow.Cells[4].Value.ToString();
+                txtType.Text = bclient.ClientType = dgvOutput.CurrentRow.Cells[5].Value.ToString();
             }
         }
     }
