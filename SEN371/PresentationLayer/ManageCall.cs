@@ -46,5 +46,10 @@ namespace Project_1.PresentationLayer
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

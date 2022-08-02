@@ -132,6 +132,7 @@
             this.button2.TabIndex = 88;
             this.button2.Text = "Run Query";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -142,6 +143,7 @@
             this.button3.TabIndex = 87;
             this.button3.Text = "View All Requests";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnSQL
             // 
@@ -162,6 +164,7 @@
             this.button4.TabIndex = 89;
             this.button4.Text = "Log Problem";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel1
             // 
@@ -189,6 +192,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripView,
@@ -203,24 +207,36 @@
             // 
             // toolStripView
             // 
+            this.toolStripView.Enabled = false;
             this.toolStripView.Name = "toolStripView";
             this.toolStripView.Size = new System.Drawing.Size(121, 33);
             this.toolStripView.Text = "View";
             // 
             // toolStriRequests
             // 
+            this.toolStriRequests.Enabled = false;
             this.toolStriRequests.Name = "toolStriRequests";
             this.toolStriRequests.Size = new System.Drawing.Size(121, 33);
             this.toolStriRequests.Text = "Requests";
             // 
             // toolStripManagement
             // 
+            this.toolStripManagement.Items.AddRange(new object[] {
+            "Call Agent",
+            "Services Manager",
+            "Contract Manager",
+            "Client Data manager"});
             this.toolStripManagement.Name = "toolStripManagement";
             this.toolStripManagement.Size = new System.Drawing.Size(121, 33);
             this.toolStripManagement.Text = "Management";
             // 
             // toolStripDepartment
             // 
+            this.toolStripDepartment.Items.AddRange(new object[] {
+            "Client Maintenance",
+            "Contract Maintenance",
+            "Call Centre",
+            "Service Department"});
             this.toolStripDepartment.Name = "toolStripDepartment";
             this.toolStripDepartment.Size = new System.Drawing.Size(121, 33);
             this.toolStripDepartment.Text = "Department";

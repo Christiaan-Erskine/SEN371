@@ -287,6 +287,7 @@
             this.button5.TabIndex = 61;
             this.button5.Text = "Log Problem";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -469,24 +470,32 @@
             // 
             // toolStripView
             // 
+            this.toolStripView.Items.AddRange(new object[] {
+            "Client Information",
+            "Call History"});
             this.toolStripView.Name = "toolStripView";
             this.toolStripView.Size = new System.Drawing.Size(121, 33);
             this.toolStripView.Text = "View";
             // 
             // toolStriRequests
             // 
+            this.toolStriRequests.Items.AddRange(new object[] {
+            "Service",
+            "Call centre"});
             this.toolStriRequests.Name = "toolStriRequests";
             this.toolStriRequests.Size = new System.Drawing.Size(121, 33);
             this.toolStriRequests.Text = "Requests";
             // 
             // toolStripManagement
             // 
+            this.toolStripManagement.Enabled = false;
             this.toolStripManagement.Name = "toolStripManagement";
             this.toolStripManagement.Size = new System.Drawing.Size(121, 33);
             this.toolStripManagement.Text = "Management";
             // 
             // toolStripDepartment
             // 
+            this.toolStripDepartment.Enabled = false;
             this.toolStripDepartment.Name = "toolStripDepartment";
             this.toolStripDepartment.Size = new System.Drawing.Size(121, 33);
             this.toolStripDepartment.Text = "Department";

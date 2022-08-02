@@ -15,6 +15,7 @@ namespace Project_1.PresentationLayer
         public Technician()
         {
             InitializeComponent();
+           
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -55,6 +56,27 @@ namespace Project_1.PresentationLayer
         private void cbbView_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Problem problem = new Problem();
+            problem.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            RunQuery runQuery = new RunQuery();
+            runQuery.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //BusinessLogicClasses.Technician technician = new BusinessLogicClasses.Technician();
+            //callCenter.StoreDepartment(callCenter.DepartmentName);
+            //technician.CreateTechnician(technician.Name, technician.Surname, "0836454569", "technician@1.co.za");
+            //technician.StoreTechnician(technician.Name, technician.Surname, technician.Cell, technician.Email);
+            //technician.StoreEmployee(technician.Name, technician.Surname, technician.EmployeeType, technician.Cell, technician.Email);
         }
     }
 }
