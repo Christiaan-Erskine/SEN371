@@ -19,13 +19,12 @@ namespace Project_1
             Application.SetCompatibleTextRenderingDefault(false);
 
 
-            
+
             //Application.Run(new Form1());
 
-            Application.Run(new PresentationLayer.ManageCall());
-            //Application.Run(new PresentationLayer.Search());
-            //Application.Run(new PresentationLayer.CallCenterEmployee());
+            //Application.Run(new PresentationLayer.ManageCall());
 
+            Application.Run(new PresentationLayer.Login());
         }
     }
 }

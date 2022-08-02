@@ -88,7 +88,7 @@ namespace Project_1.PresentationLayer
         
         private void btnnCancel_Click(object sender, EventArgs e)
         {
-
+            this.Dispose();
         }
 
         private void timer_Tick(object sender, EventArgs e)     

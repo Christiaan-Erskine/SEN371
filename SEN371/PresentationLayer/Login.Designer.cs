@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.Load += new System.EventHandler(this.Login_Load);
+            
+
             this.btnLogin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
@@ -44,7 +47,7 @@
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "Submit";
             this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.button1_Click);
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // label1
             // 
@@ -64,6 +67,10 @@
             this.txtUsername.Size = new System.Drawing.Size(239, 20);
             this.txtUsername.TabIndex = 2;
             this.txtUsername.Text = "Username";
+
+            this.txtUsername.Enter += new System.EventHandler(this.textBoxUsername_Enter);
+            this.txtUsername.Leave += new System.EventHandler(this.textBoxUsername_Leave);
+            
             // 
             // txtPass
             // 
@@ -72,6 +79,10 @@
             this.txtPass.Size = new System.Drawing.Size(239, 20);
             this.txtPass.TabIndex = 3;
             this.txtPass.Text = "Password";
+
+            this.txtPass.Enter += new System.EventHandler(this.textBoxPass_Enter);
+            this.txtPass.Leave += new System.EventHandler(this.textBoxPass_Leave);
+                  
             // 
             // label3
             // 
