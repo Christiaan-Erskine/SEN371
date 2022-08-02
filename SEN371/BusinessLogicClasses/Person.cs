@@ -16,7 +16,7 @@ namespace Project_1.BusinessLogicClasses
             this.name = Name;
             this.surname = Surname;
         }
-
+        public Person() { }
         public string Name { get => name; set => name = value; }
         public string Surname { get => surname; set => surname = value; }
 

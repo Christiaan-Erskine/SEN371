@@ -30,6 +30,11 @@ namespace Project_1.BusinessLogicClasses
             this.Cell = cell;
         }
 
+        protected Employee(string employeeId)
+        {
+            this.employeeId = employeeId;
+        }
+
         public string EmployeeId { get => EmployeeId1; set => EmployeeId1 = value; }
         public string ServiceDeoartmentId { get => serviceDeoartmentId; set => serviceDeoartmentId = value; }
         public string EmployeeId1 { get => employeeId; set => employeeId = value; }

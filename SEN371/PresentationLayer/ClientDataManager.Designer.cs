@@ -351,6 +351,7 @@
             this.btnLog.TabIndex = 18;
             this.btnLog.Text = "Log Problem";
             this.btnLog.UseVisualStyleBackColor = true;
+            this.btnLog.Click += new System.EventHandler(this.btnLog_Click);
             // 
             // lblLogOut
             // 
@@ -365,6 +366,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripView,
@@ -379,24 +381,38 @@
             // 
             // toolStripView
             // 
+            this.toolStripView.Items.AddRange(new object[] {
+            "Business Client",
+            "Individual Client"});
             this.toolStripView.Name = "toolStripView";
             this.toolStripView.Size = new System.Drawing.Size(121, 33);
             this.toolStripView.Text = "View";
             // 
             // toolStriRequests
             // 
+            this.toolStriRequests.Items.AddRange(new object[] {
+            "Services",
+            "Contract"});
             this.toolStriRequests.Name = "toolStriRequests";
             this.toolStriRequests.Size = new System.Drawing.Size(121, 33);
             this.toolStriRequests.Text = "Requests";
             // 
             // toolStripManagement
             // 
+            this.toolStripManagement.Items.AddRange(new object[] {
+            "Call Agent",
+            "Services Manager",
+            "Contract Manager",
+            "Technician"});
             this.toolStripManagement.Name = "toolStripManagement";
             this.toolStripManagement.Size = new System.Drawing.Size(121, 33);
             this.toolStripManagement.Text = "Management";
             // 
             // toolStripDepartment
             // 
+            this.toolStripDepartment.Items.AddRange(new object[] {
+            "Contract Maintenance",
+            "Call Centre"});
             this.toolStripDepartment.Name = "toolStripDepartment";
             this.toolStripDepartment.Size = new System.Drawing.Size(121, 33);
             this.toolStripDepartment.Text = "Department";
