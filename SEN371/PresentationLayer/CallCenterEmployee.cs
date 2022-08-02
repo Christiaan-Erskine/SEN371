@@ -18,11 +18,11 @@ namespace Project_1.PresentationLayer
         {
             InitializeComponent();
 
-            BusinessLogicClasses.Call call = new BusinessLogicClasses.Call();
-            SqlDataAdapter adapter = call.GetInfo();
-            DataSet ds = new DataSet();
-            adapter.Fill(ds);
-            dgvOutput.DataSource = ds.Tables[0];
+            //BusinessLogicClasses.Call call = new BusinessLogicClasses.Call();
+            //SqlDataAdapter adapter = call.GetInfo();
+            //DataSet ds = new DataSet();
+            //adapter.Fill(ds);
+            //dgvOutput.DataSource = ds.Tables[0];
         }
 
         private void label12_Click(object sender, EventArgs e)
@@ -63,7 +63,10 @@ namespace Project_1.PresentationLayer
 
         private void CallCenterEmployee_Load(object sender, EventArgs e)
         {
-
+            // TODO: This line of code loads data into the 'premierServiceSolutionsDBDataSet.PersoneAddressDetails' table. You can move, or remove it, as needed.
+            this.personeAddressDetailsTableAdapter.Fill(this.premierServiceSolutionsDBDataSet.PersoneAddressDetails);
+            // TODO: This line of code loads data into the 'premierServiceSolutionsDBDataSet.PersoneAddressDetails' table. You can move, or remove it, as needed.
+            this.personeAddressDetailsTableAdapter.Fill(this.premierServiceSolutionsDBDataSet.PersoneAddressDetails);     
         }
 
         private void btnSQL_Click(object sender, EventArgs e)
