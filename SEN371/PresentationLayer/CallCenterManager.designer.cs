@@ -323,6 +323,7 @@
             this.button5.TabIndex = 101;
             this.button5.Text = "Log Problem";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -363,6 +364,7 @@
             this.btnSQL.TabIndex = 96;
             this.btnSQL.Text = "Manage Call";
             this.btnSQL.UseVisualStyleBackColor = true;
+            this.btnSQL.Click += new System.EventHandler(this.btnSQL_Click);
             // 
             // dgvOutput
             // 
@@ -422,24 +424,37 @@
             // 
             // toolStripView
             // 
+            this.toolStripView.Items.AddRange(new object[] {
+            "Clients"});
             this.toolStripView.Name = "toolStripView";
             this.toolStripView.Size = new System.Drawing.Size(121, 33);
             this.toolStripView.Text = "View";
             // 
             // toolStriRequests
             // 
+            this.toolStriRequests.Items.AddRange(new object[] {
+            "Request Problem table",
+            "Request Services Table"});
             this.toolStriRequests.Name = "toolStriRequests";
             this.toolStriRequests.Size = new System.Drawing.Size(121, 33);
             this.toolStriRequests.Text = "Requests";
             // 
             // toolStripManagement
             // 
+            this.toolStripManagement.Items.AddRange(new object[] {
+            "Client",
+            "Call Center Employee"});
             this.toolStripManagement.Name = "toolStripManagement";
             this.toolStripManagement.Size = new System.Drawing.Size(121, 33);
             this.toolStripManagement.Text = "Management";
             // 
             // toolStripDepartment
             // 
+            this.toolStripDepartment.Items.AddRange(new object[] {
+            "Client Maintenance",
+            "Contract Maintenance",
+            "Call Centre",
+            "Service"});
             this.toolStripDepartment.Name = "toolStripDepartment";
             this.toolStripDepartment.Size = new System.Drawing.Size(121, 33);
             this.toolStripDepartment.Text = "Department";

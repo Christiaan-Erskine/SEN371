@@ -21,5 +21,11 @@ namespace Project_1.PresentationLayer
         {
            
         }
+
+        private void btnLog_Click(object sender, EventArgs e)
+        {
+            Problem problem = new Problem();
+            problem.Show();
+        }
     }
 }

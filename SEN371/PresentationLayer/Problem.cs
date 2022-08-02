@@ -16,5 +16,10 @@ namespace Project_1.PresentationLayer
         {
             InitializeComponent();
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
