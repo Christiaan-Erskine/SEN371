@@ -59,10 +59,14 @@
             this.btnLog = new System.Windows.Forms.Button();
             this.lblLogOut = new System.Windows.Forms.LinkLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStripView = new System.Windows.Forms.ToolStripComboBox();
             this.toolStriRequests = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripManagement = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripDepartment = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripView = new System.Windows.Forms.ToolStripMenuItem();
+            this.businessClientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.individualClientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientsTableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.employeeTableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOutput)).BeginInit();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -152,7 +156,7 @@
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(5, 60);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(322, 20);
             this.textBox5.TabIndex = 12;
@@ -160,7 +164,7 @@
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(5, 94);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(322, 20);
             this.textBox4.TabIndex = 11;
@@ -168,7 +172,7 @@
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(5, 127);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(322, 20);
             this.textBox3.TabIndex = 10;
@@ -176,7 +180,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(5, 161);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(322, 20);
             this.textBox2.TabIndex = 9;
@@ -184,7 +188,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(5, 26);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(322, 20);
             this.textBox1.TabIndex = 8;
@@ -252,6 +256,7 @@
             this.btnSQL.TabIndex = 8;
             this.btnSQL.Text = "Run Query";
             this.btnSQL.UseVisualStyleBackColor = true;
+            this.btnSQL.Click += new System.EventHandler(this.btnSQL_Click);
             // 
             // btnContracts
             // 
@@ -353,6 +358,7 @@
             this.lblLogOut.TabIndex = 19;
             this.lblLogOut.TabStop = true;
             this.lblLogOut.Text = "Log Out";
+            this.lblLogOut.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblLogOut_LinkClicked);
             // 
             // menuStrip1
             // 
@@ -368,15 +374,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(1149, 25);
             this.menuStrip1.TabIndex = 94;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // toolStripView
-            // 
-            this.toolStripView.Items.AddRange(new object[] {
-            "Business Client",
-            "Individual Client"});
-            this.toolStripView.Name = "toolStripView";
-            this.toolStripView.Size = new System.Drawing.Size(82, 23);
-            this.toolStripView.Text = "View";
             // 
             // toolStriRequests
             // 
@@ -406,6 +403,45 @@
             this.toolStripDepartment.Name = "toolStripDepartment";
             this.toolStripDepartment.Size = new System.Drawing.Size(82, 23);
             this.toolStripDepartment.Text = "Department";
+            // 
+            // toolStripView
+            // 
+            this.toolStripView.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.businessClientsToolStripMenuItem,
+            this.individualClientsToolStripMenuItem,
+            this.clientsTableToolStripMenuItem,
+            this.employeeTableToolStripMenuItem});
+            this.toolStripView.Name = "toolStripView";
+            this.toolStripView.Size = new System.Drawing.Size(44, 23);
+            this.toolStripView.Text = "View";
+            // 
+            // businessClientsToolStripMenuItem
+            // 
+            this.businessClientsToolStripMenuItem.Name = "businessClientsToolStripMenuItem";
+            this.businessClientsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.businessClientsToolStripMenuItem.Text = "Business Clients";
+            this.businessClientsToolStripMenuItem.Click += new System.EventHandler(this.businessClientsToolStripMenuItem_Click);
+            // 
+            // individualClientsToolStripMenuItem
+            // 
+            this.individualClientsToolStripMenuItem.Name = "individualClientsToolStripMenuItem";
+            this.individualClientsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.individualClientsToolStripMenuItem.Text = "Individual Clients";
+            this.individualClientsToolStripMenuItem.Click += new System.EventHandler(this.individualClientsToolStripMenuItem_Click);
+            // 
+            // clientsTableToolStripMenuItem
+            // 
+            this.clientsTableToolStripMenuItem.Name = "clientsTableToolStripMenuItem";
+            this.clientsTableToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clientsTableToolStripMenuItem.Text = "Clients Table";
+            this.clientsTableToolStripMenuItem.Click += new System.EventHandler(this.clientsTableToolStripMenuItem_Click);
+            // 
+            // employeeTableToolStripMenuItem
+            // 
+            this.employeeTableToolStripMenuItem.Name = "employeeTableToolStripMenuItem";
+            this.employeeTableToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.employeeTableToolStripMenuItem.Text = "Employee Table";
+            this.employeeTableToolStripMenuItem.Click += new System.EventHandler(this.employeeTableToolStripMenuItem_Click);
             // 
             // ClientDataManager
             // 
@@ -475,9 +511,13 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripComboBox toolStripView;
         private System.Windows.Forms.ToolStripComboBox toolStriRequests;
         private System.Windows.Forms.ToolStripComboBox toolStripManagement;
         private System.Windows.Forms.ToolStripComboBox toolStripDepartment;
+        private System.Windows.Forms.ToolStripMenuItem toolStripView;
+        private System.Windows.Forms.ToolStripMenuItem businessClientsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem individualClientsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clientsTableToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem employeeTableToolStripMenuItem;
     }
 }
