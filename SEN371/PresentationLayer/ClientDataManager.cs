@@ -11,9 +11,15 @@ using System.Data.SqlClient;
 
 namespace Project_1.PresentationLayer
 {
+    //ToDo:
+    //Fix Delete (Connected to Person Address)
+    //Show Employee types / departments
+    //RetrieveData Function, too much repeating code with only difference being string  
+    //Impliment Add, should be easy
     public partial class ClientDataManager : Form
     {
         public string activeTable = "Client"; //The active table will be used to CRUD with the correct table, can be used for dynamic fields with on click if statement
+        BusinessLogicClasses.BusinessClient bclient = new BusinessLogicClasses.BusinessClient();
         public ClientDataManager()
         {
             InitializeComponent();
@@ -80,6 +86,7 @@ namespace Project_1.PresentationLayer
 
         private void employeeTableToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            dgvOutput.ClearSelection();
             DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
             SqlDataAdapter adapter = dh.RetrieveData("Employee");
             DataSet ds = new DataSet();
@@ -130,37 +137,62 @@ namespace Project_1.PresentationLayer
 
         private void toolStripView_Click(object sender, EventArgs e)
         {
-
+            //Hard to get values of menu
         }
 
         private void btnUpdtSelecct_Click(object sender, EventArgs e)
         {
             if (activeTable == "Client")
             {
-                BusinessLogicClasses.BusinessClient bclient = new BusinessLogicClasses.BusinessClient();
-                bclient.ClientId = dgvOutput.CurrentRow.Cells[0].Value.ToString();
-                bclient.Name = dgvOutput.CurrentRow.Cells[1].Value.ToString();
-                bclient.Surname = dgvOutput.CurrentRow.Cells[2].Value.ToString();
-                bclient.ClientNumber = dgvOutput.CurrentRow.Cells[3].Value.ToString();
-                bclient.Email = dgvOutput.CurrentRow.Cells[4].Value.ToString();
-                bclient.ClientType = dgvOutput.CurrentRow.Cells[5].Value.ToString();
-                MessageBox.Show("Newly Created Client Object:\n" + bclient.ClientId + " " + bclient.Name + " " + bclient.Surname + " " + bclient.ClientNumber + " " + bclient.Email + " " + bclient.ClientType);
+                //MessageBox.Show("Newly Created Client Object:\n" + bclient.ClientId + " " + bclient.Name + " " + bclient.Surname + " " + bclient.ClientNumber + " " + bclient.Email + " " + bclient.ClientType);
+                bclient.UpdateClient(txtName.Text, txtSurname.Text, txtCellPhone.Text, txtEmail.Text, txtType.Text, bclient.ClientId); //User has no ability to change id
+                //(string Name, string Surname, string Cellphone, string Email, string NewType, string ClientId)
 
+                //Update shows valid SQL query, but does not make changes in the database
             }
+
+
+            dgvOutput.Refresh();
         }
 
         private void dgvOutput_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            //Too slow, need to wait 2-3 seconds before a new row can be selected
+        }
+
+        private void dgvOutput_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            //Only works for mouse navigation
+        }
+
+        private void btnDelSelect_Click(object sender, EventArgs e)
+        {
             if (activeTable == "Client")
             {
-                BusinessLogicClasses.BusinessClient bclient = new BusinessLogicClasses.BusinessClient();
-                bclient.ClientId = dgvOutput.CurrentRow.Cells[0].Value.ToString();
-                txtName.Text = bclient.Name = dgvOutput.CurrentRow.Cells[1].Value.ToString();
-                txtSurname.Text = bclient.Surname = dgvOutput.CurrentRow.Cells[2].Value.ToString();
-                txtCellPhone.Text = bclient.ClientNumber = dgvOutput.CurrentRow.Cells[3].Value.ToString();
-                txtEmail.Text = bclient.Email = dgvOutput.CurrentRow.Cells[4].Value.ToString();
-                txtType.Text = bclient.ClientType = dgvOutput.CurrentRow.Cells[5].Value.ToString();
+                bclient.DeleteClient(bclient.ClientId);
+                //Doesn't delete due to Person Address, ask Christiaan
             }
+        }
+
+        private void dgvOutput_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            //This can be used in both mouse and menu navigation
+            //Error when changing tables, unselect on button press for those buttons
+
+            try
+            {
+                if (activeTable == "Client")
+                {
+                    bclient.ClientId = dgvOutput.CurrentRow.Cells[0].Value.ToString();
+                    txtName.Text = bclient.Name = dgvOutput.CurrentRow.Cells[1].Value.ToString();
+                    txtSurname.Text = bclient.Surname = dgvOutput.CurrentRow.Cells[2].Value.ToString();
+                    txtCellPhone.Text = bclient.ClientNumber = dgvOutput.CurrentRow.Cells[3].Value.ToString();
+                    txtEmail.Text = bclient.Email = dgvOutput.CurrentRow.Cells[4].Value.ToString();
+                    txtType.Text = bclient.ClientType = dgvOutput.CurrentRow.Cells[5].Value.ToString();
+                }
+            }catch {/* Lol */}
+
+
         }
     }
 }

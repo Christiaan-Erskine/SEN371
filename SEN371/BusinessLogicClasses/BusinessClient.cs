@@ -32,7 +32,7 @@ namespace Project_1.BusinessLogicClasses
         public void StoreClientInfo()   // Default Save This
         {
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
-            database.Insert("Client", new[] { ("Name", this.Name), ("Surname", this.Surname), ("CellPhoneNumber", this.ClientNumber), ("Email", this.clientEmail), ("ClientType", "BusinessClient") });
+            database.Insert("Client", new[] { ("Name", this.Name), ("Surname", this.Surname), ("CellPhoneNumber", this.ClientNumber), ("Email", this.clientEmail), ("ClientType", "Business Client") });
 
             //more generic => database.InsertObject(this);
         }
@@ -40,7 +40,7 @@ namespace Project_1.BusinessLogicClasses
         public void UpdateClientInfo(string Name, string Surname, string Cellphone, string Email, string ClientId)  //
         {
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
-            database.Update("Client", new[] { ("Name", Name), ("Surname", Surname), ("CellPhoneNumber", Cellphone), ("Email", Email), ("ClientType", "BusinessClient") }, ("ClientId = " + ClientId));
+            database.Update("Client", new[] { ("Name", Name), ("Surname", Surname), ("CellPhoneNumber", Cellphone), ("Email", Email), ("ClientType", "Business Client") }, ("ClientId = " + ClientId));
         }
 
         public void DeleteClient(string clientId)

@@ -113,36 +113,40 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(248, 486);
+            this.btnAdd.Location = new System.Drawing.Point(372, 748);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.Size = new System.Drawing.Size(112, 35);
             this.btnAdd.TabIndex = 86;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(168, 486);
+            this.btnDelete.Location = new System.Drawing.Point(252, 748);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.Size = new System.Drawing.Size(112, 35);
             this.btnDelete.TabIndex = 85;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(88, 486);
+            this.btnSave.Location = new System.Drawing.Point(132, 748);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(112, 35);
             this.btnSave.TabIndex = 84;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(8, 486);
+            this.btnUpdate.Location = new System.Drawing.Point(12, 748);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.Size = new System.Drawing.Size(112, 35);
             this.btnUpdate.TabIndex = 83;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -150,27 +154,31 @@
             // lstExtraInfo
             // 
             this.lstExtraInfo.FormattingEnabled = true;
-            this.lstExtraInfo.Location = new System.Drawing.Point(10, 337);
+            this.lstExtraInfo.ItemHeight = 20;
+            this.lstExtraInfo.Location = new System.Drawing.Point(15, 518);
+            this.lstExtraInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lstExtraInfo.Name = "lstExtraInfo";
-            this.lstExtraInfo.Size = new System.Drawing.Size(316, 134);
+            this.lstExtraInfo.Size = new System.Drawing.Size(472, 204);
             this.lstExtraInfo.TabIndex = 82;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(7, 264);
+            this.label9.Location = new System.Drawing.Point(10, 406);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(118, 13);
+            this.label9.Size = new System.Drawing.Size(164, 20);
             this.label9.TabIndex = 77;
             this.label9.Text = "Select Person Type";
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(14, 302);
+            this.radioButton2.Location = new System.Drawing.Point(21, 465);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(71, 17);
+            this.radioButton2.Size = new System.Drawing.Size(104, 24);
             this.radioButton2.TabIndex = 76;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Employee";
@@ -179,9 +187,10 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(-45, 242);
+            this.radioButton1.Location = new System.Drawing.Point(-68, 372);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(51, 17);
+            this.radioButton1.Size = new System.Drawing.Size(74, 24);
             this.radioButton1.TabIndex = 75;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Client";
@@ -190,9 +199,10 @@
             // cbxAddress
             // 
             this.cbxAddress.AutoSize = true;
-            this.cbxAddress.Location = new System.Drawing.Point(14, 239);
+            this.cbxAddress.Location = new System.Drawing.Point(21, 368);
+            this.cbxAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxAddress.Name = "cbxAddress";
-            this.cbxAddress.Size = new System.Drawing.Size(172, 17);
+            this.cbxAddress.Size = new System.Drawing.Size(255, 24);
             this.cbxAddress.TabIndex = 73;
             this.cbxAddress.Text = "Person already has an Address";
             this.cbxAddress.UseVisualStyleBackColor = true;
@@ -200,35 +210,39 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(-46, 180);
+            this.label7.Location = new System.Drawing.Point(-69, 277);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(43, 13);
+            this.label7.Size = new System.Drawing.Size(64, 20);
             this.label7.TabIndex = 72;
             this.label7.Text = "Country";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(-48, 89);
+            this.label6.Location = new System.Drawing.Point(-72, 137);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 13);
+            this.label6.Size = new System.Drawing.Size(74, 20);
             this.label6.TabIndex = 69;
             this.label6.Text = "Surname";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(-48, 66);
+            this.label5.Location = new System.Drawing.Point(-72, 102);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.Size = new System.Drawing.Size(51, 20);
             this.label5.TabIndex = 68;
             this.label5.Text = "Name";
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(1030, 578);
+            this.button5.Location = new System.Drawing.Point(1545, 889);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(107, 29);
+            this.button5.Size = new System.Drawing.Size(160, 45);
             this.button5.TabIndex = 61;
             this.button5.Text = "Log Problem";
             this.button5.UseVisualStyleBackColor = true;
@@ -236,36 +250,40 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(1030, 200);
+            this.button4.Location = new System.Drawing.Point(1545, 308);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(107, 29);
+            this.button4.Size = new System.Drawing.Size(160, 45);
             this.button4.TabIndex = 60;
             this.button4.Text = "Add Selected";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1030, 164);
+            this.button3.Location = new System.Drawing.Point(1545, 252);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(107, 29);
+            this.button3.Size = new System.Drawing.Size(160, 45);
             this.button3.TabIndex = 59;
             this.button3.Text = "Delete Selected";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1030, 128);
+            this.button2.Location = new System.Drawing.Point(1545, 197);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 29);
+            this.button2.Size = new System.Drawing.Size(160, 45);
             this.button2.TabIndex = 58;
             this.button2.Text = "Save Selected";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1030, 92);
+            this.button1.Location = new System.Drawing.Point(1545, 142);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 29);
+            this.button1.Size = new System.Drawing.Size(160, 45);
             this.button1.TabIndex = 57;
             this.button1.Text = "Update Selected";
             this.button1.UseVisualStyleBackColor = true;
@@ -274,7 +292,7 @@
             // 
             this.btnSQL.Location = new System.Drawing.Point(1030, 53);
             this.btnSQL.Name = "btnSQL";
-            this.btnSQL.Size = new System.Drawing.Size(107, 29);
+            this.btnSQL.Size = new System.Drawing.Size(160, 45);
             this.btnSQL.TabIndex = 56;
             this.btnSQL.Text = "Manage Call";
             this.btnSQL.UseVisualStyleBackColor = true;
@@ -304,7 +322,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(573, 100);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 13);
+            this.label1.Size = new System.Drawing.Size(263, 20);
             this.label1.TabIndex = 54;
             this.label1.Text = "Logged-In as: Call Center Employee";
             // 
@@ -314,16 +332,17 @@
             this.lblLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogo.Location = new System.Drawing.Point(474, 50);
             this.lblLogo.Name = "lblLogo";
-            this.lblLogo.Size = new System.Drawing.Size(325, 31);
+            this.lblLogo.Size = new System.Drawing.Size(480, 46);
             this.lblLogo.TabIndex = 53;
             this.lblLogo.Text = "Premier Service Solutions";
             // 
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(14, 280);
+            this.radioButton3.Location = new System.Drawing.Point(21, 431);
+            this.radioButton3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(51, 17);
+            this.radioButton3.Size = new System.Drawing.Size(74, 24);
             this.radioButton3.TabIndex = 87;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Client";
@@ -361,6 +380,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripView,
@@ -380,20 +400,20 @@
             this.callHistoryToolStripMenuItem,
             this.clientInformationToolStripMenuItem});
             this.toolStripView.Name = "toolStripView";
-            this.toolStripView.Size = new System.Drawing.Size(44, 23);
+            this.toolStripView.Size = new System.Drawing.Size(65, 33);
             this.toolStripView.Text = "View";
             // 
             // callHistoryToolStripMenuItem
             // 
             this.callHistoryToolStripMenuItem.Name = "callHistoryToolStripMenuItem";
-            this.callHistoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.callHistoryToolStripMenuItem.Size = new System.Drawing.Size(257, 34);
             this.callHistoryToolStripMenuItem.Text = "Call History";
             this.callHistoryToolStripMenuItem.Click += new System.EventHandler(this.callHistoryToolStripMenuItem_Click);
             // 
             // clientInformationToolStripMenuItem
             // 
             this.clientInformationToolStripMenuItem.Name = "clientInformationToolStripMenuItem";
-            this.clientInformationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clientInformationToolStripMenuItem.Size = new System.Drawing.Size(257, 34);
             this.clientInformationToolStripMenuItem.Text = "Client Information";
             this.clientInformationToolStripMenuItem.Click += new System.EventHandler(this.clientInformationToolStripMenuItem_Click);
             // 
@@ -403,7 +423,7 @@
             this.callCentreToolStripMenuItem,
             this.serviceToolStripMenuItem});
             this.toolStriRequests.Name = "toolStriRequests";
-            this.toolStriRequests.Size = new System.Drawing.Size(66, 23);
+            this.toolStriRequests.Size = new System.Drawing.Size(99, 33);
             this.toolStriRequests.Text = "Requests";
             // 
             // callCentreToolStripMenuItem
@@ -720,7 +740,7 @@
             // 
             // CallCenterEmployee
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1157, 654);
             this.Controls.Add(this.bindingNavigator1);
@@ -739,6 +759,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblLogo);
             this.Controls.Add(this.menuStrip1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CallCenterEmployee";
             this.Text = "CallCenterEmployee";
             this.Load += new System.EventHandler(this.CallCenterEmployee_Load);
