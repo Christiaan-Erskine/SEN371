@@ -51,10 +51,6 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.cbbDepartment = new System.Windows.Forms.ComboBox();
-            this.cbbManagement = new System.Windows.Forms.ComboBox();
-            this.cbbReq = new System.Windows.Forms.ComboBox();
-            this.cbbView = new System.Windows.Forms.ComboBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -64,8 +60,14 @@
             this.lblLogo = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripView = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStriRequests = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripManagement = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripDepartment = new System.Windows.Forms.ToolStripComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOutput)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label12
@@ -312,50 +314,6 @@
             this.textBox5.Size = new System.Drawing.Size(472, 26);
             this.textBox5.TabIndex = 80;
             // 
-            // cbbDepartment
-            // 
-            this.cbbDepartment.AllowDrop = true;
-            this.cbbDepartment.FormattingEnabled = true;
-            this.cbbDepartment.Location = new System.Drawing.Point(435, 57);
-            this.cbbDepartment.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbbDepartment.Name = "cbbDepartment";
-            this.cbbDepartment.Size = new System.Drawing.Size(132, 28);
-            this.cbbDepartment.TabIndex = 105;
-            this.cbbDepartment.Text = "Department";
-            // 
-            // cbbManagement
-            // 
-            this.cbbManagement.AllowDrop = true;
-            this.cbbManagement.FormattingEnabled = true;
-            this.cbbManagement.Location = new System.Drawing.Point(295, 57);
-            this.cbbManagement.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbbManagement.Name = "cbbManagement";
-            this.cbbManagement.Size = new System.Drawing.Size(132, 28);
-            this.cbbManagement.TabIndex = 104;
-            this.cbbManagement.Text = "Management";
-            // 
-            // cbbReq
-            // 
-            this.cbbReq.AllowDrop = true;
-            this.cbbReq.FormattingEnabled = true;
-            this.cbbReq.Location = new System.Drawing.Point(155, 57);
-            this.cbbReq.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbbReq.Name = "cbbReq";
-            this.cbbReq.Size = new System.Drawing.Size(132, 28);
-            this.cbbReq.TabIndex = 103;
-            this.cbbReq.Text = "Requests";
-            // 
-            // cbbView
-            // 
-            this.cbbView.AllowDrop = true;
-            this.cbbView.FormattingEnabled = true;
-            this.cbbView.Location = new System.Drawing.Point(15, 57);
-            this.cbbView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbbView.Name = "cbbView";
-            this.cbbView.Size = new System.Drawing.Size(132, 28);
-            this.cbbView.TabIndex = 102;
-            this.cbbView.Text = "View";
-            // 
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(1539, 895);
@@ -421,7 +379,7 @@
             // 
             this.lblLogo.AutoSize = true;
             this.lblLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogo.Location = new System.Drawing.Point(627, 19);
+            this.lblLogo.Location = new System.Drawing.Point(645, 57);
             this.lblLogo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLogo.Name = "lblLogo";
             this.lblLogo.Size = new System.Drawing.Size(480, 46);
@@ -441,23 +399,58 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(758, 82);
+            this.label1.Location = new System.Drawing.Point(751, 122);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(256, 20);
             this.label1.TabIndex = 94;
             this.label1.Text = "Logged-In as: Call Center Manager";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripView,
+            this.toolStriRequests,
+            this.toolStripManagement,
+            this.toolStripDepartment});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1724, 37);
+            this.menuStrip1.TabIndex = 111;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripView
+            // 
+            this.toolStripView.Name = "toolStripView";
+            this.toolStripView.Size = new System.Drawing.Size(121, 33);
+            this.toolStripView.Text = "View";
+            // 
+            // toolStriRequests
+            // 
+            this.toolStriRequests.Name = "toolStriRequests";
+            this.toolStriRequests.Size = new System.Drawing.Size(121, 33);
+            this.toolStriRequests.Text = "Requests";
+            // 
+            // toolStripManagement
+            // 
+            this.toolStripManagement.Name = "toolStripManagement";
+            this.toolStripManagement.Size = new System.Drawing.Size(121, 33);
+            this.toolStripManagement.Text = "Management";
+            // 
+            // toolStripDepartment
+            // 
+            this.toolStripDepartment.Name = "toolStripDepartment";
+            this.toolStripDepartment.Size = new System.Drawing.Size(121, 33);
+            this.toolStripDepartment.Text = "Department";
+            // 
             // CallCenterManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1724, 989);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.cbbDepartment);
-            this.Controls.Add(this.cbbManagement);
-            this.Controls.Add(this.cbbReq);
-            this.Controls.Add(this.cbbView);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
@@ -474,6 +467,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOutput)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -504,10 +499,6 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ComboBox cbbDepartment;
-        private System.Windows.Forms.ComboBox cbbManagement;
-        private System.Windows.Forms.ComboBox cbbReq;
-        private System.Windows.Forms.ComboBox cbbView;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
@@ -517,5 +508,10 @@
         private System.Windows.Forms.Label lblLogo;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripComboBox toolStripView;
+        private System.Windows.Forms.ToolStripComboBox toolStriRequests;
+        private System.Windows.Forms.ToolStripComboBox toolStripManagement;
+        private System.Windows.Forms.ToolStripComboBox toolStripDepartment;
     }
 }

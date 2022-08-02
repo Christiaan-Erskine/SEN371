@@ -21,5 +21,10 @@ namespace Project_1.PresentationLayer
         {
 
         }
+
+        private void cbbView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

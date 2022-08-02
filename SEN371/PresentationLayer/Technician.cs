@@ -31,5 +31,30 @@ namespace Project_1.PresentationLayer
         {
 
         }
+
+        private void Technician_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbbDepartment_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbbManagement_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbbReq_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbbView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
