@@ -166,5 +166,10 @@ namespace Project_1.PresentationLayer
                 txtType.Text = bclient.ClientType = dgvOutput.CurrentRow.Cells[5].Value.ToString();
             }
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

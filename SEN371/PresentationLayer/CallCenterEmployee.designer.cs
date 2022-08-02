@@ -33,12 +33,12 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.lstExtraInfo = new System.Windows.Forms.ListBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtCountry = new System.Windows.Forms.TextBox();
+            this.txtCity = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtClientType = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rdbEmployee = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.cbxAddress = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -46,8 +46,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSurname = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -57,7 +57,7 @@
             this.dgvOutput = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.lblLogo = new System.Windows.Forms.Label();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.rdbClient = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -72,6 +72,8 @@
             this.serviceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripManagement = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripDepartment = new System.Windows.Forms.ToolStripComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtNumber = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOutput)).BeginInit();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -106,6 +108,7 @@
             this.btnSave.TabIndex = 84;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnUpdate
             // 
@@ -116,71 +119,72 @@
             this.btnUpdate.TabIndex = 83;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // lstExtraInfo
             // 
             this.lstExtraInfo.FormattingEnabled = true;
             this.lstExtraInfo.ItemHeight = 20;
-            this.lstExtraInfo.Location = new System.Drawing.Point(15, 518);
+            this.lstExtraInfo.Location = new System.Drawing.Point(15, 534);
             this.lstExtraInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lstExtraInfo.Name = "lstExtraInfo";
             this.lstExtraInfo.Size = new System.Drawing.Size(472, 204);
             this.lstExtraInfo.TabIndex = 82;
             // 
-            // textBox6
+            // txtCountry
             // 
-            this.textBox6.Location = new System.Drawing.Point(15, 314);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(472, 26);
-            this.textBox6.TabIndex = 81;
+            this.txtCountry.Location = new System.Drawing.Point(15, 314);
+            this.txtCountry.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCountry.Name = "txtCountry";
+            this.txtCountry.Size = new System.Drawing.Size(472, 26);
+            this.txtCountry.TabIndex = 81;
             // 
-            // textBox5
+            // txtCity
             // 
-            this.textBox5.Location = new System.Drawing.Point(15, 258);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(472, 26);
-            this.textBox5.TabIndex = 80;
+            this.txtCity.Location = new System.Drawing.Point(15, 258);
+            this.txtCity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(472, 26);
+            this.txtCity.TabIndex = 80;
             // 
-            // textBox4
+            // txtEmail
             // 
-            this.textBox4.Location = new System.Drawing.Point(15, 200);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(472, 26);
-            this.textBox4.TabIndex = 79;
+            this.txtEmail.Location = new System.Drawing.Point(15, 200);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(472, 26);
+            this.txtEmail.TabIndex = 79;
             // 
-            // textBox3
+            // txtClientType
             // 
-            this.textBox3.Location = new System.Drawing.Point(15, 145);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(472, 26);
-            this.textBox3.TabIndex = 78;
+            this.txtClientType.Location = new System.Drawing.Point(15, 145);
+            this.txtClientType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtClientType.Name = "txtClientType";
+            this.txtClientType.Size = new System.Drawing.Size(472, 26);
+            this.txtClientType.TabIndex = 78;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(10, 406);
+            this.label9.Location = new System.Drawing.Point(11, 441);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(164, 20);
             this.label9.TabIndex = 77;
             this.label9.Text = "Select Person Type";
             // 
-            // radioButton2
+            // rdbEmployee
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(21, 465);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(104, 24);
-            this.radioButton2.TabIndex = 76;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Employee";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdbEmployee.AutoSize = true;
+            this.rdbEmployee.Location = new System.Drawing.Point(21, 500);
+            this.rdbEmployee.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rdbEmployee.Name = "rdbEmployee";
+            this.rdbEmployee.Size = new System.Drawing.Size(104, 24);
+            this.rdbEmployee.TabIndex = 76;
+            this.rdbEmployee.TabStop = true;
+            this.rdbEmployee.Text = "Employee";
+            this.rdbEmployee.UseVisualStyleBackColor = true;
             // 
             // radioButton1
             // 
@@ -197,7 +201,7 @@
             // cbxAddress
             // 
             this.cbxAddress.AutoSize = true;
-            this.cbxAddress.Location = new System.Drawing.Point(21, 368);
+            this.cbxAddress.Location = new System.Drawing.Point(15, 412);
             this.cbxAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxAddress.Name = "cbxAddress";
             this.cbxAddress.Size = new System.Drawing.Size(255, 24);
@@ -218,12 +222,12 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 175);
+            this.label3.Location = new System.Drawing.Point(11, 176);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 20);
+            this.label3.Size = new System.Drawing.Size(48, 20);
             this.label3.TabIndex = 71;
-            this.label3.Text = "Street Address";
+            this.label3.Text = "Email";
             // 
             // label2
             // 
@@ -255,21 +259,21 @@
             this.label5.TabIndex = 68;
             this.label5.Text = "Name";
             // 
-            // textBox2
+            // txtSurname
             // 
-            this.textBox2.Location = new System.Drawing.Point(15, 89);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(472, 26);
-            this.textBox2.TabIndex = 67;
+            this.txtSurname.Location = new System.Drawing.Point(15, 89);
+            this.txtSurname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(472, 26);
+            this.txtSurname.TabIndex = 67;
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 35);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(472, 26);
-            this.textBox1.TabIndex = 66;
+            this.txtName.Location = new System.Drawing.Point(15, 35);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(472, 26);
+            this.txtName.TabIndex = 66;
             // 
             // button5
             // 
@@ -337,12 +341,13 @@
             // 
             this.dgvOutput.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvOutput.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOutput.Location = new System.Drawing.Point(544, 142);
+            this.dgvOutput.Location = new System.Drawing.Point(546, 137);
             this.dgvOutput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvOutput.Name = "dgvOutput";
             this.dgvOutput.RowHeadersWidth = 62;
             this.dgvOutput.Size = new System.Drawing.Size(980, 792);
             this.dgvOutput.TabIndex = 55;
+            this.dgvOutput.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOutput_CellContentClick);
             // 
             // label1
             // 
@@ -365,17 +370,17 @@
             this.lblLogo.TabIndex = 53;
             this.lblLogo.Text = "Premier Service Solutions";
             // 
-            // radioButton3
+            // rdbClient
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(21, 431);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(74, 24);
-            this.radioButton3.TabIndex = 87;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Client";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rdbClient.AutoSize = true;
+            this.rdbClient.Location = new System.Drawing.Point(21, 466);
+            this.rdbClient.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rdbClient.Name = "rdbClient";
+            this.rdbClient.Size = new System.Drawing.Size(74, 24);
+            this.rdbClient.TabIndex = 87;
+            this.rdbClient.TabStop = true;
+            this.rdbClient.Text = "Client";
+            this.rdbClient.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -421,27 +426,29 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.txtNumber);
             this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtSurname);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.radioButton3);
+            this.panel1.Controls.Add(this.rdbClient);
             this.panel1.Controls.Add(this.cbxAddress);
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.btnDelete);
-            this.panel1.Controls.Add(this.radioButton2);
+            this.panel1.Controls.Add(this.rdbEmployee);
             this.panel1.Controls.Add(this.btnSave);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.btnUpdate);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.txtClientType);
             this.panel1.Controls.Add(this.lstExtraInfo);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.txtEmail);
+            this.panel1.Controls.Add(this.txtCountry);
+            this.panel1.Controls.Add(this.txtCity);
             this.panel1.Location = new System.Drawing.Point(14, 92);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
@@ -450,7 +457,6 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripView,
@@ -459,7 +465,6 @@
             this.toolStripDepartment});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(1724, 37);
             this.menuStrip1.TabIndex = 93;
             this.menuStrip1.Text = "menuStrip1";
@@ -499,28 +504,46 @@
             // callCentreToolStripMenuItem
             // 
             this.callCentreToolStripMenuItem.Name = "callCentreToolStripMenuItem";
-            this.callCentreToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.callCentreToolStripMenuItem.Size = new System.Drawing.Size(198, 34);
             this.callCentreToolStripMenuItem.Text = "Call Centre";
             // 
             // serviceToolStripMenuItem
             // 
             this.serviceToolStripMenuItem.Name = "serviceToolStripMenuItem";
-            this.serviceToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.serviceToolStripMenuItem.Size = new System.Drawing.Size(198, 34);
             this.serviceToolStripMenuItem.Text = "Service";
             // 
             // toolStripManagement
             // 
             this.toolStripManagement.Enabled = false;
             this.toolStripManagement.Name = "toolStripManagement";
-            this.toolStripManagement.Size = new System.Drawing.Size(82, 23);
+            this.toolStripManagement.Size = new System.Drawing.Size(82, 33);
             this.toolStripManagement.Text = "Management";
             // 
             // toolStripDepartment
             // 
             this.toolStripDepartment.Enabled = false;
             this.toolStripDepartment.Name = "toolStripDepartment";
-            this.toolStripDepartment.Size = new System.Drawing.Size(82, 23);
+            this.toolStripDepartment.Size = new System.Drawing.Size(82, 33);
             this.toolStripDepartment.Text = "Department";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(16, 351);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(137, 20);
+            this.label8.TabIndex = 93;
+            this.label8.Text = "CellPhoneNumber";
+            // 
+            // txtNumber
+            // 
+            this.txtNumber.Location = new System.Drawing.Point(15, 376);
+            this.txtNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNumber.Name = "txtNumber";
+            this.txtNumber.Size = new System.Drawing.Size(472, 26);
+            this.txtNumber.TabIndex = 92;
             // 
             // CallCenterEmployee
             // 
@@ -563,12 +586,12 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.ListBox lstExtraInfo;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtCountry;
+        private System.Windows.Forms.TextBox txtCity;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtClientType;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton rdbEmployee;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.CheckBox cbxAddress;
         private System.Windows.Forms.Label label7;
@@ -576,8 +599,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSurname;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
@@ -587,7 +610,7 @@
         private System.Windows.Forms.DataGridView dgvOutput;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblLogo;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton rdbClient;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
@@ -602,5 +625,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStriRequests;
         private System.Windows.Forms.ToolStripMenuItem callCentreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem serviceToolStripMenuItem;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtNumber;
     }
 }

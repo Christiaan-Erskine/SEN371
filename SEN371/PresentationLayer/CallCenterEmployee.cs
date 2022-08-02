@@ -13,6 +13,7 @@ namespace Project_1.PresentationLayer
 {
     public partial class CallCenterEmployee : Form
     {
+        BusinessLogicClasses.BusinessClient client = new BusinessLogicClasses.BusinessClient();
         public string activeTable = "Call"; //The active table will be used to CRUD with the correct table, can be used for dynamic fields with on click if statement
         public CallCenterEmployee()
         {
@@ -70,6 +71,58 @@ namespace Project_1.PresentationLayer
         {
             PresentationLayer.ManageCall callManager = new PresentationLayer.ManageCall();
             callManager.Show();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (client.ClientId == null)
+            {
+                MessageBox.Show("Please select a value on the table");
+            }
+            else
+            {
+                client.UpdateClient(txtName.Text, txtSurname.Text, txtNumber.Text, txtEmail.Text, client.ClientId);
+            }
+            
+        }
+
+        private void dgvOutput_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (activeTable == "Client")
+            {
+                client.ClientId = dgvOutput.CurrentRow.Cells[0].Value.ToString();
+                txtName.Text = client.Name = dgvOutput.CurrentRow.Cells[1].Value.ToString();
+                txtSurname.Text = client.Surname = dgvOutput.CurrentRow.Cells[2].Value.ToString();
+                txtNumber.Text = client.ClientNumber = dgvOutput.CurrentRow.Cells[3].Value.ToString();
+                txtEmail.Text = client.Email = dgvOutput.CurrentRow.Cells[4].Value.ToString();
+            }
+        }
+        private void dgvOutput_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            //This can be used in both mouse and menu navigation
+            //Error when changing tables, unselect on button press for those buttons
+
+            try
+            {
+                if (activeTable == "Client")
+                {
+                    client.ClientId = dgvOutput.CurrentRow.Cells[0].Value.ToString();
+                    txtName.Text = client.Name = dgvOutput.CurrentRow.Cells[1].Value.ToString();
+                    txtSurname.Text = client.Surname = dgvOutput.CurrentRow.Cells[2].Value.ToString();
+                    txtNumber.Text = client.ClientNumber = dgvOutput.CurrentRow.Cells[3].Value.ToString();
+                    txtEmail.Text = client.Email = dgvOutput.CurrentRow.Cells[4].Value.ToString();
+                }
+            }
+            catch(Exception error) 
+            {
+                MessageBox.Show(error.Message);
+            }
+
+
+        }
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
