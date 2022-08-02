@@ -72,7 +72,7 @@ namespace Project_1
 
 
             //add new technician
-            BusinessLogicClasses.Technician technician = new BusinessLogicClasses.Technician("1", "Sarah", "MC-dairmond", "send reports", "Technician", "123 123 123", "tech1@yahoo.com");
+            //BusinessLogicClasses.Technician technician = new BusinessLogicClasses.Technician("1", "Sarah", "MC-dairmond", "send reports", "Technician", "123 123 123", "tech1@yahoo.com");
             //callCenter.StoreDepartment(callCenter.DepartmentName);
             //technician.CreateTechnician(technician.Name, technician.Surname, "0836454569", "technician@1.co.za");
             //technician.StoreTechnician(technician.Name, technician.Surname, technician.Cell, technician.Email);
