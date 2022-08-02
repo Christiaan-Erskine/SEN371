@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.btnnCancel = new System.Windows.Forms.Button();
             this.btnStartRecording = new System.Windows.Forms.Button();
@@ -40,7 +41,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.TextBoxProblemDescription = new System.Windows.Forms.RichTextBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnChooseClient = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -48,6 +48,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -98,6 +99,7 @@
             this.TextBoxTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBoxTimer.Location = new System.Drawing.Point(18, 95);
             this.TextBoxTimer.Name = "TextBoxTimer";
+            this.TextBoxTimer.ReadOnly = true;
             this.TextBoxTimer.Size = new System.Drawing.Size(119, 29);
             this.TextBoxTimer.TabIndex = 17;
             this.TextBoxTimer.Text = "00:00";
@@ -116,7 +118,7 @@
             // 
             // btnSaveRecording
             // 
-            this.btnSaveRecording.Location = new System.Drawing.Point(18, 198);
+            this.btnSaveRecording.Location = new System.Drawing.Point(18, 208);
             this.btnSaveRecording.Margin = new System.Windows.Forms.Padding(2);
             this.btnSaveRecording.Name = "btnSaveRecording";
             this.btnSaveRecording.Size = new System.Drawing.Size(101, 24);
@@ -176,17 +178,6 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnChooseClient
-            // 
-            this.btnChooseClient.Location = new System.Drawing.Point(496, 182);
-            this.btnChooseClient.Margin = new System.Windows.Forms.Padding(2);
-            this.btnChooseClient.Name = "btnChooseClient";
-            this.btnChooseClient.Size = new System.Drawing.Size(99, 25);
-            this.btnChooseClient.TabIndex = 26;
-            this.btnChooseClient.Text = "Choose Client";
-            this.btnChooseClient.UseVisualStyleBackColor = true;
-            this.btnChooseClient.Click += new System.EventHandler(this.btnChooseClient_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -245,6 +236,11 @@
             this.label6.TabIndex = 33;
             this.label6.Text = "Surname";
             // 
+            // timer
+            // 
+            this.timer.Interval = 50;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
             // ManageCall
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,7 +253,6 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnChooseClient);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.TextBoxProblemDescription);
             this.Controls.Add(this.label2);
@@ -291,7 +286,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox TextBoxProblemDescription;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnChooseClient;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
@@ -299,5 +293,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Timer timer;
     }
 }

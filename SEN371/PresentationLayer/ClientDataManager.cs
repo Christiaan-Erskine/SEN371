@@ -81,5 +81,10 @@ namespace Project_1.PresentationLayer
             adapter.Fill(ds);
             dgvOutput.DataSource = ds.Tables[0];
         }
+
+        private void toolStripView_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

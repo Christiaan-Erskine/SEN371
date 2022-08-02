@@ -38,5 +38,10 @@ namespace Project_1.PresentationLayer
             ManageCall call = new ManageCall();
             call.Show();
         }
+
+        private void toolStriRequests_Click(object sender, EventArgs e)
+        {
+          
+        }
     }
 }

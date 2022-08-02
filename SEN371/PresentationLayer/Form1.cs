@@ -41,9 +41,15 @@ namespace Project_1
 
                 return;
             }
+            
+           
 
-            PresentationLayer.Login form2 = new PresentationLayer.Login();
-            form2.Show();
+            //PresentationLayer.Login form2 = new PresentationLayer.Login();
+            //form2.Show();
+
+           
+
+            
 
             BusinessLogicClasses.PersonAddress address = new BusinessLogicClasses.PersonAddress("4", "123 Demo Demo", "0188", "Certain City", "Fakeland");
             //address.Country = "South Africa";
@@ -82,7 +88,7 @@ namespace Project_1
             //iclient.StoreClient(iclient.Name, iclient.Surname, iclient.ClientNumber, iclient.Email, iclient.ClientType);
             //iclient.UpdateClient("FirstName", iclient.Surname, iclient.ClientNumber, iclient.Email, "1");
 
-            BusinessLogicClasses.Call call = new BusinessLogicClasses.Call("1", DateTime.Now, DateTime.Today.AddDays(1), "1", "This is a call");
+            //BusinessLogicClasses.Call call = new BusinessLogicClasses.Call("1", DateTime.Now, DateTime.Today.AddDays(1), "1", "This is a call");
             //call.StoreCall(call.CallStarted, call.CallEnded, call.Description, call.AgentId, call.CallId);
 
             
