@@ -284,6 +284,7 @@
             this.btnUpdtSelecct.TabIndex = 10;
             this.btnUpdtSelecct.Text = "Update Selected";
             this.btnUpdtSelecct.UseVisualStyleBackColor = true;
+            this.btnUpdtSelecct.Click += new System.EventHandler(this.btnUpdtSelecct_Click);
             // 
             // btnDelSelect
             // 

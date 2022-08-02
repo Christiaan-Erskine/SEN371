@@ -12,6 +12,11 @@ namespace Project_1.PresentationLayer
 {
     public partial class Registration : Form
     {
+        //ToDo
+        //Register Employee = new employee in database
+        //Fix Validation
+        //Sometimes EmployeeType is not saved
+        //Duplications in txt file, issue in txtFileHandler.cs
         string userType;
         public Registration()
         {
@@ -101,6 +106,11 @@ namespace Project_1.PresentationLayer
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Registration_Load(object sender, EventArgs e)
         {
 
         }

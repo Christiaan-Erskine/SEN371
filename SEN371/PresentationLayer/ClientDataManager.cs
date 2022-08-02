@@ -132,5 +132,20 @@ namespace Project_1.PresentationLayer
         {
 
         }
+
+        private void btnUpdtSelecct_Click(object sender, EventArgs e)
+        {
+            if (activeTable == "Client")
+            {
+                BusinessLogicClasses.BusinessClient bclient = new BusinessLogicClasses.BusinessClient();
+                bclient.ClientId = dgvOutput.CurrentRow.Cells[0].Value.ToString();
+                bclient.Name = dgvOutput.CurrentRow.Cells[1].Value.ToString();
+                bclient.Surname = dgvOutput.CurrentRow.Cells[2].Value.ToString();
+                bclient.ClientNumber = dgvOutput.CurrentRow.Cells[3].Value.ToString();
+                bclient.Email = dgvOutput.CurrentRow.Cells[4].Value.ToString();
+                bclient.ClientType = dgvOutput.CurrentRow.Cells[5].Value.ToString();
+                MessageBox.Show("Newly Created Client Object:\n" + bclient.ClientId + " " + bclient.Name + " " + bclient.Surname + " " + bclient.ClientNumber + " " + bclient.Email + " " + bclient.ClientType);
+            }
+        }
     }
 }
