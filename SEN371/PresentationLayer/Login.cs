@@ -9,7 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Project_1.PresentationLayer
-{
+{ 
+    //ToDo:
+    //Iterate through database, create username and random password for every employee
     public partial class Login : Form
     {
         public BusinessLogicClasses.User currentUser; // The current user information (such as EployeeId) can be passed to different forms
@@ -29,7 +31,41 @@ namespace Project_1.PresentationLayer
             //txt.WriteToFile();
             //txt.AddNewUser(newuser);
 
+
+
         }
+
+
+        private void textBoxUsername_Enter(object sender, EventArgs e)
+        {        
+            if (txtUsername.Text == "Username")
+            {
+                txtUsername.Text = "";
+            }
+        }
+        private void textBoxPass_Enter(object sender, EventArgs e)
+        {
+            if (txtPass.Text == "Password")
+            {
+                txtPass.Text = "";
+            }
+        }
+           
+        private void textBoxPass_Leave(object sender, EventArgs e)
+        {
+            if (txtPass.Text == "")
+            {
+                txtPass.Text = "Password";
+            }
+        }
+        private void textBoxUsername_Leave(object sender, EventArgs e)
+        {
+            if (txtUsername.Text == "")
+            {
+                txtUsername.Text = "Username";
+            }
+        }
+        
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -43,10 +79,11 @@ namespace Project_1.PresentationLayer
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            txtUsername.Text = "Username";
+            txtPass.Text = "Password";
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
             string password = txtPass.Text;
@@ -56,11 +93,11 @@ namespace Project_1.PresentationLayer
 
             DataAccessLayer.txtFileHandler txt = new DataAccessLayer.txtFileHandler();
 
-            for(int i = 0; i < txt.users.Count; i++)
+            for (int i = 0; i < txt.users.Count; i++)
             {
                 if (txt.users[i].Username == username && txt.users[i].Password == password)
                 {
-                    MessageBox.Show("Success, welcome valued " + txt.users[i].EmployeeType +", \n" + "Have a great day!");
+                    MessageBox.Show("Success, welcome valued " + txt.users[i].EmployeeType + ", \n" + "Have a great day!");
                     employeeType = txt.users[i].EmployeeType;
                     this.currentUser = txt.users[i];
                     flagValid = true;
@@ -71,7 +108,7 @@ namespace Project_1.PresentationLayer
                     flagName = true;
                     tempName = txt.users[i].Username;
                 }
-                
+
             }
             if (flagValid == false && flagName == true)
             {
@@ -82,7 +119,7 @@ namespace Project_1.PresentationLayer
                 MessageBox.Show("Please enter valid credentials");
             }
 
-            switch(employeeType)
+            switch (employeeType)
             {
                 case "Call Centre Employee":
                     {
@@ -118,6 +155,8 @@ namespace Project_1.PresentationLayer
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            //Dispose();
+
             PresentationLayer.Registration Register = new PresentationLayer.Registration();
             Register.Show(); // Only a popup, Does not close Login
         }

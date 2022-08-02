@@ -229,6 +229,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Registration";
             this.Text = "Registration";
+            this.Load += new System.EventHandler(this.Registration_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
