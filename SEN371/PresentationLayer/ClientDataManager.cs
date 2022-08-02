@@ -14,6 +14,7 @@ namespace Project_1.PresentationLayer
     public partial class ClientDataManager : Form
     {
         public string activeTable = "Client"; //The active table will be used to CRUD with the correct table, can be used for dynamic fields with on click if statement
+        BusinessLogicClasses.BusinessClient bclient = new BusinessLogicClasses.BusinessClient();
         public ClientDataManager()
         {
             InitializeComponent();
@@ -137,23 +138,26 @@ namespace Project_1.PresentationLayer
         {
             if (activeTable == "Client")
             {
-                BusinessLogicClasses.BusinessClient bclient = new BusinessLogicClasses.BusinessClient();
-                bclient.ClientId = dgvOutput.CurrentRow.Cells[0].Value.ToString();
-                bclient.Name = dgvOutput.CurrentRow.Cells[1].Value.ToString();
-                bclient.Surname = dgvOutput.CurrentRow.Cells[2].Value.ToString();
-                bclient.ClientNumber = dgvOutput.CurrentRow.Cells[3].Value.ToString();
-                bclient.Email = dgvOutput.CurrentRow.Cells[4].Value.ToString();
-                bclient.ClientType = dgvOutput.CurrentRow.Cells[5].Value.ToString();
-                MessageBox.Show("Newly Created Client Object:\n" + bclient.ClientId + " " + bclient.Name + " " + bclient.Surname + " " + bclient.ClientNumber + " " + bclient.Email + " " + bclient.ClientType);
+                //MessageBox.Show("Newly Created Client Object:\n" + bclient.ClientId + " " + bclient.Name + " " + bclient.Surname + " " + bclient.ClientNumber + " " + bclient.Email + " " + bclient.ClientType);
+                bclient.UpdateClient(txtName.Text, txtSurname.Text, txtCellPhone.Text, txtEmail.Text, txtType.Text, bclient.ClientId); //User has no ability to change id
+                //(string Name, string Surname, string Cellphone, string Email, string NewType, string ClientId)
 
+                //Update shows valid SQL query, but does not make changes in the database
             }
+
+
+            dgvOutput.Refresh();
         }
 
         private void dgvOutput_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void dgvOutput_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
             if (activeTable == "Client")
             {
-                BusinessLogicClasses.BusinessClient bclient = new BusinessLogicClasses.BusinessClient();
                 bclient.ClientId = dgvOutput.CurrentRow.Cells[0].Value.ToString();
                 txtName.Text = bclient.Name = dgvOutput.CurrentRow.Cells[1].Value.ToString();
                 txtSurname.Text = bclient.Surname = dgvOutput.CurrentRow.Cells[2].Value.ToString();

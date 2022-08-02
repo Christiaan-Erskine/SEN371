@@ -89,6 +89,7 @@
             this.dgvOutput.Size = new System.Drawing.Size(653, 515);
             this.dgvOutput.TabIndex = 0;
             this.dgvOutput.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOutput_CellContentClick);
+            this.dgvOutput.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvOutput_CellMouseClick);
             // 
             // panel1
             // 

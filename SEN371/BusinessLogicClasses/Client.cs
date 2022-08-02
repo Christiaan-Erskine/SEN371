@@ -43,11 +43,18 @@ namespace Project_1.BusinessLogicClasses
 
         }
 
+        public void UpdateClient(string Name, string Surname, string Cellphone, string Email, string NewType, string ClientId)
+        {
+            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
+            database.Update("Client", new[] { ("Name", Name), ("Surname", Surname), ("CellPhoneNumber", Cellphone), ("Email", Email), ("ClientType", NewType) }, ("ClientId = " + ClientId));
+        }
+
         public void UpdateClient(string Name, string Surname, string Cellphone, string Email, string ClientId) 
         {
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
             database.Update("Client", new[] { ("Name", Name), ("Surname", Surname), ("CellPhoneNumber", Cellphone), ("Email", Email), ("ClientType", clientType) }, ("ClientId = " + ClientId));
         }
+
 
         public void DeleteClient(string clientId)
         {
