@@ -156,6 +156,20 @@ namespace Project_1.PresentationLayer
 
         private void dgvOutput_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+
+        }
+
+        private void btnDelSelect_Click(object sender, EventArgs e)
+        {
+            if (activeTable == "Client")
+            {
+                bclient.DeleteClient(bclient.ClientId);
+                //Doesn't delete due to Person Address, ask Christiaan
+            }
+        }
+
+        private void dgvOutput_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
             if (activeTable == "Client")
             {
                 bclient.ClientId = dgvOutput.CurrentRow.Cells[0].Value.ToString();
