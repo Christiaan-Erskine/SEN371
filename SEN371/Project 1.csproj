@@ -86,6 +86,11 @@
     <Compile Include="BusinessLogicClasses\WorkersContract.cs" />
     <Compile Include="DataAccessLayer\DataHandler.cs" />
     <Compile Include="DataAccessLayer\txtFileHandler.cs" />
+    <Compile Include="PremierServiceSolutionsDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PremierServiceSolutionsDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\CallCenterEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +203,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="PremierServiceSolutionsDBDataSet.xsc">
+      <DependentUpon>PremierServiceSolutionsDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PremierServiceSolutionsDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PremierServiceSolutionsDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PremierServiceSolutionsDBDataSet.xss">
+      <DependentUpon>PremierServiceSolutionsDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -223,7 +239,9 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="DataLayer\Users.txt" />
   </ItemGroup>
