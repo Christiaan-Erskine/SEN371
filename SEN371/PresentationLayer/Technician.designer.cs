@@ -30,22 +30,23 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.lblLogo = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.dgvOutput = new System.Windows.Forms.DataGridView();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btnSQL = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.rbtnIncomplete = new System.Windows.Forms.RadioButton();
+            this.rbtnComplete = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStripView = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripView = new System.Windows.Forms.ToolStripMenuItem();
+            this.serviceRequestsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientServicesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStriRequests = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripManagement = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripDepartment = new System.Windows.Forms.ToolStripComboBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.callToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.outstandingCallsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOutput)).BeginInit();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -70,25 +71,6 @@
             this.lblLogo.TabIndex = 19;
             this.lblLogo.Text = "Premier Service Solutions";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.AllowDrop = true;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(11, 7);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(311, 21);
-            this.comboBox1.TabIndex = 63;
-            this.comboBox1.Text = "Set Job Status";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(11, 45);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(311, 20);
-            this.textBox1.TabIndex = 64;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // dgvOutput
             // 
             this.dgvOutput.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -97,91 +79,66 @@
             this.dgvOutput.RowHeadersWidth = 62;
             this.dgvOutput.Size = new System.Drawing.Size(653, 515);
             this.dgvOutput.TabIndex = 65;
+            this.dgvOutput.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOutput_CellContentClick);
+            this.dgvOutput.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOutput_CellEnter);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(11, 487);
+            this.btnUpdate.Location = new System.Drawing.Point(1030, 93);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.Size = new System.Drawing.Size(107, 28);
             this.btnUpdate.TabIndex = 84;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(91, 487);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 23);
-            this.button1.TabIndex = 85;
-            this.button1.Text = "Close Request";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(910, 34);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 29);
-            this.button2.TabIndex = 88;
-            this.button2.Text = "Run Query";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(1030, 128);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(107, 29);
-            this.button3.TabIndex = 87;
-            this.button3.Text = "View All Requests";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // btnSQL
-            // 
-            this.btnSQL.Location = new System.Drawing.Point(1030, 92);
-            this.btnSQL.Name = "btnSQL";
-            this.btnSQL.Size = new System.Drawing.Size(107, 29);
-            this.btnSQL.TabIndex = 86;
-            this.btnSQL.Text = "See Job Status";
-            this.btnSQL.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(1030, 578);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(107, 29);
-            this.button4.TabIndex = 89;
-            this.button4.Text = "Log Problem";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.rbtnIncomplete);
+            this.panel1.Controls.Add(this.rbtnComplete);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.btnUpdate);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Location = new System.Drawing.Point(14, 92);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(336, 517);
             this.panel1.TabIndex = 90;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // rbtnIncomplete
+            // 
+            this.rbtnIncomplete.AutoSize = true;
+            this.rbtnIncomplete.Location = new System.Drawing.Point(18, 47);
+            this.rbtnIncomplete.Name = "rbtnIncomplete";
+            this.rbtnIncomplete.Size = new System.Drawing.Size(97, 17);
+            this.rbtnIncomplete.TabIndex = 88;
+            this.rbtnIncomplete.TabStop = true;
+            this.rbtnIncomplete.Text = "Job Incomplete";
+            this.rbtnIncomplete.UseVisualStyleBackColor = true;
+            // 
+            // rbtnComplete
+            // 
+            this.rbtnComplete.AutoSize = true;
+            this.rbtnComplete.Location = new System.Drawing.Point(18, 30);
+            this.rbtnComplete.Name = "rbtnComplete";
+            this.rbtnComplete.Size = new System.Drawing.Size(89, 17);
+            this.rbtnComplete.TabIndex = 87;
+            this.rbtnComplete.TabStop = true;
+            this.rbtnComplete.Text = "Job Complete";
+            this.rbtnComplete.UseVisualStyleBackColor = true;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 29);
+            this.label2.Location = new System.Drawing.Point(10, 14);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 13);
+            this.label2.Size = new System.Drawing.Size(93, 13);
             this.label2.TabIndex = 86;
-            this.label2.Text = "Job List Details";
+            this.label2.Text = "Toggle Job Status";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripView,
@@ -197,10 +154,36 @@
             // 
             // toolStripView
             // 
-            this.toolStripView.Enabled = false;
+            this.toolStripView.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.serviceRequestsToolStripMenuItem,
+            this.clientServicesToolStripMenuItem,
+            this.clientToolStripMenuItem,
+            this.callToolStripMenuItem,
+            this.outstandingCallsToolStripMenuItem});
             this.toolStripView.Name = "toolStripView";
-            this.toolStripView.Size = new System.Drawing.Size(82, 23);
+            this.toolStripView.Size = new System.Drawing.Size(44, 23);
             this.toolStripView.Text = "View";
+            // 
+            // serviceRequestsToolStripMenuItem
+            // 
+            this.serviceRequestsToolStripMenuItem.Name = "serviceRequestsToolStripMenuItem";
+            this.serviceRequestsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.serviceRequestsToolStripMenuItem.Text = "Service Requests";
+            this.serviceRequestsToolStripMenuItem.Click += new System.EventHandler(this.serviceRequestsToolStripMenuItem_Click);
+            // 
+            // clientServicesToolStripMenuItem
+            // 
+            this.clientServicesToolStripMenuItem.Name = "clientServicesToolStripMenuItem";
+            this.clientServicesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clientServicesToolStripMenuItem.Text = "Client Services";
+            this.clientServicesToolStripMenuItem.Click += new System.EventHandler(this.clientServicesToolStripMenuItem_Click);
+            // 
+            // clientToolStripMenuItem
+            // 
+            this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
+            this.clientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clientToolStripMenuItem.Text = "Client";
+            this.clientToolStripMenuItem.Click += new System.EventHandler(this.clientToolStripMenuItem_Click);
             // 
             // toolStriRequests
             // 
@@ -211,6 +194,7 @@
             // 
             // toolStripManagement
             // 
+            this.toolStripManagement.Enabled = false;
             this.toolStripManagement.Items.AddRange(new object[] {
             "Call Agent",
             "Services Manager",
@@ -222,6 +206,7 @@
             // 
             // toolStripDepartment
             // 
+            this.toolStripDepartment.Enabled = false;
             this.toolStripDepartment.Items.AddRange(new object[] {
             "Client Maintenance",
             "Contract Maintenance",
@@ -231,6 +216,30 @@
             this.toolStripDepartment.Size = new System.Drawing.Size(82, 23);
             this.toolStripDepartment.Text = "Department";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(1030, 160);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(107, 29);
+            this.button3.TabIndex = 87;
+            this.button3.Text = "View All Requests";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // callToolStripMenuItem
+            // 
+            this.callToolStripMenuItem.Name = "callToolStripMenuItem";
+            this.callToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.callToolStripMenuItem.Text = "Client Calls";
+            this.callToolStripMenuItem.Click += new System.EventHandler(this.callToolStripMenuItem_Click);
+            // 
+            // outstandingCallsToolStripMenuItem
+            // 
+            this.outstandingCallsToolStripMenuItem.Name = "outstandingCallsToolStripMenuItem";
+            this.outstandingCallsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.outstandingCallsToolStripMenuItem.Text = "Outstanding Calls";
+            this.outstandingCallsToolStripMenuItem.Click += new System.EventHandler(this.outstandingCallsToolStripMenuItem_Click);
+            // 
             // Technician
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -238,10 +247,8 @@
             this.ClientSize = new System.Drawing.Size(1149, 643);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.btnSQL);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.dgvOutput);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblLogo);
@@ -261,21 +268,22 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblLogo;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dgvOutput;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button btnSQL;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripComboBox toolStripView;
         private System.Windows.Forms.ToolStripComboBox toolStriRequests;
         private System.Windows.Forms.ToolStripComboBox toolStripManagement;
         private System.Windows.Forms.ToolStripComboBox toolStripDepartment;
+        private System.Windows.Forms.ToolStripMenuItem toolStripView;
+        private System.Windows.Forms.ToolStripMenuItem serviceRequestsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clientServicesToolStripMenuItem;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.RadioButton rbtnIncomplete;
+        private System.Windows.Forms.RadioButton rbtnComplete;
+        private System.Windows.Forms.ToolStripMenuItem clientToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem callToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem outstandingCallsToolStripMenuItem;
     }
 }
