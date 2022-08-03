@@ -205,6 +205,11 @@ namespace Project_1.PresentationLayer
 
         private void btnAddSelect_Click(object sender, EventArgs e)
         {
+            //bclient.StoreClient(txtName.Text, txtSurname.Text, txtCellPhone.Text, txtEmail.Text, txtType.Text);
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
             bclient.StoreClient(txtName.Text, txtSurname.Text, txtCellPhone.Text, txtEmail.Text, txtType.Text);
         }
     }
