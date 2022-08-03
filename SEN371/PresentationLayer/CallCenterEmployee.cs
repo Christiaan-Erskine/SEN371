@@ -69,14 +69,7 @@ namespace Project_1.PresentationLayer
         }
 
         private void clientInformationToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
-            //SqlDataAdapter adapter = dh.RetrieveData("Client");
-            //DataSet ds = new DataSet();
-            //adapter.Fill(ds);       
-            //dgvOutput.DataSource = ds.Tables[0];
-
-
+        {     
             dgvOutput.DataSource = personAddressDetailsBindingSource;
             dgvOutput.Refresh();
 
