@@ -35,34 +35,24 @@
             System.Windows.Forms.Label emailLabel;
             System.Windows.Forms.Label client_TypeLabel;
             System.Windows.Forms.Label full_AddressLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CallCenterEmployee));
             System.Windows.Forms.Label label2;
-            this.lstExtraInfo = new System.Windows.Forms.ListBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CallCenterEmployee));
             this.label9 = new System.Windows.Forms.Label();
             this.radioButtonEmployee = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.cbxAddress = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnSQL = new System.Windows.Forms.Button();
             this.dgvOutput = new System.Windows.Forms.DataGridView();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cellNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clientTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fullAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.personAddressDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.premierServiceSolutionsDBDataSet1 = new Project_1.PremierServiceSolutionsDBDataSet1();
             this.label1 = new System.Windows.Forms.Label();
             this.lblLogo = new System.Windows.Forms.Label();
             this.radioButtonClient = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBoxEmployeeType = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.full_AddressTextBox = new System.Windows.Forms.TextBox();
             this.client_TypeTextBox = new System.Windows.Forms.TextBox();
@@ -94,7 +84,8 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tableAdapterManager = new Project_1.PremierServiceSolutionsDBDataSet1TableAdapters.TableAdapterManager();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBoxEmployeeType = new System.Windows.Forms.TextBox();
+            this.callBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.callTableAdapter = new Project_1.PremierServiceSolutionsDBDataSet1TableAdapters.CallTableAdapter();
             nameLabel = new System.Windows.Forms.Label();
             surnameLabel = new System.Windows.Forms.Label();
             cell_NumberLabel = new System.Windows.Forms.Label();
@@ -109,12 +100,13 @@
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.callBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // nameLabel
             // 
             nameLabel.AutoSize = true;
-            nameLabel.Location = new System.Drawing.Point(42, 37);
+            nameLabel.Location = new System.Drawing.Point(37, 43);
             nameLabel.Name = "nameLabel";
             nameLabel.Size = new System.Drawing.Size(38, 13);
             nameLabel.TabIndex = 87;
@@ -123,7 +115,7 @@
             // surnameLabel
             // 
             surnameLabel.AutoSize = true;
-            surnameLabel.Location = new System.Drawing.Point(28, 63);
+            surnameLabel.Location = new System.Drawing.Point(23, 69);
             surnameLabel.Name = "surnameLabel";
             surnameLabel.Size = new System.Drawing.Size(52, 13);
             surnameLabel.TabIndex = 88;
@@ -132,7 +124,7 @@
             // cell_NumberLabel
             // 
             cell_NumberLabel.AutoSize = true;
-            cell_NumberLabel.Location = new System.Drawing.Point(13, 87);
+            cell_NumberLabel.Location = new System.Drawing.Point(8, 93);
             cell_NumberLabel.Name = "cell_NumberLabel";
             cell_NumberLabel.Size = new System.Drawing.Size(67, 13);
             cell_NumberLabel.TabIndex = 89;
@@ -141,7 +133,7 @@
             // emailLabel
             // 
             emailLabel.AutoSize = true;
-            emailLabel.Location = new System.Drawing.Point(45, 113);
+            emailLabel.Location = new System.Drawing.Point(40, 119);
             emailLabel.Name = "emailLabel";
             emailLabel.Size = new System.Drawing.Size(35, 13);
             emailLabel.TabIndex = 90;
@@ -150,7 +142,7 @@
             // client_TypeLabel
             // 
             client_TypeLabel.AutoSize = true;
-            client_TypeLabel.Location = new System.Drawing.Point(17, 139);
+            client_TypeLabel.Location = new System.Drawing.Point(12, 145);
             client_TypeLabel.Name = "client_TypeLabel";
             client_TypeLabel.Size = new System.Drawing.Size(63, 13);
             client_TypeLabel.TabIndex = 91;
@@ -159,25 +151,26 @@
             // full_AddressLabel
             // 
             full_AddressLabel.AutoSize = true;
-            full_AddressLabel.Location = new System.Drawing.Point(13, 165);
+            full_AddressLabel.Location = new System.Drawing.Point(8, 171);
             full_AddressLabel.Name = "full_AddressLabel";
             full_AddressLabel.Size = new System.Drawing.Size(67, 13);
             full_AddressLabel.TabIndex = 92;
             full_AddressLabel.Text = "Full Address:";
             // 
-            // lstExtraInfo
+            // label2
             // 
-            this.lstExtraInfo.FormattingEnabled = true;
-            this.lstExtraInfo.Location = new System.Drawing.Point(10, 337);
-            this.lstExtraInfo.Name = "lstExtraInfo";
-            this.lstExtraInfo.Size = new System.Drawing.Size(316, 134);
-            this.lstExtraInfo.TabIndex = 82;
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(126, 255);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(83, 13);
+            label2.TabIndex = 95;
+            label2.Text = "Employee Type:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(7, 264);
+            this.label9.Location = new System.Drawing.Point(18, 213);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(118, 13);
             this.label9.TabIndex = 77;
@@ -186,7 +179,7 @@
             // radioButtonEmployee
             // 
             this.radioButtonEmployee.AutoSize = true;
-            this.radioButtonEmployee.Location = new System.Drawing.Point(14, 302);
+            this.radioButtonEmployee.Location = new System.Drawing.Point(25, 251);
             this.radioButtonEmployee.Name = "radioButtonEmployee";
             this.radioButtonEmployee.Size = new System.Drawing.Size(71, 17);
             this.radioButtonEmployee.TabIndex = 76;
@@ -205,16 +198,6 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Client";
             this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // cbxAddress
-            // 
-            this.cbxAddress.AutoSize = true;
-            this.cbxAddress.Location = new System.Drawing.Point(10, 216);
-            this.cbxAddress.Name = "cbxAddress";
-            this.cbxAddress.Size = new System.Drawing.Size(172, 17);
-            this.cbxAddress.TabIndex = 73;
-            this.cbxAddress.Text = "Person already has an Address";
-            this.cbxAddress.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -245,7 +228,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(1031, 549);
+            this.button5.Location = new System.Drawing.Point(1019, 552);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(107, 29);
             this.button5.TabIndex = 61;
@@ -253,36 +236,9 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(1031, 221);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(107, 29);
-            this.button3.TabIndex = 59;
-            this.button3.Text = "Delete Selected";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(1031, 185);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 29);
-            this.button2.TabIndex = 58;
-            this.button2.Text = "Save Selected";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(1031, 149);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 29);
-            this.button1.TabIndex = 57;
-            this.button1.Text = "Update Selected";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // btnSQL
             // 
-            this.btnSQL.Location = new System.Drawing.Point(1031, 107);
+            this.btnSQL.Location = new System.Drawing.Point(1018, 107);
             this.btnSQL.Margin = new System.Windows.Forms.Padding(2);
             this.btnSQL.Name = "btnSQL";
             this.btnSQL.Size = new System.Drawing.Size(107, 29);
@@ -293,60 +249,14 @@
             // 
             // dgvOutput
             // 
-            this.dgvOutput.AutoGenerateColumns = false;
             this.dgvOutput.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvOutput.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOutput.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nameDataGridViewTextBoxColumn,
-            this.surnameDataGridViewTextBoxColumn,
-            this.cellNumberDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn,
-            this.clientTypeDataGridViewTextBoxColumn,
-            this.fullAddressDataGridViewTextBoxColumn});
-            this.dgvOutput.DataSource = this.personAddressDetailsBindingSource;
             this.dgvOutput.Location = new System.Drawing.Point(386, 107);
             this.dgvOutput.Margin = new System.Windows.Forms.Padding(2);
             this.dgvOutput.Name = "dgvOutput";
             this.dgvOutput.RowHeadersWidth = 62;
             this.dgvOutput.Size = new System.Drawing.Size(628, 518);
             this.dgvOutput.TabIndex = 55;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // surnameDataGridViewTextBoxColumn
-            // 
-            this.surnameDataGridViewTextBoxColumn.DataPropertyName = "Surname";
-            this.surnameDataGridViewTextBoxColumn.HeaderText = "Surname";
-            this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
-            // 
-            // cellNumberDataGridViewTextBoxColumn
-            // 
-            this.cellNumberDataGridViewTextBoxColumn.DataPropertyName = "Cell Number";
-            this.cellNumberDataGridViewTextBoxColumn.HeaderText = "Cell Number";
-            this.cellNumberDataGridViewTextBoxColumn.Name = "cellNumberDataGridViewTextBoxColumn";
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            // 
-            // clientTypeDataGridViewTextBoxColumn
-            // 
-            this.clientTypeDataGridViewTextBoxColumn.DataPropertyName = "Client Type";
-            this.clientTypeDataGridViewTextBoxColumn.HeaderText = "Client Type";
-            this.clientTypeDataGridViewTextBoxColumn.Name = "clientTypeDataGridViewTextBoxColumn";
-            // 
-            // fullAddressDataGridViewTextBoxColumn
-            // 
-            this.fullAddressDataGridViewTextBoxColumn.DataPropertyName = "Full Address";
-            this.fullAddressDataGridViewTextBoxColumn.HeaderText = "Full Address";
-            this.fullAddressDataGridViewTextBoxColumn.Name = "fullAddressDataGridViewTextBoxColumn";
-            this.fullAddressDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // personAddressDetailsBindingSource
             // 
@@ -382,7 +292,7 @@
             // radioButtonClient
             // 
             this.radioButtonClient.AutoSize = true;
-            this.radioButtonClient.Location = new System.Drawing.Point(14, 280);
+            this.radioButtonClient.Location = new System.Drawing.Point(25, 229);
             this.radioButtonClient.Name = "radioButtonClient";
             this.radioButtonClient.Size = new System.Drawing.Size(51, 17);
             this.radioButtonClient.TabIndex = 87;
@@ -410,19 +320,24 @@
             this.panel1.Controls.Add(nameLabel);
             this.panel1.Controls.Add(this.nameTextBox);
             this.panel1.Controls.Add(this.radioButtonClient);
-            this.panel1.Controls.Add(this.cbxAddress);
             this.panel1.Controls.Add(this.radioButtonEmployee);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.lstExtraInfo);
-            this.panel1.Location = new System.Drawing.Point(7, 107);
+            this.panel1.Location = new System.Drawing.Point(10, 179);
             this.panel1.Margin = new System.Windows.Forms.Padding(1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(367, 518);
+            this.panel1.Size = new System.Drawing.Size(367, 353);
             this.panel1.TabIndex = 92;
+            // 
+            // textBoxEmployeeType
+            // 
+            this.textBoxEmployeeType.Location = new System.Drawing.Point(215, 251);
+            this.textBoxEmployeeType.Name = "textBoxEmployeeType";
+            this.textBoxEmployeeType.Size = new System.Drawing.Size(122, 20);
+            this.textBoxEmployeeType.TabIndex = 96;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(10, 484);
+            this.btnSave.Location = new System.Drawing.Point(15, 314);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 94;
@@ -433,7 +348,7 @@
             // full_AddressTextBox
             // 
             this.full_AddressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personAddressDetailsBindingSource, "Full Address", true));
-            this.full_AddressTextBox.Location = new System.Drawing.Point(86, 162);
+            this.full_AddressTextBox.Location = new System.Drawing.Point(81, 168);
             this.full_AddressTextBox.Name = "full_AddressTextBox";
             this.full_AddressTextBox.Size = new System.Drawing.Size(264, 20);
             this.full_AddressTextBox.TabIndex = 93;
@@ -441,7 +356,7 @@
             // client_TypeTextBox
             // 
             this.client_TypeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personAddressDetailsBindingSource, "Client Type", true));
-            this.client_TypeTextBox.Location = new System.Drawing.Point(86, 136);
+            this.client_TypeTextBox.Location = new System.Drawing.Point(81, 142);
             this.client_TypeTextBox.Name = "client_TypeTextBox";
             this.client_TypeTextBox.Size = new System.Drawing.Size(264, 20);
             this.client_TypeTextBox.TabIndex = 92;
@@ -449,7 +364,7 @@
             // emailTextBox
             // 
             this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personAddressDetailsBindingSource, "Email", true));
-            this.emailTextBox.Location = new System.Drawing.Point(86, 110);
+            this.emailTextBox.Location = new System.Drawing.Point(81, 116);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(264, 20);
             this.emailTextBox.TabIndex = 91;
@@ -457,7 +372,7 @@
             // cell_NumberTextBox
             // 
             this.cell_NumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personAddressDetailsBindingSource, "Cell Number", true));
-            this.cell_NumberTextBox.Location = new System.Drawing.Point(86, 84);
+            this.cell_NumberTextBox.Location = new System.Drawing.Point(81, 90);
             this.cell_NumberTextBox.Name = "cell_NumberTextBox";
             this.cell_NumberTextBox.Size = new System.Drawing.Size(264, 20);
             this.cell_NumberTextBox.TabIndex = 90;
@@ -465,7 +380,7 @@
             // surnameTextBox
             // 
             this.surnameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personAddressDetailsBindingSource, "Surname", true));
-            this.surnameTextBox.Location = new System.Drawing.Point(86, 60);
+            this.surnameTextBox.Location = new System.Drawing.Point(81, 66);
             this.surnameTextBox.Name = "surnameTextBox";
             this.surnameTextBox.Size = new System.Drawing.Size(264, 20);
             this.surnameTextBox.TabIndex = 89;
@@ -473,7 +388,7 @@
             // nameTextBox
             // 
             this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personAddressDetailsBindingSource, "Name", true));
-            this.nameTextBox.Location = new System.Drawing.Point(86, 34);
+            this.nameTextBox.Location = new System.Drawing.Point(81, 40);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(264, 20);
             this.nameTextBox.TabIndex = 88;
@@ -489,7 +404,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(3, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(1149, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(1129, 25);
             this.menuStrip1.TabIndex = 93;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -582,7 +497,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1149, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1129, 25);
             this.bindingNavigator1.TabIndex = 94;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -696,27 +611,20 @@
             this.toolStripMenuItem1.Size = new System.Drawing.Size(32, 19);
             this.toolStripMenuItem1.Text = "toolStripMenuItem1";
             // 
-            // label2
+            // callBindingSource
             // 
-            label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(115, 306);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(83, 13);
-            label2.TabIndex = 95;
-            label2.Text = "Employee Type:";
+            this.callBindingSource.DataMember = "Call";
+            this.callBindingSource.DataSource = this.premierServiceSolutionsDBDataSet1;
             // 
-            // textBoxEmployeeType
+            // callTableAdapter
             // 
-            this.textBoxEmployeeType.Location = new System.Drawing.Point(204, 302);
-            this.textBoxEmployeeType.Name = "textBoxEmployeeType";
-            this.textBoxEmployeeType.Size = new System.Drawing.Size(122, 20);
-            this.textBoxEmployeeType.TabIndex = 96;
+            this.callTableAdapter.ClearBeforeFill = true;
             // 
             // CallCenterEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1149, 643);
+            this.ClientSize = new System.Drawing.Size(1129, 643);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.radioButton1);
@@ -724,9 +632,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSQL);
             this.Controls.Add(this.dgvOutput);
             this.Controls.Add(this.label1);
@@ -745,24 +650,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.callBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.ListBox lstExtraInfo;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.RadioButton radioButtonEmployee;
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.CheckBox cbxAddress;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnSQL;
         private System.Windows.Forms.DataGridView dgvOutput;
         private System.Windows.Forms.Label label1;
@@ -781,12 +682,6 @@
         private PremierServiceSolutionsDBDataSet1 premierServiceSolutionsDBDataSet1;
         private System.Windows.Forms.BindingSource personAddressDetailsBindingSource;
         private PremierServiceSolutionsDBDataSet1TableAdapters.PersonAddressDetailsTableAdapter personAddressDetailsTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn surnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cellNumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clientTypeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fullAddressDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
@@ -809,5 +704,7 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.TextBox textBoxEmployeeType;
+        private System.Windows.Forms.BindingSource callBindingSource;
+        private PremierServiceSolutionsDBDataSet1TableAdapters.CallTableAdapter callTableAdapter;
     }
 }
