@@ -7,15 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Project_1.PresentationLayer
 {
     public partial class Technician : Form
     {
+        public string activeTable = "ServiceRequest";
         public Technician()
         {
             InitializeComponent();
-           
+
+            DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
+            SqlDataAdapter adapter = dh.RetrieveData("ServiceRequest");
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dgvOutput.DataSource = ds.Tables[0];
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -72,11 +79,67 @@ namespace Project_1.PresentationLayer
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //BusinessLogicClasses.Technician technician = new BusinessLogicClasses.Technician();
-            //callCenter.StoreDepartment(callCenter.DepartmentName);
-            //technician.CreateTechnician(technician.Name, technician.Surname, "0836454569", "technician@1.co.za");
-            //technician.StoreTechnician(technician.Name, technician.Surname, technician.Cell, technician.Email);
-            //technician.StoreEmployee(technician.Name, technician.Surname, technician.EmployeeType, technician.Cell, technician.Email);
+            DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
+            SqlDataAdapter adapter = dh.RetrieveData("ServiceRequest");
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dgvOutput.DataSource = ds.Tables[0];
+            activeTable = "ServiceRequest";
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void serviceRequestsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
+            SqlDataAdapter adapter = dh.RetrieveData("ServiceRequest");
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dgvOutput.DataSource = ds.Tables[0];
+            activeTable = "ServiceRequest";
+        }
+
+        private void clientServicesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
+            SqlDataAdapter adapter = dh.RetrieveData("ClientServices");
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dgvOutput.DataSource = ds.Tables[0];
+            activeTable = "ClientServices";
+        }
+
+        private void clientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
+            SqlDataAdapter adapter = dh.RetrieveData("PersonAddressDetails");
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dgvOutput.DataSource = ds.Tables[0];
+            activeTable = "PersonAddressDetails";
+
+        }
+
+        private void dgvOutput_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvOutput_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (activeTable == "ServiceRequest")
+            {
+                rbtnComplete.Enabled = true;
+                rbtnIncomplete.Enabled = true;
+            }
+            else
+            {
+                rbtnComplete.Enabled = false;
+                rbtnIncomplete.Enabled = false;
+            }
         }
     }
 }
