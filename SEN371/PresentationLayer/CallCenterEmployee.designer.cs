@@ -86,6 +86,7 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.callBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.callTableAdapter = new Project_1.PremierServiceSolutionsDBDataSet1TableAdapters.CallTableAdapter();
+            this.lblLogOut = new System.Windows.Forms.LinkLabel();
             nameLabel = new System.Windows.Forms.Label();
             surnameLabel = new System.Windows.Forms.Label();
             cell_NumberLabel = new System.Windows.Forms.Label();
@@ -621,11 +622,23 @@
             // 
             this.callTableAdapter.ClearBeforeFill = true;
             // 
+            // lblLogOut
+            // 
+            this.lblLogOut.AutoSize = true;
+            this.lblLogOut.Location = new System.Drawing.Point(12, 92);
+            this.lblLogOut.Name = "lblLogOut";
+            this.lblLogOut.Size = new System.Drawing.Size(45, 13);
+            this.lblLogOut.TabIndex = 95;
+            this.lblLogOut.TabStop = true;
+            this.lblLogOut.Text = "Log Out";
+            this.lblLogOut.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblLogOut_LinkClicked);
+            // 
             // CallCenterEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1129, 643);
+            this.Controls.Add(this.lblLogOut);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.radioButton1);
@@ -707,5 +720,6 @@
         private System.Windows.Forms.TextBox textBoxEmployeeType;
         private System.Windows.Forms.BindingSource callBindingSource;
         private PremierServiceSolutionsDBDataSet1TableAdapters.CallTableAdapter callTableAdapter;
+        private System.Windows.Forms.LinkLabel lblLogOut;
     }
 }

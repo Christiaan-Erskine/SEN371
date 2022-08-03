@@ -168,5 +168,12 @@ namespace Project_1.PresentationLayer
         {
             MessageBox.Show(Globals.empId);
         }
+
+        private void lblLogOut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            PresentationLayer.Login login = new PresentationLayer.Login();
+            login.Show();
+            this.Close();
+        }
     }
 }
