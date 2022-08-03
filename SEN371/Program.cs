@@ -25,6 +25,7 @@ namespace Project_1
             //Application.Run(new PresentationLayer.CallCenterEmployee());
             //Application.Run(new PresentationLayer.Search());
             Application.Run(new PresentationLayer.ClientDataManager());
+            //Application.Run(new PresentationLayer.RunQuery());
 
         }
     }
