@@ -7483,7 +7483,7 @@ SELECT CallId, CallStartTime, CallEndTime, ProblemDescription, EmployeeId, Clien
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Project_1.Properties.Settings.Default.PremierServiceSolutionsDBConnectionString;
+           // this._connection.ConnectionString = global::Project_1.Properties.Settings.Default.PremierServiceSolutionsDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7946,7 +7946,7 @@ SELECT ClientId, Name, Surname, CellPhoneNumber, Email, ClientType FROM Client W
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Project_1.Properties.Settings.Default.PremierServiceSolutionsDBConnectionString;
+            //this._connection.ConnectionString = global::Project_1.Properties.Settings.Default.PremierServiceSolutionsDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8367,7 +8367,7 @@ SELECT ClientId, Name, Surname, CellPhoneNumber, Email, ClientType FROM Client W
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Project_1.Properties.Settings.Default.PremierServiceSolutionsDBConnectionString;
+            //this._connection.ConnectionString = global::Project_1.Properties.Settings.Default.PremierServiceSolutionsDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8634,7 +8634,7 @@ SELECT ContractId, ClientId, ContractTypeId FROM Contract WHERE (ContractId = @C
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Project_1.Properties.Settings.Default.PremierServiceSolutionsDBConnectionString;
+            //this._connection.ConnectionString = global::Project_1.Properties.Settings.Default.PremierServiceSolutionsDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8968,7 +8968,7 @@ SELECT ContractId, ClientId, ContractTypeId FROM Contract WHERE (ContractId = @C
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Project_1.Properties.Settings.Default.PremierServiceSolutionsDBConnectionString;
+            //this._connection.ConnectionString = global::Project_1.Properties.Settings.Default.PremierServiceSolutionsDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9219,7 +9219,7 @@ SELECT ContractTypeId, ContractTypeDescription, AvailabilityStatus FROM Contract
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Project_1.Properties.Settings.Default.PremierServiceSolutionsDBConnectionString;
+            //this._connection.ConnectionString = global::Project_1.Properties.Settings.Default.PremierServiceSolutionsDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9574,7 +9574,7 @@ SELECT DepartmentId, DepartmentName FROM Department WHERE (DepartmentId = @Depar
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Project_1.Properties.Settings.Default.PremierServiceSolutionsDBConnectionString;
+            //this._connection.ConnectionString = global::Project_1.Properties.Settings.Default.PremierServiceSolutionsDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9918,7 +9918,7 @@ SELECT EmployeeId, Name, Surname, CellPhoneNumber, Email FROM Employee WHERE (Em
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Project_1.Properties.Settings.Default.PremierServiceSolutionsDBConnectionString;
+            //this._connection.ConnectionString = global::Project_1.Properties.Settings.Default.PremierServiceSolutionsDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10308,7 +10308,7 @@ SELECT EmployeeId, Name, Surname, CellPhoneNumber, Email FROM Employee WHERE (Em
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Project_1.Properties.Settings.Default.PremierServiceSolutionsDBConnectionString;
+            //this._connection.ConnectionString = global::Project_1.Properties.Settings.Default.PremierServiceSolutionsDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10552,7 +10552,7 @@ SELECT EmployeeId, Name, Surname, CellPhoneNumber, Email FROM Employee WHERE (Em
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Project_1.Properties.Settings.Default.PremierServiceSolutionsDBConnectionString;
+            //this._connection.ConnectionString = global::Project_1.Properties.Settings.Default.PremierServiceSolutionsDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10826,7 +10826,7 @@ SELECT ServiceId, ServiceDescription FROM Service WHERE (ServiceId = @ServiceId)
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Project_1.Properties.Settings.Default.PremierServiceSolutionsDBConnectionString;
+            //this._connection.ConnectionString = global::Project_1.Properties.Settings.Default.PremierServiceSolutionsDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11176,7 +11176,7 @@ SELECT RequestId, ClientId, CallAgentId, TechnicianId, CallId, JobStatus FROM Se
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Project_1.Properties.Settings.Default.PremierServiceSolutionsDBConnectionString;
+            //this._connection.ConnectionString = global::Project_1.Properties.Settings.Default.PremierServiceSolutionsDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11588,7 +11588,7 @@ SELECT RequestId, ClientId, CallAgentId, TechnicianId, CallId, JobStatus FROM Se
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Project_1.Properties.Settings.Default.PremierServiceSolutionsDBConnectionString;
+            //this._connection.ConnectionString = global::Project_1.Properties.Settings.Default.PremierServiceSolutionsDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11760,7 +11760,7 @@ SELECT RequestId, ClientId, CallAgentId, TechnicianId, CallId, JobStatus FROM Se
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Project_1.Properties.Settings.Default.PremierServiceSolutionsDBConnectionString;
+            //this._connection.ConnectionString = global::Project_1.Properties.Settings.Default.PremierServiceSolutionsDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11828,7 +11828,7 @@ SELECT RequestId, ClientId, CallAgentId, TechnicianId, CallId, JobStatus FROM Se
         private void InitCommandCollection() {
             this._commandCollection = new global::System.Data.IDbCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Connection = new global::System.Data.SqlClient.SqlConnection(global::Project_1.Properties.Settings.Default.PremierServiceSolutionsDBConnectionString);
+            //((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Connection = new global::System.Data.SqlClient.SqlConnection(global::Project_1.Properties.Settings.Default.PremierServiceSolutionsDBConnectionString);
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).CommandText = "dbo.[Create]";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
