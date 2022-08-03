@@ -9,15 +9,15 @@ namespace Project_1.BusinessLogicClasses
 {
     public class Call
     {
-        string callId;
+        //string callId;
         DateTime callStarted;
         DateTime callEnded;
         string agentId;
         string description;
 
-        public Call(string callId, DateTime callStarted, DateTime callEnded, string agentId, string description = "")
+        public Call(/*string callId,*/ DateTime callStarted, DateTime callEnded, string agentId, string description = "")
         {
-            this.callId = callId;
+            /*this.callId = callId;*/
             this.callStarted = callStarted;
             this.callEnded = callEnded;
             this.agentId = agentId;
@@ -31,7 +31,7 @@ namespace Project_1.BusinessLogicClasses
         //TO DO:
         //Convert DateTime to string in format DB uses
 
-        public string CallId { get => callId; set => callId = value; }
+       // public string CallId { get => callId; set => callId = value; }
         public DateTime CallStarted { get => callStarted; set => callStarted = value; }
         public DateTime CallEnded { get => callEnded; set => callEnded = value; }
         public string AgentId { get => agentId; set => agentId = value; }

@@ -62,12 +62,11 @@ namespace Project_1.PresentationLayer
                 MessageBox.Show("Please enter a problem description");
                 return;
             }
-            var id = Globals.empId;
-
+          
             //agent id is missing here
-            //BusinessLogicClasses.Call call = new BusinessLogicClasses.Call(new DateTime(starTime), new DateTime(stopTime), "", TextBoxProblemDescription.Text);
-
-           // call.StoreCall();
+            BusinessLogicClasses.Call call = new BusinessLogicClasses.Call(new DateTime(starTime), new DateTime(stopTime), Globals.empId, TextBoxProblemDescription.Text);
+            
+            call.StoreCall();
                   
         }
 
