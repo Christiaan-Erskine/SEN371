@@ -389,14 +389,14 @@
             // contractsToolStripMenuItem
             // 
             this.contractsToolStripMenuItem.Name = "contractsToolStripMenuItem";
-            this.contractsToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.contractsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.contractsToolStripMenuItem.Text = "Contracts";
             this.contractsToolStripMenuItem.Click += new System.EventHandler(this.contractsToolStripMenuItem_Click);
             // 
             // servicesToolStripMenuItem
             // 
             this.servicesToolStripMenuItem.Name = "servicesToolStripMenuItem";
-            this.servicesToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.servicesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.servicesToolStripMenuItem.Text = "Services";
             this.servicesToolStripMenuItem.Click += new System.EventHandler(this.servicesToolStripMenuItem_Click);
             // 
