@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -19,10 +19,12 @@ namespace Project_1
             Application.SetCompatibleTextRenderingDefault(false);
 
 
-            
+
             //Application.Run(new Form1());
 
-            Application.Run(new PresentationLayer.CallCenterManager());
+            Application.Run(new PresentationLayer.Problem());
+
+            //Application.Run(new PresentationLayer.CallCenterEmployee());
             //Application.Run(new PresentationLayer.Search());
             //Application.Run(new PresentationLayer.ClientDataManager());
 

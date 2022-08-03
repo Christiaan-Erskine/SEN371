@@ -250,5 +250,26 @@ namespace Project_1.DataAccessLayer
                 sql_connection.Close();
             }
         }
+
+        public void sqlQuery(string query)
+        {
+            sql_connection.Open();
+            SqlCommand command = new SqlCommand(query, sql_connection);
+            try
+            {
+                command.ExecuteNonQuery();
+
+                //MessageBox.Show("Values inserted");
+                Debug.WriteLine("Successful");
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Insert Error: " + error.Message);
+            }
+            finally
+            {
+                sql_connection.Close();
+            }
+        }
     }
 }

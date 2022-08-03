@@ -101,6 +101,8 @@ namespace Project_1.PresentationLayer
                     employeeType = txt.users[i].EmployeeType;
                     this.currentUser = txt.users[i];
                     flagValid = true;
+                    //Globals.empId = currentUser.Username;
+                    Globals.empId = "47";
                     break;
                 }
                 else if (txt.users[i].Username == username && txt.users[i].Password != password)
