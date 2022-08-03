@@ -12,7 +12,7 @@ namespace Project_1.DataAccessLayer
         //string path = System.IO.File.ReadAllText(@"../DataLayer/");
         static string path = @"../../DataLayer/Users.txt";
         string[] lines = File.ReadAllLines(path);
-        int counter;
+        public static int counter;
 
         public List<BusinessLogicClasses.User> users = new List<BusinessLogicClasses.User>(); 
 
