@@ -168,5 +168,11 @@ namespace Project_1.PresentationLayer
             login.Show();
             this.Close();
         }
+
+        private void dgvOutput_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            PresentationLayer.Search search = new PresentationLayer.Search();
+            search.Show();
+        }
     }
 }

@@ -272,6 +272,7 @@
             this.dgvOutput.Size = new System.Drawing.Size(513, 483);
             this.dgvOutput.TabIndex = 95;
             this.dgvOutput.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOutput_CellEnter);
+            this.dgvOutput.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvOutput_MouseDoubleClick);
             // 
             // lblLogo
             // 

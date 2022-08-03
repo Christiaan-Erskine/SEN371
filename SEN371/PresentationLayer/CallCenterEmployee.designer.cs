@@ -258,6 +258,7 @@
             this.dgvOutput.RowHeadersWidth = 62;
             this.dgvOutput.Size = new System.Drawing.Size(628, 518);
             this.dgvOutput.TabIndex = 55;
+            this.dgvOutput.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvOutput_MouseDoubleClick);
             // 
             // personAddressDetailsBindingSource
             // 

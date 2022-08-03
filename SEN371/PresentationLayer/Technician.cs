@@ -188,5 +188,11 @@ namespace Project_1.PresentationLayer
 
             call.UpdateCall(description, call.AgentId, call.CallId);
         }
+
+        private void dgvOutput_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            PresentationLayer.Search search = new PresentationLayer.Search();
+            search.Show();
+        }
     }
 }

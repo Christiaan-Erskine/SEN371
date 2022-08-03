@@ -41,12 +41,12 @@
             this.serviceRequestsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientServicesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.callToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.outstandingCallsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStriRequests = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripManagement = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripDepartment = new System.Windows.Forms.ToolStripComboBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.callToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.outstandingCallsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOutput)).BeginInit();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -81,6 +81,7 @@
             this.dgvOutput.TabIndex = 65;
             this.dgvOutput.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOutput_CellContentClick);
             this.dgvOutput.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOutput_CellEnter);
+            this.dgvOutput.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvOutput_MouseDoubleClick);
             // 
             // btnUpdate
             // 
@@ -167,23 +168,37 @@
             // serviceRequestsToolStripMenuItem
             // 
             this.serviceRequestsToolStripMenuItem.Name = "serviceRequestsToolStripMenuItem";
-            this.serviceRequestsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.serviceRequestsToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.serviceRequestsToolStripMenuItem.Text = "Service Requests";
             this.serviceRequestsToolStripMenuItem.Click += new System.EventHandler(this.serviceRequestsToolStripMenuItem_Click);
             // 
             // clientServicesToolStripMenuItem
             // 
             this.clientServicesToolStripMenuItem.Name = "clientServicesToolStripMenuItem";
-            this.clientServicesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clientServicesToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.clientServicesToolStripMenuItem.Text = "Client Services";
             this.clientServicesToolStripMenuItem.Click += new System.EventHandler(this.clientServicesToolStripMenuItem_Click);
             // 
             // clientToolStripMenuItem
             // 
             this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
-            this.clientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clientToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.clientToolStripMenuItem.Text = "Client";
             this.clientToolStripMenuItem.Click += new System.EventHandler(this.clientToolStripMenuItem_Click);
+            // 
+            // callToolStripMenuItem
+            // 
+            this.callToolStripMenuItem.Name = "callToolStripMenuItem";
+            this.callToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.callToolStripMenuItem.Text = "Client Calls";
+            this.callToolStripMenuItem.Click += new System.EventHandler(this.callToolStripMenuItem_Click);
+            // 
+            // outstandingCallsToolStripMenuItem
+            // 
+            this.outstandingCallsToolStripMenuItem.Name = "outstandingCallsToolStripMenuItem";
+            this.outstandingCallsToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.outstandingCallsToolStripMenuItem.Text = "Outstanding Calls";
+            this.outstandingCallsToolStripMenuItem.Click += new System.EventHandler(this.outstandingCallsToolStripMenuItem_Click);
             // 
             // toolStriRequests
             // 
@@ -225,20 +240,6 @@
             this.button3.Text = "View All Requests";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // callToolStripMenuItem
-            // 
-            this.callToolStripMenuItem.Name = "callToolStripMenuItem";
-            this.callToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.callToolStripMenuItem.Text = "Client Calls";
-            this.callToolStripMenuItem.Click += new System.EventHandler(this.callToolStripMenuItem_Click);
-            // 
-            // outstandingCallsToolStripMenuItem
-            // 
-            this.outstandingCallsToolStripMenuItem.Name = "outstandingCallsToolStripMenuItem";
-            this.outstandingCallsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.outstandingCallsToolStripMenuItem.Text = "Outstanding Calls";
-            this.outstandingCallsToolStripMenuItem.Click += new System.EventHandler(this.outstandingCallsToolStripMenuItem_Click);
             // 
             // Technician
             // 
