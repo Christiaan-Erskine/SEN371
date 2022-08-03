@@ -9,6 +9,5 @@ namespace Project_1.PresentationLayer
     public static class Globals
     {
         public static string empId;
-
     }
 }
