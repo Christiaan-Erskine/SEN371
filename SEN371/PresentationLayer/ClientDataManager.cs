@@ -12,15 +12,15 @@ using System.Data.SqlClient;
 namespace Project_1.PresentationLayer
 {
     //ToDo:
-    //Fix Delete (Connected to Person Address)
-    //Show Employee types / departments
     //RetrieveData Function, too much repeating code with only difference being string  
-    //Impliment Add, should be easy
+    //Update EmployeeDepartment when updating Employee
+    //Remove Restrictions from Employee for deleting, connected to Employee Department
     //Update SQL Adapter on refresh
     public partial class ClientDataManager : Form
     {
         public string activeTable = "Client"; //The active table will be used to CRUD with the correct table, can be used for dynamic fields with on click if statement
         BusinessLogicClasses.BusinessClient bclient = new BusinessLogicClasses.BusinessClient();
+        BusinessLogicClasses.ClientDataManager memployee = new BusinessLogicClasses.ClientDataManager();
         public ClientDataManager()
         {
             InitializeComponent();
@@ -89,11 +89,11 @@ namespace Project_1.PresentationLayer
         {
             dgvOutput.ClearSelection();
             DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
-            SqlDataAdapter adapter = dh.RetrieveData("Employee");
+            SqlDataAdapter adapter = dh.RetrieveData("EmployeeDetails");
             DataSet ds = new DataSet();
             adapter.Fill(ds);
             dgvOutput.DataSource = ds.Tables[0];
-            activeTable = "Employee";
+            activeTable = "EmployeeDetails";
         }
 
         private void contractsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -138,7 +138,7 @@ namespace Project_1.PresentationLayer
 
         private void toolStripView_Click(object sender, EventArgs e)
         {
-            //Hard to get values of menu
+//
         }
 
         private void btnUpdtSelecct_Click(object sender, EventArgs e)
@@ -151,7 +151,11 @@ namespace Project_1.PresentationLayer
 
                 //Update shows valid SQL query, but does not make changes in the database
             }
-
+            if (activeTable == "EmployeeDetails")
+            {
+                memployee.UpdateEmployee(memployee.EmployeeId, txtName.Text, txtSurname.Text, txtCellPhone.Text, txtEmail.Text);
+            }
+            MessageBox.Show(activeTable);
             //To see changes in database, has no effect
             //System.Threading.Thread.Sleep(5000);
             this.Refresh();
@@ -177,6 +181,10 @@ namespace Project_1.PresentationLayer
                 bclient.DeleteClient(bclient.ClientId);
                 //Doesn't delete due to Person Address, ask Christiaan
             }
+            if (activeTable == "EmployeeDetails")
+            {
+                memployee.DeleteEmployee(memployee.EmployeeId);
+            }
         }
 
         private void dgvOutput_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -189,6 +197,32 @@ namespace Project_1.PresentationLayer
 
             try
             {
+                txtName.Enabled = true;
+                txtSurname.Enabled = true;
+                txtType.Enabled = true;
+                txtEmail.Enabled = true;
+                txtCellPhone.Enabled = true;
+
+                if (activeTable == "EmployeeDetails")
+                {
+                    label4.Text = "Employee Department";
+                    btnSave.Text = "Submit New Employee";
+                }
+                else if (activeTable == "Client")
+                {
+                    label4.Text = "Client Type";
+                    btnSave.Text = "Submit New Client";
+                }
+                else
+                {
+                    txtName.Enabled = false;
+                    txtSurname.Enabled = false;
+                    txtType.Enabled = false;
+                    txtEmail.Enabled = false;
+                    txtCellPhone.Enabled = false;
+                }
+
+
                 if (activeTable == "Client")
                 {
                     bclient.ClientId = dgvOutput.CurrentRow.Cells[0].Value.ToString();
@@ -198,7 +232,17 @@ namespace Project_1.PresentationLayer
                     txtEmail.Text = bclient.Email = dgvOutput.CurrentRow.Cells[4].Value.ToString();
                     txtType.Text = bclient.ClientType = dgvOutput.CurrentRow.Cells[5].Value.ToString();
                 }
-            }catch {/* Lol */}
+
+                if (activeTable == "EmployeeDetails")
+                {
+                    memployee.EmployeeId = dgvOutput.CurrentRow.Cells[0].Value.ToString();
+                    txtName.Text = memployee.Name = dgvOutput.CurrentRow.Cells[1].Value.ToString();
+                    txtSurname.Text = memployee.Surname = dgvOutput.CurrentRow.Cells[2].Value.ToString();
+                    txtCellPhone.Text = memployee.Cell = dgvOutput.CurrentRow.Cells[3].Value.ToString();
+                    txtEmail.Text = memployee.Email = dgvOutput.CurrentRow.Cells[4].Value.ToString();
+                }
+            }
+            catch {/* Lol */}
 
 
         }
@@ -210,7 +254,132 @@ namespace Project_1.PresentationLayer
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            bclient.StoreClient(txtName.Text, txtSurname.Text, txtCellPhone.Text, txtEmail.Text, txtType.Text);
+            if (activeTable == "Client")
+            {
+                bclient.StoreClient(txtName.Text, txtSurname.Text, txtCellPhone.Text, txtEmail.Text, txtType.Text);
+            }
+            
+            if (activeTable == "EmployeeDetails")
+            {
+                memployee.StoreEmployee(txtName.Text, txtSurname.Text, txtCellPhone.Text, txtEmail.Text);
+            }
+        }
+
+        private void btnClient_Click(object sender, EventArgs e)
+        {
+            //Search Instead?
+            DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
+            SqlDataAdapter adapter = dh.RetrieveData("Client");
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dgvOutput.DataSource = ds.Tables[0];
+            activeTable = "Client";
+        }
+
+        private void btnEmployee_Click(object sender, EventArgs e)
+        {
+            //Search Instead?
+            dgvOutput.ClearSelection();
+            DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
+            SqlDataAdapter adapter = dh.RetrieveData("EmployeeDetails");
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dgvOutput.DataSource = ds.Tables[0];
+            activeTable = "EmployeeDetails";
+        }
+
+        private void btnIssue_Click(object sender, EventArgs e)
+        {
+            dgvOutput.ClearSelection();
+            DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
+            SqlDataAdapter adapter = dh.RetrieveData("ServiceRequest");
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dgvOutput.DataSource = ds.Tables[0];
+            activeTable = "ServiceRequest";
+        }
+
+        private void callAgentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dgvOutput.ClearSelection();
+            DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
+            SqlDataAdapter adapter = dh.RetrieveData("EmployeeDetails", "DepartmentName = 'Human Resources'");
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dgvOutput.DataSource = ds.Tables[0];
+            activeTable = "EmployeeDetails";
+        }
+
+        private void contractMaintananceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dgvOutput.ClearSelection();
+            DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
+            SqlDataAdapter adapter = dh.RetrieveData("EmployeeDetails", "DepartmentName = 'Contract Maintenance'");
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dgvOutput.DataSource = ds.Tables[0];
+            activeTable = "EmployeeDetails";
+        }
+
+        private void serviceMaintananceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dgvOutput.ClearSelection();
+            DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
+            SqlDataAdapter adapter = dh.RetrieveData("EmployeeDetails", "DepartmentName = 'Services'");
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dgvOutput.DataSource = ds.Tables[0];
+            activeTable = "EmployeeDetails";
+        }
+
+        private void technicianToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dgvOutput.ClearSelection();
+            DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
+            SqlDataAdapter adapter = dh.RetrieveData("EmployeeDetails", "DepartmentName = 'Client Maintenance'");
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dgvOutput.DataSource = ds.Tables[0];
+            activeTable = "EmployeeDetails";
+        }
+
+        private void dgvOutput_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            PresentationLayer.Search search = new PresentationLayer.Search();
+            search.Show();
+        }
+
+        private void callCentreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dgvOutput.ClearSelection();
+            DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
+            SqlDataAdapter adapter = dh.RetrieveData("EmployeeDetails", "DepartmentName = 'Call Centre'");
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dgvOutput.DataSource = ds.Tables[0];
+            activeTable = "EmployeeDetails";
+        }
+
+        private void servicesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            dgvOutput.ClearSelection();
+            DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
+            SqlDataAdapter adapter = dh.RetrieveData("EmployeeDetails", "DepartmentName = 'Services'");
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dgvOutput.DataSource = ds.Tables[0];
+            activeTable = "EmployeeDetails";
+        }
+
+        private void newHumanResourcesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dgvOutput.ClearSelection();
+            DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
+            SqlDataAdapter adapter = dh.RetrieveData("EmployeeDetails", "DepartmentName = 'New Human Resources'");
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dgvOutput.DataSource = ds.Tables[0];
+            activeTable = "EmployeeDetails";
         }
     }
 }

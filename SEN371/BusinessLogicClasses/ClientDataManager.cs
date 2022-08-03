@@ -18,6 +18,10 @@ namespace Project_1.BusinessLogicClasses
             this.ClientId = clientId;
         }
 
+        public ClientDataManager()
+        {
+        }
+
         public string ClientId { get => clientId; set => clientId = value; }
 
 

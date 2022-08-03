@@ -121,6 +121,7 @@
     <Compile Include="PresentationLayer\ClientDataManager.Designer.cs">
       <DependentUpon>ClientDataManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="Globals.cs" />
     <Compile Include="PresentationLayer\Login.cs">
       <SubType>Form</SubType>
     </Compile>

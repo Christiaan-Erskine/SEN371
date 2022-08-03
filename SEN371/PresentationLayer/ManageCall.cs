@@ -51,7 +51,6 @@ namespace Project_1.PresentationLayer
         {
 
         }
-
        
         
         private void btnSave_Click(object sender, EventArgs e)
@@ -63,11 +62,12 @@ namespace Project_1.PresentationLayer
                 MessageBox.Show("Please enter a problem description");
                 return;
             }
+            var id = Globals.empId;
 
             //agent id is missing here
-            BusinessLogicClasses.Call call = new BusinessLogicClasses.Call(new DateTime(starTime), new DateTime(stopTime), "", TextBoxProblemDescription.Text);
+            //BusinessLogicClasses.Call call = new BusinessLogicClasses.Call(new DateTime(starTime), new DateTime(stopTime), "", TextBoxProblemDescription.Text);
 
-            call.StoreCall();
+           // call.StoreCall();
                   
         }
 
