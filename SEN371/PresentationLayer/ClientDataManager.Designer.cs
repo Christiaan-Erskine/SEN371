@@ -273,6 +273,7 @@
             this.btnClient.TabIndex = 14;
             this.btnClient.Text = "Find Client Details";
             this.btnClient.UseVisualStyleBackColor = true;
+            this.btnClient.Click += new System.EventHandler(this.btnClient_Click);
             // 
             // btnIssue
             // 
@@ -282,6 +283,7 @@
             this.btnIssue.TabIndex = 15;
             this.btnIssue.Text = "View Issue History";
             this.btnIssue.UseVisualStyleBackColor = true;
+            this.btnIssue.Click += new System.EventHandler(this.btnIssue_Click);
             // 
             // btnEmployee
             // 
@@ -291,6 +293,7 @@
             this.btnEmployee.TabIndex = 16;
             this.btnEmployee.Text = "Find Employee Details";
             this.btnEmployee.UseVisualStyleBackColor = true;
+            this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
             // 
             // btnService
             // 
