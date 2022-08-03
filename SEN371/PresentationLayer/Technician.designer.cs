@@ -33,18 +33,20 @@
             this.dgvOutput = new System.Windows.Forms.DataGridView();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.rbtnIncomplete = new System.Windows.Forms.RadioButton();
+            this.rbtnComplete = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripView = new System.Windows.Forms.ToolStripMenuItem();
             this.serviceRequestsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientServicesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStriRequests = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripManagement = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripDepartment = new System.Windows.Forms.ToolStripComboBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.rbtnComplete = new System.Windows.Forms.RadioButton();
-            this.rbtnIncomplete = new System.Windows.Forms.RadioButton();
-            this.clientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.callToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.outstandingCallsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOutput)).BeginInit();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -88,6 +90,7 @@
             this.btnUpdate.TabIndex = 84;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // panel1
             // 
@@ -100,6 +103,28 @@
             this.panel1.Size = new System.Drawing.Size(336, 517);
             this.panel1.TabIndex = 90;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // rbtnIncomplete
+            // 
+            this.rbtnIncomplete.AutoSize = true;
+            this.rbtnIncomplete.Location = new System.Drawing.Point(18, 47);
+            this.rbtnIncomplete.Name = "rbtnIncomplete";
+            this.rbtnIncomplete.Size = new System.Drawing.Size(97, 17);
+            this.rbtnIncomplete.TabIndex = 88;
+            this.rbtnIncomplete.TabStop = true;
+            this.rbtnIncomplete.Text = "Job Incomplete";
+            this.rbtnIncomplete.UseVisualStyleBackColor = true;
+            // 
+            // rbtnComplete
+            // 
+            this.rbtnComplete.AutoSize = true;
+            this.rbtnComplete.Location = new System.Drawing.Point(18, 30);
+            this.rbtnComplete.Name = "rbtnComplete";
+            this.rbtnComplete.Size = new System.Drawing.Size(89, 17);
+            this.rbtnComplete.TabIndex = 87;
+            this.rbtnComplete.TabStop = true;
+            this.rbtnComplete.Text = "Job Complete";
+            this.rbtnComplete.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -132,7 +157,9 @@
             this.toolStripView.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.serviceRequestsToolStripMenuItem,
             this.clientServicesToolStripMenuItem,
-            this.clientToolStripMenuItem});
+            this.clientToolStripMenuItem,
+            this.callToolStripMenuItem,
+            this.outstandingCallsToolStripMenuItem});
             this.toolStripView.Name = "toolStripView";
             this.toolStripView.Size = new System.Drawing.Size(44, 23);
             this.toolStripView.Text = "View";
@@ -150,6 +177,13 @@
             this.clientServicesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clientServicesToolStripMenuItem.Text = "Client Services";
             this.clientServicesToolStripMenuItem.Click += new System.EventHandler(this.clientServicesToolStripMenuItem_Click);
+            // 
+            // clientToolStripMenuItem
+            // 
+            this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
+            this.clientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clientToolStripMenuItem.Text = "Client";
+            this.clientToolStripMenuItem.Click += new System.EventHandler(this.clientToolStripMenuItem_Click);
             // 
             // toolStriRequests
             // 
@@ -192,34 +226,19 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // rbtnComplete
+            // callToolStripMenuItem
             // 
-            this.rbtnComplete.AutoSize = true;
-            this.rbtnComplete.Location = new System.Drawing.Point(18, 30);
-            this.rbtnComplete.Name = "rbtnComplete";
-            this.rbtnComplete.Size = new System.Drawing.Size(89, 17);
-            this.rbtnComplete.TabIndex = 87;
-            this.rbtnComplete.TabStop = true;
-            this.rbtnComplete.Text = "Job Complete";
-            this.rbtnComplete.UseVisualStyleBackColor = true;
+            this.callToolStripMenuItem.Name = "callToolStripMenuItem";
+            this.callToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.callToolStripMenuItem.Text = "Client Calls";
+            this.callToolStripMenuItem.Click += new System.EventHandler(this.callToolStripMenuItem_Click);
             // 
-            // rbtnIncomplete
+            // outstandingCallsToolStripMenuItem
             // 
-            this.rbtnIncomplete.AutoSize = true;
-            this.rbtnIncomplete.Location = new System.Drawing.Point(18, 47);
-            this.rbtnIncomplete.Name = "rbtnIncomplete";
-            this.rbtnIncomplete.Size = new System.Drawing.Size(97, 17);
-            this.rbtnIncomplete.TabIndex = 88;
-            this.rbtnIncomplete.TabStop = true;
-            this.rbtnIncomplete.Text = "Job Incomplete";
-            this.rbtnIncomplete.UseVisualStyleBackColor = true;
-            // 
-            // clientToolStripMenuItem
-            // 
-            this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
-            this.clientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.clientToolStripMenuItem.Text = "Client";
-            this.clientToolStripMenuItem.Click += new System.EventHandler(this.clientToolStripMenuItem_Click);
+            this.outstandingCallsToolStripMenuItem.Name = "outstandingCallsToolStripMenuItem";
+            this.outstandingCallsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.outstandingCallsToolStripMenuItem.Text = "Outstanding Calls";
+            this.outstandingCallsToolStripMenuItem.Click += new System.EventHandler(this.outstandingCallsToolStripMenuItem_Click);
             // 
             // Technician
             // 
@@ -264,5 +283,7 @@
         private System.Windows.Forms.RadioButton rbtnIncomplete;
         private System.Windows.Forms.RadioButton rbtnComplete;
         private System.Windows.Forms.ToolStripMenuItem clientToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem callToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem outstandingCallsToolStripMenuItem;
     }
 }

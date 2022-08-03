@@ -9,11 +9,12 @@ namespace Project_1.BusinessLogicClasses
 {
     public class Call
     {
-        //string callId;
+        string callId;
         DateTime callStarted;
         DateTime callEnded;
         string agentId;
         string description;
+        string clientId;
 
         public Call(/*string callId,*/ DateTime callStarted, DateTime callEnded, string agentId, string description = "")
         {
@@ -36,6 +37,8 @@ namespace Project_1.BusinessLogicClasses
         public DateTime CallEnded { get => callEnded; set => callEnded = value; }
         public string AgentId { get => agentId; set => agentId = value; }
         public string Description { get => description; set => description = value; }
+        public string CallId { get => callId; set => callId = value; }
+        public string ClientId { get => clientId; set => clientId = value; }
 
         public string dateToString(DateTime date) // C# DateTime to a string in correct SQL format for DateTime
         {
@@ -58,6 +61,11 @@ namespace Project_1.BusinessLogicClasses
         {
             DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
             database.Update("Call", new[] { ("callstarttime", dateToString(start)), ("callendtime", dateToString(end)), ("problemdescription", descrption), ("employeeid", agentId), ("clientid", clientId) }, ("CallId = " + callId));//Client?
+        } 
+        public void UpdateCall(string descrption, string agentId, string callId)
+        {
+            DataAccessLayer.DataHandler database = new DataAccessLayer.DataHandler();
+            database.Update("Call", new[] { ("problemdescription", descrption), ("employeeid", agentId) }, ("CallId = " + callId));//Client?
         }
 
         public void DeleteCall(string callId)
