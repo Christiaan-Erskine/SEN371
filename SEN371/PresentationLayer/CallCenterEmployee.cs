@@ -163,6 +163,10 @@ namespace Project_1.PresentationLayer
                 dataHandler.Insert("Employee", new[] { ("Name", nameTextBox.Text), ("Surname", surnameTextBox.Text), ("CellPhoneNumber", cell_NumberTextBox.Text), ("Email", emailTextBox.Text) });           
             }           
         }
-  
+
+        private void lblLogo_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(Globals.empId);
+        }
     }
 }
