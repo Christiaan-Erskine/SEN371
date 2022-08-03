@@ -288,6 +288,7 @@
             this.lblLogo.Size = new System.Drawing.Size(325, 31);
             this.lblLogo.TabIndex = 53;
             this.lblLogo.Text = "Premier Service Solutions";
+            this.lblLogo.Click += new System.EventHandler(this.lblLogo_Click);
             // 
             // radioButtonClient
             // 
