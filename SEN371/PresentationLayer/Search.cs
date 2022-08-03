@@ -32,7 +32,12 @@ namespace Project_1.PresentationLayer
 
         private void cbbFields_SelectedIndexChanged(object sender, EventArgs e)
         {
+           /* cbbFields.Items.Clear();
 
+            for (int i = 0; i < dgvOutput.Columns.Count; i++)
+            {
+                cbbFields.Items.Add(dgvOutput.Columns[i].HeaderText);
+            }*/
         }
 
         private void cbbTable_SelectedIndexChanged(object sender, EventArgs e)
@@ -42,6 +47,12 @@ namespace Project_1.PresentationLayer
             DataSet ds = new DataSet();
             adapter.Fill(ds);
             dgvOutput.DataSource = ds.Tables[0];
+
+            cbbFields.Items.Clear();
+            for (int i = 0; i < dgvOutput.Columns.Count; i++)
+            {
+                cbbFields.Items.Add(dgvOutput.Columns[i].HeaderText);
+            }
         }
 
         private void tbxSearch_TextChanged(object sender, EventArgs e)
@@ -57,6 +68,23 @@ namespace Project_1.PresentationLayer
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string condition = cbbFields.Text + " = '" + tbxSearch.Text + "'";
+            //MessageBox.Show(condition);
+            try
+            {
+                DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
+                SqlDataAdapter adapter = dh.RetrieveData(cbbTable.Text, condition);
+                DataSet ds = new DataSet();
+                adapter.Fill(ds);
+                dgvOutput.DataSource = ds.Tables[0];
+            }
+            catch { }
+
+
         }
     }
 }
