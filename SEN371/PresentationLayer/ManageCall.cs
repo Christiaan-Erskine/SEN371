@@ -65,9 +65,9 @@ namespace Project_1.PresentationLayer
             }
 
             //agent id is missing here
-            BusinessLogicClasses.Call call = new BusinessLogicClasses.Call(new DateTime(starTime), new DateTime(stopTime), "", TextBoxProblemDescription.Text);
+            //BusinessLogicClasses.Call call = new BusinessLogicClasses.Call(new DateTime(starTime), new DateTime(stopTime), "", TextBoxProblemDescription.Text);
 
-            call.StoreCall();
+           // call.StoreCall();
                   
         }
 

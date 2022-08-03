@@ -17,6 +17,10 @@ namespace Project_1.PresentationLayer
 
         string selectedTable;
 
+        BusinessLogicClasses.BusinessClient BusinessClient = new BusinessLogicClasses.BusinessClient();
+        BusinessLogicClasses.Call call = new BusinessLogicClasses.Call();
+
+        
         public CallCenterEmployee()
         {
             InitializeComponent();
@@ -26,6 +30,8 @@ namespace Project_1.PresentationLayer
             //DataSet ds = new DataSet();
             //adapter.Fill(ds);
             //dgvOutput.DataSource = ds.Tables[0];
+
+            dgvOutput.DataSource = personAddressDetailsBindingSource;
 
             selectedTable = radioButtonClient.Checked ? "Client" : "Employee";
 
@@ -50,27 +56,37 @@ namespace Project_1.PresentationLayer
 
         private void callHistoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            BusinessLogicClasses.Call call = new BusinessLogicClasses.Call();
-            SqlDataAdapter adapter = call.GetInfo();
-            DataSet ds = new DataSet();
-            adapter.Fill(ds);
-            dgvOutput.DataSource = ds.Tables[0];
+            //BusinessLogicClasses.Call call = new BusinessLogicClasses.Call();
+            //SqlDataAdapter adapter = call.GetInfo();
+            //DataSet ds = new DataSet();
+            //adapter.Fill(ds);
+            //dgvOutput.DataSource = ds.Tables[0];
+
+            dgvOutput.DataSource = callBindingSource;
+            dgvOutput.Refresh();
+
             activeTable = "Call";
         }
 
         private void clientInformationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
-            SqlDataAdapter adapter = dh.RetrieveData("Client");
-            DataSet ds = new DataSet();
-            adapter.Fill(ds);
-            dgvOutput.DataSource = ds.Tables[0];
+            //DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
+            //SqlDataAdapter adapter = dh.RetrieveData("Client");
+            //DataSet ds = new DataSet();
+            //adapter.Fill(ds);       
+            //dgvOutput.DataSource = ds.Tables[0];
+
+
+            dgvOutput.DataSource = personAddressDetailsBindingSource;
+            dgvOutput.Refresh();
+
             activeTable = "Client";
         }
 
         private void CallCenterEmployee_Load(object sender, EventArgs e)
         {
-           
+            // TODO: This line of code loads data into the 'premierServiceSolutionsDBDataSet1.Call' table. You can move, or remove it, as needed.
+            this.callTableAdapter.Fill(this.premierServiceSolutionsDBDataSet1.Call);
             this.personAddressDetailsTableAdapter.Fill(this.premierServiceSolutionsDBDataSet1.PersonAddressDetails);                   
         }
 
@@ -141,12 +157,12 @@ namespace Project_1.PresentationLayer
                 //        return;
                 //}
 
-                //more correct way commented above this, not working yet
+                //more correct way commented above this, could not get it working for now              
                 DataAccessLayer.DataHandler dataHandler = new DataAccessLayer.DataHandler();
 
                 dataHandler.Insert("Employee", new[] { ("Name", nameTextBox.Text), ("Surname", surnameTextBox.Text), ("CellPhoneNumber", cell_NumberTextBox.Text), ("Email", emailTextBox.Text) });           
             }           
         }
-      
+  
     }
 }
