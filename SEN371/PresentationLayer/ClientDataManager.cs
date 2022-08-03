@@ -348,5 +348,38 @@ namespace Project_1.PresentationLayer
             PresentationLayer.Search search = new PresentationLayer.Search();
             search.Show();
         }
+
+        private void callCentreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dgvOutput.ClearSelection();
+            DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
+            SqlDataAdapter adapter = dh.RetrieveData("EmployeeDetails", "DepartmentName = 'Call Centre'");
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dgvOutput.DataSource = ds.Tables[0];
+            activeTable = "EmployeeDetails";
+        }
+
+        private void servicesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            dgvOutput.ClearSelection();
+            DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
+            SqlDataAdapter adapter = dh.RetrieveData("EmployeeDetails", "DepartmentName = 'Services'");
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dgvOutput.DataSource = ds.Tables[0];
+            activeTable = "EmployeeDetails";
+        }
+
+        private void newHumanResourcesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dgvOutput.ClearSelection();
+            DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
+            SqlDataAdapter adapter = dh.RetrieveData("EmployeeDetails", "DepartmentName = 'New Human Resources'");
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dgvOutput.DataSource = ds.Tables[0];
+            activeTable = "EmployeeDetails";
+        }
     }
 }
