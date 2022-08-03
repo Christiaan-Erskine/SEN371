@@ -14,7 +14,7 @@ namespace Project_1.PresentationLayer
     //Iterate through database, create username and random password for every employee
     public partial class Login : Form
     {
-        public BusinessLogicClasses.User currentUser; // The current user information (such as EployeeId) can be passed to different forms
+        public static BusinessLogicClasses.User currentUser; // The current user information (such as EployeeId) can be passed to different forms
         public Login()
         {
             InitializeComponent();
