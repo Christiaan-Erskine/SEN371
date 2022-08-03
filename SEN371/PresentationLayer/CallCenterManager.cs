@@ -18,12 +18,12 @@ namespace Project_1.PresentationLayer
         public CallCenterManager()
         {
             InitializeComponent();
-            //DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
-            //SqlDataAdapter adapter = dh.RetrieveData("Client");
-            //DataSet ds = new DataSet();
-            //adapter.Fill(ds);
-            //dgvOutput.DataSource = ds.Tables[0];
-            //activeTable = "Client";
+            DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
+            SqlDataAdapter adapter = dh.RetrieveData("Client");
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dgvOutput.DataSource = ds.Tables[0];
+            activeTable = "Client";
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -55,14 +55,14 @@ namespace Project_1.PresentationLayer
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            //if (activeTable == "Client")
-            //{
-            //    //MessageBox.Show("Newly Created Client Object:\n" + bclient.ClientId + " " + bclient.Name + " " + bclient.Surname + " " + bclient.ClientNumber + " " + bclient.Email + " " + bclient.ClientType);
-            //    bclient.UpdateClient(txtName.Text, txtSurname.Text, txtCellPhone.Text, txtEmail.Text, txtType.Text, bclient.ClientId); //User has no ability to change id
-            //    //(string Name, string Surname, string Cellphone, string Email, string NewType, string ClientId)
+            if (activeTable == "Client")
+            {
+                //MessageBox.Show("Newly Created Client Object:\n" + bclient.ClientId + " " + bclient.Name + " " + bclient.Surname + " " + bclient.ClientNumber + " " + bclient.Email + " " + bclient.ClientType);
+                bclient.UpdateClient(txtName.Text, txtSurname.Text, txtCellPhone.Text, txtEmail.Text, txtType.Text, bclient.ClientId); //User has no ability to change id
+                //(string Name, string Surname, string Cellphone, string Email, string NewType, string ClientId)
 
-            //    //Update shows valid SQL query, but does not make changes in the database
-            //}
+                //Update shows valid SQL query, but does not make changes in the database
+            }
 
 
             dgvOutput.Refresh();

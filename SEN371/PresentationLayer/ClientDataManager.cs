@@ -136,17 +136,19 @@ namespace Project_1.PresentationLayer
 
         private void btnUpdtSelecct_Click(object sender, EventArgs e)
         {
-            if (activeTable == "Client")
+            try
             {
-                //MessageBox.Show("Newly Created Client Object:\n" + bclient.ClientId + " " + bclient.Name + " " + bclient.Surname + " " + bclient.ClientNumber + " " + bclient.Email + " " + bclient.ClientType);
-                bclient.UpdateClient(txtName.Text, txtSurname.Text, txtCellPhone.Text, txtEmail.Text, txtType.Text, bclient.ClientId); //User has no ability to change id
-                //(string Name, string Surname, string Cellphone, string Email, string NewType, string ClientId)
-
-                //Update shows valid SQL query, but does not make changes in the database
+                if (activeTable == "Client")
+                {
+                    bclient.ClientId = dgvOutput.CurrentRow.Cells[0].Value.ToString();
+                    txtName.Text = bclient.Name = dgvOutput.CurrentRow.Cells[1].Value.ToString();
+                    txtSurname.Text = bclient.Surname = dgvOutput.CurrentRow.Cells[2].Value.ToString();
+                    txtCellPhone.Text = bclient.ClientNumber = dgvOutput.CurrentRow.Cells[3].Value.ToString();
+                    txtEmail.Text = bclient.Email = dgvOutput.CurrentRow.Cells[4].Value.ToString();
+                    txtType.Text = bclient.ClientType = dgvOutput.CurrentRow.Cells[5].Value.ToString();
+                }
             }
-
-
-            dgvOutput.Refresh();
+            catch {/* Lol */}
         }
 
         private void dgvOutput_CellContentClick(object sender, DataGridViewCellEventArgs e)
