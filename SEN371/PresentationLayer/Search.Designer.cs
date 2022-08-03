@@ -34,9 +34,7 @@
             this.cbbTable = new System.Windows.Forms.ComboBox();
             this.cbbFields = new System.Windows.Forms.ComboBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOutput)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,15 +106,7 @@
             this.btnSearch.TabIndex = 5;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(12, 536);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(107, 29);
-            this.btnUpdate.TabIndex = 6;
-            this.btnUpdate.Text = "Update Selected";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnCancel
             // 
@@ -128,23 +118,12 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(124, 536);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(107, 29);
-            this.btnDelete.TabIndex = 8;
-            this.btnDelete.Text = "Delete Selected";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            // 
             // Search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(805, 598);
-            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.cbbFields);
             this.Controls.Add(this.cbbTable);
@@ -168,8 +147,6 @@
         private System.Windows.Forms.ComboBox cbbTable;
         private System.Windows.Forms.ComboBox cbbFields;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnDelete;
     }
 }
