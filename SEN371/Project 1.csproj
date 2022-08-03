@@ -91,6 +91,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PremierServiceSolutionsDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="PremierServiceSolutionsDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PremierServiceSolutionsDBDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\CallCenterEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +218,17 @@
     </None>
     <None Include="PremierServiceSolutionsDBDataSet.xss">
       <DependentUpon>PremierServiceSolutionsDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PremierServiceSolutionsDBDataSet1.xsc">
+      <DependentUpon>PremierServiceSolutionsDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PremierServiceSolutionsDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PremierServiceSolutionsDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PremierServiceSolutionsDBDataSet1.xss">
+      <DependentUpon>PremierServiceSolutionsDBDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

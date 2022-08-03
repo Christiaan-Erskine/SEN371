@@ -13,8 +13,6 @@ namespace Project_1.PresentationLayer
 {
     public partial class CallCenterManager : Form
     {
-        public string activeTable = "Client"; //The active table will be used to CRUD with the correct table, can be used for dynamic fields with on click if statement
-        BusinessLogicClasses.BusinessClient bclient = new BusinessLogicClasses.BusinessClient();
         public CallCenterManager()
         {
             InitializeComponent();
@@ -51,21 +49,6 @@ namespace Project_1.PresentationLayer
         private void toolStriRequests_Click(object sender, EventArgs e)
         {
           
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            //if (activeTable == "Client")
-            //{
-            //    //MessageBox.Show("Newly Created Client Object:\n" + bclient.ClientId + " " + bclient.Name + " " + bclient.Surname + " " + bclient.ClientNumber + " " + bclient.Email + " " + bclient.ClientType);
-            //    bclient.UpdateClient(txtName.Text, txtSurname.Text, txtCellPhone.Text, txtEmail.Text, txtType.Text, bclient.ClientId); //User has no ability to change id
-            //    //(string Name, string Surname, string Cellphone, string Email, string NewType, string ClientId)
-
-            //    //Update shows valid SQL query, but does not make changes in the database
-            //}
-
-
-            dgvOutput.Refresh();
         }
     }
 }

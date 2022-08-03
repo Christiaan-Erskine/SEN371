@@ -20,9 +20,9 @@ namespace Project_1 {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("PremierServiceSolutionsDBDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("PremierServiceSolutionsDBDataSet1")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class PremierServiceSolutionsDBDataSet : global::System.Data.DataSet {
+    public partial class PremierServiceSolutionsDBDataSet1 : global::System.Data.DataSet {
         
         private CallDataTable tableCall;
         
@@ -54,8 +54,6 @@ namespace Project_1 {
         
         private PersonAddressDetailsDataTable tablePersonAddressDetails;
         
-        private global::System.Data.DataRelation relationFK__Call__ClientId__628FA481;
-        
         private global::System.Data.DataRelation relationFK__Call__EmployeeId__619B8048;
         
         private global::System.Data.DataRelation relationFK__ClientMan__Clien__76969D2E;
@@ -70,8 +68,6 @@ namespace Project_1 {
         
         private global::System.Data.DataRelation relationFK__EmployeeD__Emplo__6E01572D;
         
-        private global::System.Data.DataRelation relationFK__PersonAdd__Perso__151B244E;
-        
         private global::System.Data.DataRelation relationFK__ServiceRe__CallA__66603565;
         
         private global::System.Data.DataRelation relationFK__ServiceRe__CallI__68487DD7;
@@ -84,7 +80,7 @@ namespace Project_1 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public PremierServiceSolutionsDBDataSet() {
+        public PremierServiceSolutionsDBDataSet1() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -95,7 +91,7 @@ namespace Project_1 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected PremierServiceSolutionsDBDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected PremierServiceSolutionsDBDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -363,7 +359,7 @@ namespace Project_1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            PremierServiceSolutionsDBDataSet cln = ((PremierServiceSolutionsDBDataSet)(base.Clone()));
+            PremierServiceSolutionsDBDataSet1 cln = ((PremierServiceSolutionsDBDataSet1)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -556,7 +552,6 @@ namespace Project_1 {
                     this.tablePersonAddressDetails.InitVars();
                 }
             }
-            this.relationFK__Call__ClientId__628FA481 = this.Relations["FK__Call__ClientId__628FA481"];
             this.relationFK__Call__EmployeeId__619B8048 = this.Relations["FK__Call__EmployeeId__619B8048"];
             this.relationFK__ClientMan__Clien__76969D2E = this.Relations["FK__ClientMan__Clien__76969D2E"];
             this.relationFK__Contract__Client__73BA3083 = this.Relations["FK__Contract__Client__73BA3083"];
@@ -564,7 +559,6 @@ namespace Project_1 {
             this.relationFK_ContractServices = this.Relations["FK_ContractServices"];
             this.relationFK__EmployeeD__Depar__6EF57B66 = this.Relations["FK__EmployeeD__Depar__6EF57B66"];
             this.relationFK__EmployeeD__Emplo__6E01572D = this.Relations["FK__EmployeeD__Emplo__6E01572D"];
-            this.relationFK__PersonAdd__Perso__151B244E = this.Relations["FK__PersonAdd__Perso__151B244E"];
             this.relationFK__ServiceRe__CallA__66603565 = this.Relations["FK__ServiceRe__CallA__66603565"];
             this.relationFK__ServiceRe__CallI__68487DD7 = this.Relations["FK__ServiceRe__CallI__68487DD7"];
             this.relationFK__ServiceRe__Clien__656C112C = this.Relations["FK__ServiceRe__Clien__656C112C"];
@@ -574,9 +568,9 @@ namespace Project_1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "PremierServiceSolutionsDBDataSet";
+            this.DataSetName = "PremierServiceSolutionsDBDataSet1";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/PremierServiceSolutionsDBDataSet.xsd";
+            this.Namespace = "http://tempuri.org/PremierServiceSolutionsDBDataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableCall = new CallDataTable();
@@ -609,10 +603,6 @@ namespace Project_1 {
             base.Tables.Add(this.tableEmployeeDetails);
             this.tablePersonAddressDetails = new PersonAddressDetailsDataTable();
             base.Tables.Add(this.tablePersonAddressDetails);
-            this.relationFK__Call__ClientId__628FA481 = new global::System.Data.DataRelation("FK__Call__ClientId__628FA481", new global::System.Data.DataColumn[] {
-                        this.tableClient.ClientIdColumn}, new global::System.Data.DataColumn[] {
-                        this.tableCall.ClientIdColumn}, false);
-            this.Relations.Add(this.relationFK__Call__ClientId__628FA481);
             this.relationFK__Call__EmployeeId__619B8048 = new global::System.Data.DataRelation("FK__Call__EmployeeId__619B8048", new global::System.Data.DataColumn[] {
                         this.tableEmployee.EmployeeIdColumn}, new global::System.Data.DataColumn[] {
                         this.tableCall.EmployeeIdColumn}, false);
@@ -641,10 +631,6 @@ namespace Project_1 {
                         this.tableEmployee.EmployeeIdColumn}, new global::System.Data.DataColumn[] {
                         this.tableEmployeeDepartment.EmployeeIdColumn}, false);
             this.Relations.Add(this.relationFK__EmployeeD__Emplo__6E01572D);
-            this.relationFK__PersonAdd__Perso__151B244E = new global::System.Data.DataRelation("FK__PersonAdd__Perso__151B244E", new global::System.Data.DataColumn[] {
-                        this.tableClient.ClientIdColumn}, new global::System.Data.DataColumn[] {
-                        this.tablePersonAddress.PersonIdColumn}, false);
-            this.Relations.Add(this.relationFK__PersonAdd__Perso__151B244E);
             this.relationFK__ServiceRe__CallA__66603565 = new global::System.Data.DataRelation("FK__ServiceRe__CallA__66603565", new global::System.Data.DataColumn[] {
                         this.tableEmployee.EmployeeIdColumn}, new global::System.Data.DataColumn[] {
                         this.tableServiceRequest.CallAgentIdColumn}, false);
@@ -764,7 +750,7 @@ namespace Project_1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            PremierServiceSolutionsDBDataSet ds = new PremierServiceSolutionsDBDataSet();
+            PremierServiceSolutionsDBDataSet1 ds = new PremierServiceSolutionsDBDataSet1();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -990,7 +976,7 @@ namespace Project_1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CallRow AddCallRow(System.DateTime CallStartTime, System.DateTime CallEndTime, string ProblemDescription, EmployeeRow parentEmployeeRowByFK__Call__EmployeeId__619B8048, ClientRow parentClientRowByFK__Call__ClientId__628FA481) {
+            public CallRow AddCallRow(System.DateTime CallStartTime, System.DateTime CallEndTime, string ProblemDescription, EmployeeRow parentEmployeeRowByFK__Call__EmployeeId__619B8048, int ClientId) {
                 CallRow rowCallRow = ((CallRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -998,12 +984,9 @@ namespace Project_1 {
                         CallEndTime,
                         ProblemDescription,
                         null,
-                        null};
+                        ClientId};
                 if ((parentEmployeeRowByFK__Call__EmployeeId__619B8048 != null)) {
                     columnValuesArray[4] = parentEmployeeRowByFK__Call__EmployeeId__619B8048[0];
-                }
-                if ((parentClientRowByFK__Call__ClientId__628FA481 != null)) {
-                    columnValuesArray[5] = parentClientRowByFK__Call__ClientId__628FA481[0];
                 }
                 rowCallRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCallRow);
@@ -1133,7 +1116,7 @@ namespace Project_1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                PremierServiceSolutionsDBDataSet ds = new PremierServiceSolutionsDBDataSet();
+                PremierServiceSolutionsDBDataSet1 ds = new PremierServiceSolutionsDBDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1470,7 +1453,7 @@ namespace Project_1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                PremierServiceSolutionsDBDataSet ds = new PremierServiceSolutionsDBDataSet();
+                PremierServiceSolutionsDBDataSet1 ds = new PremierServiceSolutionsDBDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1750,7 +1733,7 @@ namespace Project_1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                PremierServiceSolutionsDBDataSet ds = new PremierServiceSolutionsDBDataSet();
+                PremierServiceSolutionsDBDataSet1 ds = new PremierServiceSolutionsDBDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2044,7 +2027,7 @@ namespace Project_1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                PremierServiceSolutionsDBDataSet ds = new PremierServiceSolutionsDBDataSet();
+                PremierServiceSolutionsDBDataSet1 ds = new PremierServiceSolutionsDBDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2313,7 +2296,7 @@ namespace Project_1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                PremierServiceSolutionsDBDataSet ds = new PremierServiceSolutionsDBDataSet();
+                PremierServiceSolutionsDBDataSet1 ds = new PremierServiceSolutionsDBDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2600,7 +2583,7 @@ namespace Project_1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                PremierServiceSolutionsDBDataSet ds = new PremierServiceSolutionsDBDataSet();
+                PremierServiceSolutionsDBDataSet1 ds = new PremierServiceSolutionsDBDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2877,7 +2860,7 @@ namespace Project_1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                PremierServiceSolutionsDBDataSet ds = new PremierServiceSolutionsDBDataSet();
+                PremierServiceSolutionsDBDataSet1 ds = new PremierServiceSolutionsDBDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3199,7 +3182,7 @@ namespace Project_1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                PremierServiceSolutionsDBDataSet ds = new PremierServiceSolutionsDBDataSet();
+                PremierServiceSolutionsDBDataSet1 ds = new PremierServiceSolutionsDBDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3466,7 +3449,7 @@ namespace Project_1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                PremierServiceSolutionsDBDataSet ds = new PremierServiceSolutionsDBDataSet();
+                PremierServiceSolutionsDBDataSet1 ds = new PremierServiceSolutionsDBDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3652,17 +3635,14 @@ namespace Project_1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PersonAddressRow AddPersonAddressRow(ClientRow parentClientRowByFK__PersonAdd__Perso__151B244E, string StreetAddress, string City, string PostalCode, string Country) {
+            public PersonAddressRow AddPersonAddressRow(int PersonId, string StreetAddress, string City, string PostalCode, string Country) {
                 PersonAddressRow rowPersonAddressRow = ((PersonAddressRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
+                        PersonId,
                         StreetAddress,
                         City,
                         PostalCode,
                         Country};
-                if ((parentClientRowByFK__PersonAdd__Perso__151B244E != null)) {
-                    columnValuesArray[0] = parentClientRowByFK__PersonAdd__Perso__151B244E[0];
-                }
                 rowPersonAddressRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPersonAddressRow);
                 return rowPersonAddressRow;
@@ -3776,7 +3756,7 @@ namespace Project_1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                PremierServiceSolutionsDBDataSet ds = new PremierServiceSolutionsDBDataSet();
+                PremierServiceSolutionsDBDataSet1 ds = new PremierServiceSolutionsDBDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4053,7 +4033,7 @@ namespace Project_1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                PremierServiceSolutionsDBDataSet ds = new PremierServiceSolutionsDBDataSet();
+                PremierServiceSolutionsDBDataSet1 ds = new PremierServiceSolutionsDBDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4398,7 +4378,7 @@ namespace Project_1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                PremierServiceSolutionsDBDataSet ds = new PremierServiceSolutionsDBDataSet();
+                PremierServiceSolutionsDBDataSet1 ds = new PremierServiceSolutionsDBDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4660,7 +4640,7 @@ namespace Project_1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                PremierServiceSolutionsDBDataSet ds = new PremierServiceSolutionsDBDataSet();
+                PremierServiceSolutionsDBDataSet1 ds = new PremierServiceSolutionsDBDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4993,7 +4973,7 @@ namespace Project_1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                PremierServiceSolutionsDBDataSet ds = new PremierServiceSolutionsDBDataSet();
+                PremierServiceSolutionsDBDataSet1 ds = new PremierServiceSolutionsDBDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -5317,7 +5297,7 @@ namespace Project_1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                PremierServiceSolutionsDBDataSet ds = new PremierServiceSolutionsDBDataSet();
+                PremierServiceSolutionsDBDataSet1 ds = new PremierServiceSolutionsDBDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -5478,17 +5458,6 @@ namespace Project_1 {
                 }
                 set {
                     this[this.tableCall.ClientIdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ClientRow ClientRow {
-                get {
-                    return ((ClientRow)(this.GetParentRow(this.Table.ParentRelations["FK__Call__ClientId__628FA481"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Call__ClientId__628FA481"]);
                 }
             }
             
@@ -5742,17 +5711,6 @@ namespace Project_1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CallRow[] GetCallRows() {
-                if ((this.Table.ChildRelations["FK__Call__ClientId__628FA481"] == null)) {
-                    return new CallRow[0];
-                }
-                else {
-                    return ((CallRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Call__ClientId__628FA481"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ClientManagementInformationRow[] GetClientManagementInformationRows() {
                 if ((this.Table.ChildRelations["FK__ClientMan__Clien__76969D2E"] == null)) {
                     return new ClientManagementInformationRow[0];
@@ -5770,17 +5728,6 @@ namespace Project_1 {
                 }
                 else {
                     return ((ContractRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Contract__Client__73BA3083"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PersonAddressRow[] GetPersonAddressRows() {
-                if ((this.Table.ChildRelations["FK__PersonAdd__Perso__151B244E"] == null)) {
-                    return new PersonAddressRow[0];
-                }
-                else {
-                    return ((PersonAddressRow[])(base.GetChildRows(this.Table.ChildRelations["FK__PersonAdd__Perso__151B244E"])));
                 }
             }
             
@@ -6586,17 +6533,6 @@ namespace Project_1 {
                 }
                 set {
                     this[this.tablePersonAddress.CountryColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ClientRow ClientRow {
-                get {
-                    return ((ClientRow)(this.GetParentRow(this.Table.ParentRelations["FK__PersonAdd__Perso__151B244E"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__PersonAdd__Perso__151B244E"]);
                 }
             }
             
@@ -7867,7 +7803,7 @@ namespace Project_1 {
         }
     }
 }
-namespace Project_1.PremierServiceSolutionsDBDataSetTableAdapters {
+namespace Project_1.PremierServiceSolutionsDBDataSet1TableAdapters {
     
     
     /// <summary>
@@ -8069,7 +8005,7 @@ SELECT CallId, CallStartTime, CallEndTime, ProblemDescription, EmployeeId, Clien
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(PremierServiceSolutionsDBDataSet.CallDataTable dataTable) {
+        public virtual int Fill(PremierServiceSolutionsDBDataSet1.CallDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8082,9 +8018,9 @@ SELECT CallId, CallStartTime, CallEndTime, ProblemDescription, EmployeeId, Clien
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual PremierServiceSolutionsDBDataSet.CallDataTable GetData() {
+        public virtual PremierServiceSolutionsDBDataSet1.CallDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            PremierServiceSolutionsDBDataSet.CallDataTable dataTable = new PremierServiceSolutionsDBDataSet.CallDataTable();
+            PremierServiceSolutionsDBDataSet1.CallDataTable dataTable = new PremierServiceSolutionsDBDataSet1.CallDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8092,14 +8028,14 @@ SELECT CallId, CallStartTime, CallEndTime, ProblemDescription, EmployeeId, Clien
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PremierServiceSolutionsDBDataSet.CallDataTable dataTable) {
+        public virtual int Update(PremierServiceSolutionsDBDataSet1.CallDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PremierServiceSolutionsDBDataSet dataSet) {
+        public virtual int Update(PremierServiceSolutionsDBDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "Call");
         }
         
@@ -8532,7 +8468,7 @@ SELECT ClientId, Name, Surname, CellPhoneNumber, Email, ClientType FROM Client W
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(PremierServiceSolutionsDBDataSet.ClientDataTable dataTable) {
+        public virtual int Fill(PremierServiceSolutionsDBDataSet1.ClientDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8545,9 +8481,9 @@ SELECT ClientId, Name, Surname, CellPhoneNumber, Email, ClientType FROM Client W
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual PremierServiceSolutionsDBDataSet.ClientDataTable GetData() {
+        public virtual PremierServiceSolutionsDBDataSet1.ClientDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            PremierServiceSolutionsDBDataSet.ClientDataTable dataTable = new PremierServiceSolutionsDBDataSet.ClientDataTable();
+            PremierServiceSolutionsDBDataSet1.ClientDataTable dataTable = new PremierServiceSolutionsDBDataSet1.ClientDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8555,14 +8491,14 @@ SELECT ClientId, Name, Surname, CellPhoneNumber, Email, ClientType FROM Client W
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PremierServiceSolutionsDBDataSet.ClientDataTable dataTable) {
+        public virtual int Update(PremierServiceSolutionsDBDataSet1.ClientDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PremierServiceSolutionsDBDataSet dataSet) {
+        public virtual int Update(PremierServiceSolutionsDBDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "Client");
         }
         
@@ -8952,7 +8888,7 @@ SELECT ClientId, Name, Surname, CellPhoneNumber, Email, ClientType FROM Client W
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(PremierServiceSolutionsDBDataSet.ClientManagementInformationDataTable dataTable) {
+        public virtual int Fill(PremierServiceSolutionsDBDataSet1.ClientManagementInformationDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8965,9 +8901,9 @@ SELECT ClientId, Name, Surname, CellPhoneNumber, Email, ClientType FROM Client W
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual PremierServiceSolutionsDBDataSet.ClientManagementInformationDataTable GetData() {
+        public virtual PremierServiceSolutionsDBDataSet1.ClientManagementInformationDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            PremierServiceSolutionsDBDataSet.ClientManagementInformationDataTable dataTable = new PremierServiceSolutionsDBDataSet.ClientManagementInformationDataTable();
+            PremierServiceSolutionsDBDataSet1.ClientManagementInformationDataTable dataTable = new PremierServiceSolutionsDBDataSet1.ClientManagementInformationDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8975,14 +8911,14 @@ SELECT ClientId, Name, Surname, CellPhoneNumber, Email, ClientType FROM Client W
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PremierServiceSolutionsDBDataSet.ClientManagementInformationDataTable dataTable) {
+        public virtual int Update(PremierServiceSolutionsDBDataSet1.ClientManagementInformationDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PremierServiceSolutionsDBDataSet dataSet) {
+        public virtual int Update(PremierServiceSolutionsDBDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "ClientManagementInformation");
         }
         
@@ -9178,8 +9114,8 @@ SELECT ClientId, Name, Surname, CellPhoneNumber, Email, ClientType FROM Client W
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Contract] ([ClientId], [ContractTypeId]) VALUES (@ClientId, @C" +
-                "ontractTypeId);\nSELECT ContractId, ClientId, ContractTypeId FROM Contract WHERE " +
-                "(ContractId = SCOPE_IDENTITY())";
+                "ontractTypeId);\r\nSELECT ContractId, ClientId, ContractTypeId FROM Contract WHERE" +
+                " (ContractId = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClientId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClientId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContractTypeId", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractTypeId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -9219,7 +9155,7 @@ SELECT ContractId, ClientId, ContractTypeId FROM Contract WHERE (ContractId = @C
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(PremierServiceSolutionsDBDataSet.ContractDataTable dataTable) {
+        public virtual int Fill(PremierServiceSolutionsDBDataSet1.ContractDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9232,9 +9168,9 @@ SELECT ContractId, ClientId, ContractTypeId FROM Contract WHERE (ContractId = @C
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual PremierServiceSolutionsDBDataSet.ContractDataTable GetData() {
+        public virtual PremierServiceSolutionsDBDataSet1.ContractDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            PremierServiceSolutionsDBDataSet.ContractDataTable dataTable = new PremierServiceSolutionsDBDataSet.ContractDataTable();
+            PremierServiceSolutionsDBDataSet1.ContractDataTable dataTable = new PremierServiceSolutionsDBDataSet1.ContractDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9242,14 +9178,14 @@ SELECT ContractId, ClientId, ContractTypeId FROM Contract WHERE (ContractId = @C
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PremierServiceSolutionsDBDataSet.ContractDataTable dataTable) {
+        public virtual int Update(PremierServiceSolutionsDBDataSet1.ContractDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PremierServiceSolutionsDBDataSet dataSet) {
+        public virtual int Update(PremierServiceSolutionsDBDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "Contract");
         }
         
@@ -9553,7 +9489,7 @@ SELECT ContractId, ClientId, ContractTypeId FROM Contract WHERE (ContractId = @C
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(PremierServiceSolutionsDBDataSet.ContractServicesDataTable dataTable) {
+        public virtual int Fill(PremierServiceSolutionsDBDataSet1.ContractServicesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9566,9 +9502,9 @@ SELECT ContractId, ClientId, ContractTypeId FROM Contract WHERE (ContractId = @C
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual PremierServiceSolutionsDBDataSet.ContractServicesDataTable GetData() {
+        public virtual PremierServiceSolutionsDBDataSet1.ContractServicesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            PremierServiceSolutionsDBDataSet.ContractServicesDataTable dataTable = new PremierServiceSolutionsDBDataSet.ContractServicesDataTable();
+            PremierServiceSolutionsDBDataSet1.ContractServicesDataTable dataTable = new PremierServiceSolutionsDBDataSet1.ContractServicesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9576,14 +9512,14 @@ SELECT ContractId, ClientId, ContractTypeId FROM Contract WHERE (ContractId = @C
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PremierServiceSolutionsDBDataSet.ContractServicesDataTable dataTable) {
+        public virtual int Update(PremierServiceSolutionsDBDataSet1.ContractServicesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PremierServiceSolutionsDBDataSet dataSet) {
+        public virtual int Update(PremierServiceSolutionsDBDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "ContractServices");
         }
         
@@ -9805,7 +9741,7 @@ SELECT ContractTypeId, ContractTypeDescription, AvailabilityStatus FROM Contract
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(PremierServiceSolutionsDBDataSet.ContractTypeDataTable dataTable) {
+        public virtual int Fill(PremierServiceSolutionsDBDataSet1.ContractTypeDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9818,9 +9754,9 @@ SELECT ContractTypeId, ContractTypeDescription, AvailabilityStatus FROM Contract
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual PremierServiceSolutionsDBDataSet.ContractTypeDataTable GetData() {
+        public virtual PremierServiceSolutionsDBDataSet1.ContractTypeDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            PremierServiceSolutionsDBDataSet.ContractTypeDataTable dataTable = new PremierServiceSolutionsDBDataSet.ContractTypeDataTable();
+            PremierServiceSolutionsDBDataSet1.ContractTypeDataTable dataTable = new PremierServiceSolutionsDBDataSet1.ContractTypeDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9828,14 +9764,14 @@ SELECT ContractTypeId, ContractTypeDescription, AvailabilityStatus FROM Contract
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PremierServiceSolutionsDBDataSet.ContractTypeDataTable dataTable) {
+        public virtual int Update(PremierServiceSolutionsDBDataSet1.ContractTypeDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PremierServiceSolutionsDBDataSet dataSet) {
+        public virtual int Update(PremierServiceSolutionsDBDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "ContractType");
         }
         
@@ -10121,9 +10057,9 @@ SELECT ContractTypeId, ContractTypeDescription, AvailabilityStatus FROM Contract
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DepartmentName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartmentName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Department] ([DepartmentName]) VALUES (@DepartmentName);\nSELEC" +
-                "T DepartmentId, DepartmentName FROM Department WHERE (DepartmentId = SCOPE_IDENT" +
-                "ITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Department] ([DepartmentName]) VALUES (@DepartmentName);\r\nSELE" +
+                "CT DepartmentId, DepartmentName FROM Department WHERE (DepartmentId = SCOPE_IDEN" +
+                "TITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DepartmentName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartmentName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
@@ -10159,7 +10095,7 @@ SELECT DepartmentId, DepartmentName FROM Department WHERE (DepartmentId = @Depar
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(PremierServiceSolutionsDBDataSet.DepartmentDataTable dataTable) {
+        public virtual int Fill(PremierServiceSolutionsDBDataSet1.DepartmentDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -10172,9 +10108,9 @@ SELECT DepartmentId, DepartmentName FROM Department WHERE (DepartmentId = @Depar
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual PremierServiceSolutionsDBDataSet.DepartmentDataTable GetData() {
+        public virtual PremierServiceSolutionsDBDataSet1.DepartmentDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            PremierServiceSolutionsDBDataSet.DepartmentDataTable dataTable = new PremierServiceSolutionsDBDataSet.DepartmentDataTable();
+            PremierServiceSolutionsDBDataSet1.DepartmentDataTable dataTable = new PremierServiceSolutionsDBDataSet1.DepartmentDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -10182,14 +10118,14 @@ SELECT DepartmentId, DepartmentName FROM Department WHERE (DepartmentId = @Depar
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PremierServiceSolutionsDBDataSet.DepartmentDataTable dataTable) {
+        public virtual int Update(PremierServiceSolutionsDBDataSet1.DepartmentDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PremierServiceSolutionsDBDataSet dataSet) {
+        public virtual int Update(PremierServiceSolutionsDBDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "Department");
         }
         
@@ -10454,8 +10390,8 @@ SELECT DepartmentId, DepartmentName FROM Department WHERE (DepartmentId = @Depar
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Employee] ([Name], [Surname], [CellPhoneNumber], [Email]) VALU" +
-                "ES (@Name, @Surname, @CellPhoneNumber, @Email);\nSELECT EmployeeId, Name, Surname" +
-                ", CellPhoneNumber, Email FROM Employee WHERE (EmployeeId = SCOPE_IDENTITY())";
+                "ES (@Name, @Surname, @CellPhoneNumber, @Email);\r\nSELECT EmployeeId, Name, Surnam" +
+                "e, CellPhoneNumber, Email FROM Employee WHERE (EmployeeId = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Surname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Surname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -10503,7 +10439,7 @@ SELECT EmployeeId, Name, Surname, CellPhoneNumber, Email FROM Employee WHERE (Em
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(PremierServiceSolutionsDBDataSet.EmployeeDataTable dataTable) {
+        public virtual int Fill(PremierServiceSolutionsDBDataSet1.EmployeeDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -10516,9 +10452,9 @@ SELECT EmployeeId, Name, Surname, CellPhoneNumber, Email FROM Employee WHERE (Em
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual PremierServiceSolutionsDBDataSet.EmployeeDataTable GetData() {
+        public virtual PremierServiceSolutionsDBDataSet1.EmployeeDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            PremierServiceSolutionsDBDataSet.EmployeeDataTable dataTable = new PremierServiceSolutionsDBDataSet.EmployeeDataTable();
+            PremierServiceSolutionsDBDataSet1.EmployeeDataTable dataTable = new PremierServiceSolutionsDBDataSet1.EmployeeDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -10526,14 +10462,14 @@ SELECT EmployeeId, Name, Surname, CellPhoneNumber, Email FROM Employee WHERE (Em
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PremierServiceSolutionsDBDataSet.EmployeeDataTable dataTable) {
+        public virtual int Update(PremierServiceSolutionsDBDataSet1.EmployeeDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PremierServiceSolutionsDBDataSet dataSet) {
+        public virtual int Update(PremierServiceSolutionsDBDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "Employee");
         }
         
@@ -10893,7 +10829,7 @@ SELECT EmployeeId, Name, Surname, CellPhoneNumber, Email FROM Employee WHERE (Em
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(PremierServiceSolutionsDBDataSet.EmployeeDepartmentDataTable dataTable) {
+        public virtual int Fill(PremierServiceSolutionsDBDataSet1.EmployeeDepartmentDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -10906,9 +10842,9 @@ SELECT EmployeeId, Name, Surname, CellPhoneNumber, Email FROM Employee WHERE (Em
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual PremierServiceSolutionsDBDataSet.EmployeeDepartmentDataTable GetData() {
+        public virtual PremierServiceSolutionsDBDataSet1.EmployeeDepartmentDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            PremierServiceSolutionsDBDataSet.EmployeeDepartmentDataTable dataTable = new PremierServiceSolutionsDBDataSet.EmployeeDepartmentDataTable();
+            PremierServiceSolutionsDBDataSet1.EmployeeDepartmentDataTable dataTable = new PremierServiceSolutionsDBDataSet1.EmployeeDepartmentDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -10916,14 +10852,14 @@ SELECT EmployeeId, Name, Surname, CellPhoneNumber, Email FROM Employee WHERE (Em
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PremierServiceSolutionsDBDataSet.EmployeeDepartmentDataTable dataTable) {
+        public virtual int Update(PremierServiceSolutionsDBDataSet1.EmployeeDepartmentDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PremierServiceSolutionsDBDataSet dataSet) {
+        public virtual int Update(PremierServiceSolutionsDBDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "EmployeeDepartment");
         }
         
@@ -11137,7 +11073,7 @@ SELECT EmployeeId, Name, Surname, CellPhoneNumber, Email FROM Employee WHERE (Em
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(PremierServiceSolutionsDBDataSet.PersonAddressDataTable dataTable) {
+        public virtual int Fill(PremierServiceSolutionsDBDataSet1.PersonAddressDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -11150,9 +11086,9 @@ SELECT EmployeeId, Name, Surname, CellPhoneNumber, Email FROM Employee WHERE (Em
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual PremierServiceSolutionsDBDataSet.PersonAddressDataTable GetData() {
+        public virtual PremierServiceSolutionsDBDataSet1.PersonAddressDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            PremierServiceSolutionsDBDataSet.PersonAddressDataTable dataTable = new PremierServiceSolutionsDBDataSet.PersonAddressDataTable();
+            PremierServiceSolutionsDBDataSet1.PersonAddressDataTable dataTable = new PremierServiceSolutionsDBDataSet1.PersonAddressDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -11160,14 +11096,14 @@ SELECT EmployeeId, Name, Surname, CellPhoneNumber, Email FROM Employee WHERE (Em
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PremierServiceSolutionsDBDataSet.PersonAddressDataTable dataTable) {
+        public virtual int Update(PremierServiceSolutionsDBDataSet1.PersonAddressDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PremierServiceSolutionsDBDataSet dataSet) {
+        public virtual int Update(PremierServiceSolutionsDBDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "PersonAddress");
         }
         
@@ -11373,9 +11309,9 @@ SELECT EmployeeId, Name, Surname, CellPhoneNumber, Email FROM Employee WHERE (Em
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ServiceDescription", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ServiceDescription", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Service] ([ServiceDescription]) VALUES (@ServiceDescription);\n" +
-                "SELECT ServiceId, ServiceDescription FROM Service WHERE (ServiceId = SCOPE_IDENT" +
-                "ITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Service] ([ServiceDescription]) VALUES (@ServiceDescription);\r" +
+                "\nSELECT ServiceId, ServiceDescription FROM Service WHERE (ServiceId = SCOPE_IDEN" +
+                "TITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ServiceDescription", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ServiceDescription", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
@@ -11411,7 +11347,7 @@ SELECT ServiceId, ServiceDescription FROM Service WHERE (ServiceId = @ServiceId)
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(PremierServiceSolutionsDBDataSet.ServiceDataTable dataTable) {
+        public virtual int Fill(PremierServiceSolutionsDBDataSet1.ServiceDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -11424,9 +11360,9 @@ SELECT ServiceId, ServiceDescription FROM Service WHERE (ServiceId = @ServiceId)
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual PremierServiceSolutionsDBDataSet.ServiceDataTable GetData() {
+        public virtual PremierServiceSolutionsDBDataSet1.ServiceDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            PremierServiceSolutionsDBDataSet.ServiceDataTable dataTable = new PremierServiceSolutionsDBDataSet.ServiceDataTable();
+            PremierServiceSolutionsDBDataSet1.ServiceDataTable dataTable = new PremierServiceSolutionsDBDataSet1.ServiceDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -11434,14 +11370,14 @@ SELECT ServiceId, ServiceDescription FROM Service WHERE (ServiceId = @ServiceId)
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PremierServiceSolutionsDBDataSet.ServiceDataTable dataTable) {
+        public virtual int Update(PremierServiceSolutionsDBDataSet1.ServiceDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PremierServiceSolutionsDBDataSet dataSet) {
+        public virtual int Update(PremierServiceSolutionsDBDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "Service");
         }
         
@@ -11762,7 +11698,7 @@ SELECT RequestId, ClientId, CallAgentId, TechnicianId, CallId, JobStatus FROM Se
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(PremierServiceSolutionsDBDataSet.ServiceRequestDataTable dataTable) {
+        public virtual int Fill(PremierServiceSolutionsDBDataSet1.ServiceRequestDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -11775,9 +11711,9 @@ SELECT RequestId, ClientId, CallAgentId, TechnicianId, CallId, JobStatus FROM Se
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual PremierServiceSolutionsDBDataSet.ServiceRequestDataTable GetData() {
+        public virtual PremierServiceSolutionsDBDataSet1.ServiceRequestDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            PremierServiceSolutionsDBDataSet.ServiceRequestDataTable dataTable = new PremierServiceSolutionsDBDataSet.ServiceRequestDataTable();
+            PremierServiceSolutionsDBDataSet1.ServiceRequestDataTable dataTable = new PremierServiceSolutionsDBDataSet1.ServiceRequestDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -11785,14 +11721,14 @@ SELECT RequestId, ClientId, CallAgentId, TechnicianId, CallId, JobStatus FROM Se
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PremierServiceSolutionsDBDataSet.ServiceRequestDataTable dataTable) {
+        public virtual int Update(PremierServiceSolutionsDBDataSet1.ServiceRequestDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PremierServiceSolutionsDBDataSet dataSet) {
+        public virtual int Update(PremierServiceSolutionsDBDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "ServiceRequest");
         }
         
@@ -12173,7 +12109,7 @@ SELECT RequestId, ClientId, CallAgentId, TechnicianId, CallId, JobStatus FROM Se
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(PremierServiceSolutionsDBDataSet.ClientServicesDataTable dataTable) {
+        public virtual int Fill(PremierServiceSolutionsDBDataSet1.ClientServicesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -12186,9 +12122,9 @@ SELECT RequestId, ClientId, CallAgentId, TechnicianId, CallId, JobStatus FROM Se
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual PremierServiceSolutionsDBDataSet.ClientServicesDataTable GetData() {
+        public virtual PremierServiceSolutionsDBDataSet1.ClientServicesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            PremierServiceSolutionsDBDataSet.ClientServicesDataTable dataTable = new PremierServiceSolutionsDBDataSet.ClientServicesDataTable();
+            PremierServiceSolutionsDBDataSet1.ClientServicesDataTable dataTable = new PremierServiceSolutionsDBDataSet1.ClientServicesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -12346,7 +12282,7 @@ SELECT RequestId, ClientId, CallAgentId, TechnicianId, CallId, JobStatus FROM Se
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(PremierServiceSolutionsDBDataSet.EmployeeDetailsDataTable dataTable) {
+        public virtual int Fill(PremierServiceSolutionsDBDataSet1.EmployeeDetailsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -12359,9 +12295,9 @@ SELECT RequestId, ClientId, CallAgentId, TechnicianId, CallId, JobStatus FROM Se
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual PremierServiceSolutionsDBDataSet.EmployeeDetailsDataTable GetData() {
+        public virtual PremierServiceSolutionsDBDataSet1.EmployeeDetailsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            PremierServiceSolutionsDBDataSet.EmployeeDetailsDataTable dataTable = new PremierServiceSolutionsDBDataSet.EmployeeDetailsDataTable();
+            PremierServiceSolutionsDBDataSet1.EmployeeDetailsDataTable dataTable = new PremierServiceSolutionsDBDataSet1.EmployeeDetailsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -12519,7 +12455,7 @@ SELECT RequestId, ClientId, CallAgentId, TechnicianId, CallId, JobStatus FROM Se
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(PremierServiceSolutionsDBDataSet.PersonAddressDetailsDataTable dataTable) {
+        public virtual int Fill(PremierServiceSolutionsDBDataSet1.PersonAddressDetailsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -12532,9 +12468,9 @@ SELECT RequestId, ClientId, CallAgentId, TechnicianId, CallId, JobStatus FROM Se
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual PremierServiceSolutionsDBDataSet.PersonAddressDetailsDataTable GetData() {
+        public virtual PremierServiceSolutionsDBDataSet1.PersonAddressDetailsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            PremierServiceSolutionsDBDataSet.PersonAddressDetailsDataTable dataTable = new PremierServiceSolutionsDBDataSet.PersonAddressDetailsDataTable();
+            PremierServiceSolutionsDBDataSet1.PersonAddressDetailsDataTable dataTable = new PremierServiceSolutionsDBDataSet1.PersonAddressDetailsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -12956,17 +12892,8 @@ SELECT RequestId, ClientId, CallAgentId, TechnicianId, CallId, JobStatus FROM Se
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(PremierServiceSolutionsDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(PremierServiceSolutionsDBDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._clientTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Client.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._clientTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._employeeTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Employee.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -12982,6 +12909,15 @@ SELECT RequestId, ClientId, CallAgentId, TechnicianId, CallId, JobStatus FROM Se
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._callTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._clientTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Client.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._clientTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -13074,16 +13010,8 @@ SELECT RequestId, ClientId, CallAgentId, TechnicianId, CallId, JobStatus FROM Se
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(PremierServiceSolutionsDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(PremierServiceSolutionsDBDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._clientTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Client.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._clientTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._employeeTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Employee.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -13097,6 +13025,14 @@ SELECT RequestId, ClientId, CallAgentId, TechnicianId, CallId, JobStatus FROM Se
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._callTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._clientTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Client.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._clientTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -13180,7 +13116,7 @@ SELECT RequestId, ClientId, CallAgentId, TechnicianId, CallId, JobStatus FROM Se
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(PremierServiceSolutionsDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(PremierServiceSolutionsDBDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._serviceRequestTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.ServiceRequest.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -13254,6 +13190,14 @@ SELECT RequestId, ClientId, CallAgentId, TechnicianId, CallId, JobStatus FROM Se
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._clientTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Client.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._clientTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._callTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Call.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -13267,14 +13211,6 @@ SELECT RequestId, ClientId, CallAgentId, TechnicianId, CallId, JobStatus FROM Se
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._employeeTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._clientTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Client.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._clientTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -13310,7 +13246,7 @@ SELECT RequestId, ClientId, CallAgentId, TechnicianId, CallId, JobStatus FROM Se
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(PremierServiceSolutionsDBDataSet dataSet) {
+        public virtual int UpdateAll(PremierServiceSolutionsDBDataSet1 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
