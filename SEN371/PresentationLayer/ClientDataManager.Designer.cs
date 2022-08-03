@@ -40,18 +40,13 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtCellPhone = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.lblLogo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSQL = new System.Windows.Forms.Button();
             this.btnContracts = new System.Windows.Forms.Button();
             this.btnUpdtSelecct = new System.Windows.Forms.Button();
             this.btnDelSelect = new System.Windows.Forms.Button();
-            this.btnAddSelect = new System.Windows.Forms.Button();
-            this.btnSavSelect = new System.Windows.Forms.Button();
             this.btnClient = new System.Windows.Forms.Button();
             this.btnIssue = new System.Windows.Forms.Button();
             this.btnEmployee = new System.Windows.Forms.Button();
@@ -105,10 +100,7 @@
             this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.txtCellPhone);
             this.panel1.Controls.Add(this.txtName);
-            this.panel1.Controls.Add(this.btnAdd);
-            this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnSave);
-            this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Location = new System.Drawing.Point(14, 92);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(336, 517);
@@ -204,41 +196,14 @@
             this.txtName.Size = new System.Drawing.Size(322, 20);
             this.txtName.TabIndex = 8;
             // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(251, 487);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 7;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(171, 487);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnDelete.TabIndex = 6;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(89, 487);
+            this.btnSave.Location = new System.Drawing.Point(8, 472);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(142, 23);
             this.btnSave.TabIndex = 5;
-            this.btnSave.Text = "Save";
+            this.btnSave.Text = "Submit New Client";
             this.btnSave.UseVisualStyleBackColor = true;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(8, 487);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
-            this.btnUpdate.TabIndex = 4;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
             // 
             // lblLogo
             // 
@@ -298,24 +263,6 @@
             this.btnDelSelect.Text = "Delete Selected";
             this.btnDelSelect.UseVisualStyleBackColor = true;
             this.btnDelSelect.Click += new System.EventHandler(this.btnDelSelect_Click);
-            // 
-            // btnAddSelect
-            // 
-            this.btnAddSelect.Location = new System.Drawing.Point(1030, 162);
-            this.btnAddSelect.Name = "btnAddSelect";
-            this.btnAddSelect.Size = new System.Drawing.Size(107, 29);
-            this.btnAddSelect.TabIndex = 12;
-            this.btnAddSelect.Text = "Add Selected";
-            this.btnAddSelect.UseVisualStyleBackColor = true;
-            // 
-            // btnSavSelect
-            // 
-            this.btnSavSelect.Location = new System.Drawing.Point(1030, 197);
-            this.btnSavSelect.Name = "btnSavSelect";
-            this.btnSavSelect.Size = new System.Drawing.Size(107, 29);
-            this.btnSavSelect.TabIndex = 13;
-            this.btnSavSelect.Text = "Save Selected";
-            this.btnSavSelect.UseVisualStyleBackColor = true;
             // 
             // btnClient
             // 
@@ -521,8 +468,6 @@
             this.Controls.Add(this.btnEmployee);
             this.Controls.Add(this.btnIssue);
             this.Controls.Add(this.btnClient);
-            this.Controls.Add(this.btnSavSelect);
-            this.Controls.Add(this.btnAddSelect);
             this.Controls.Add(this.btnDelSelect);
             this.Controls.Add(this.btnUpdtSelecct);
             this.Controls.Add(this.btnContracts);
@@ -548,18 +493,13 @@
 
         private System.Windows.Forms.DataGridView dgvOutput;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label lblLogo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSQL;
         private System.Windows.Forms.Button btnContracts;
         private System.Windows.Forms.Button btnUpdtSelecct;
         private System.Windows.Forms.Button btnDelSelect;
-        private System.Windows.Forms.Button btnAddSelect;
-        private System.Windows.Forms.Button btnSavSelect;
         private System.Windows.Forms.Button btnClient;
         private System.Windows.Forms.Button btnIssue;
         private System.Windows.Forms.Button btnEmployee;

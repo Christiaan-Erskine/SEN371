@@ -16,6 +16,7 @@ namespace Project_1.PresentationLayer
     //Show Employee types / departments
     //RetrieveData Function, too much repeating code with only difference being string  
     //Impliment Add, should be easy
+    //Update SQL Adapter on refresh
     public partial class ClientDataManager : Form
     {
         public string activeTable = "Client"; //The active table will be used to CRUD with the correct table, can be used for dynamic fields with on click if statement
@@ -151,8 +152,12 @@ namespace Project_1.PresentationLayer
                 //Update shows valid SQL query, but does not make changes in the database
             }
 
-
+            //To see changes in database, has no effect
+            //System.Threading.Thread.Sleep(5000);
+            this.Refresh();
+            dgvOutput.Update();
             dgvOutput.Refresh();
+
         }
 
         private void dgvOutput_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -179,6 +184,9 @@ namespace Project_1.PresentationLayer
             //This can be used in both mouse and menu navigation
             //Error when changing tables, unselect on button press for those buttons
 
+            dgvOutput.Update();
+            dgvOutput.Refresh();
+
             try
             {
                 if (activeTable == "Client")
@@ -193,6 +201,11 @@ namespace Project_1.PresentationLayer
             }catch {/* Lol */}
 
 
+        }
+
+        private void btnAddSelect_Click(object sender, EventArgs e)
+        {
+            bclient.StoreClient(txtName.Text, txtSurname.Text, txtCellPhone.Text, txtEmail.Text, txtType.Text);
         }
     }
 }
