@@ -37,7 +37,11 @@ namespace Project_1.PresentationLayer
 
         private void cbbTable_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
+            SqlDataAdapter adapter = dh.RetrieveData(cbbTable.Text);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dgvOutput.DataSource = ds.Tables[0];
         }
 
         private void tbxSearch_TextChanged(object sender, EventArgs e)

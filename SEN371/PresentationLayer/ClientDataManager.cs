@@ -342,5 +342,11 @@ namespace Project_1.PresentationLayer
             dgvOutput.DataSource = ds.Tables[0];
             activeTable = "EmployeeDetails";
         }
+
+        private void dgvOutput_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            PresentationLayer.Search search = new PresentationLayer.Search();
+            search.Show();
+        }
     }
 }

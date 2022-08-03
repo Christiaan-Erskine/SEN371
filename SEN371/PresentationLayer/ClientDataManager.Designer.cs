@@ -83,6 +83,7 @@
             this.dgvOutput.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOutput_CellContentClick);
             this.dgvOutput.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOutput_CellEnter);
             this.dgvOutput.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvOutput_CellMouseClick);
+            this.dgvOutput.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvOutput_MouseDoubleClick);
             // 
             // panel1
             // 
