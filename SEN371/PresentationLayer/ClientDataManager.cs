@@ -298,5 +298,49 @@ namespace Project_1.PresentationLayer
             dgvOutput.DataSource = ds.Tables[0];
             activeTable = "ServiceRequest";
         }
+
+        private void callAgentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dgvOutput.ClearSelection();
+            DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
+            SqlDataAdapter adapter = dh.RetrieveData("EmployeeDetails", "DepartmentName = 'Human Resources'");
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dgvOutput.DataSource = ds.Tables[0];
+            activeTable = "EmployeeDetails";
+        }
+
+        private void contractMaintananceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dgvOutput.ClearSelection();
+            DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
+            SqlDataAdapter adapter = dh.RetrieveData("EmployeeDetails", "DepartmentName = 'Contract Maintenance'");
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dgvOutput.DataSource = ds.Tables[0];
+            activeTable = "EmployeeDetails";
+        }
+
+        private void serviceMaintananceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dgvOutput.ClearSelection();
+            DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
+            SqlDataAdapter adapter = dh.RetrieveData("EmployeeDetails", "DepartmentName = 'Services'");
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dgvOutput.DataSource = ds.Tables[0];
+            activeTable = "EmployeeDetails";
+        }
+
+        private void technicianToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dgvOutput.ClearSelection();
+            DataAccessLayer.DataHandler dh = new DataAccessLayer.DataHandler();
+            SqlDataAdapter adapter = dh.RetrieveData("EmployeeDetails", "DepartmentName = 'Client Maintenance'");
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dgvOutput.DataSource = ds.Tables[0];
+            activeTable = "EmployeeDetails";
+        }
     }
 }
