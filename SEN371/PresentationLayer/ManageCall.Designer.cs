@@ -55,18 +55,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(208, 9);
+            this.label1.Location = new System.Drawing.Point(242, 55);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 31);
+            this.label1.Size = new System.Drawing.Size(254, 46);
             this.label1.TabIndex = 9;
             this.label1.Text = "Manage Call";
             // 
             // btnnCancel
             // 
-            this.btnnCancel.Location = new System.Drawing.Point(525, 295);
-            this.btnnCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnnCancel.Location = new System.Drawing.Point(600, 682);
             this.btnnCancel.Name = "btnnCancel";
-            this.btnnCancel.Size = new System.Drawing.Size(70, 31);
+            this.btnnCancel.Size = new System.Drawing.Size(105, 48);
             this.btnnCancel.TabIndex = 8;
             this.btnnCancel.Text = "Cancel";
             this.btnnCancel.UseVisualStyleBackColor = true;
@@ -74,10 +74,9 @@
             // 
             // btnStartRecording
             // 
-            this.btnStartRecording.Location = new System.Drawing.Point(18, 66);
-            this.btnStartRecording.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStartRecording.Location = new System.Drawing.Point(555, 162);
             this.btnStartRecording.Name = "btnStartRecording";
-            this.btnStartRecording.Size = new System.Drawing.Size(119, 24);
+            this.btnStartRecording.Size = new System.Drawing.Size(152, 48);
             this.btnStartRecording.TabIndex = 15;
             this.btnStartRecording.Text = "Start Recording";
             this.btnStartRecording.UseVisualStyleBackColor = true;
@@ -85,10 +84,9 @@
             // 
             // btnStopRecording
             // 
-            this.btnStopRecording.Location = new System.Drawing.Point(18, 129);
-            this.btnStopRecording.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStopRecording.Location = new System.Drawing.Point(553, 262);
             this.btnStopRecording.Name = "btnStopRecording";
-            this.btnStopRecording.Size = new System.Drawing.Size(119, 23);
+            this.btnStopRecording.Size = new System.Drawing.Size(152, 48);
             this.btnStopRecording.TabIndex = 16;
             this.btnStopRecording.Text = "Stop Recording";
             this.btnStopRecording.UseVisualStyleBackColor = true;
@@ -97,20 +95,20 @@
             // TextBoxTimer
             // 
             this.TextBoxTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBoxTimer.Location = new System.Drawing.Point(18, 95);
+            this.TextBoxTimer.Location = new System.Drawing.Point(555, 215);
+            this.TextBoxTimer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TextBoxTimer.Name = "TextBoxTimer";
             this.TextBoxTimer.ReadOnly = true;
-            this.TextBoxTimer.Size = new System.Drawing.Size(119, 29);
+            this.TextBoxTimer.Size = new System.Drawing.Size(152, 39);
             this.TextBoxTimer.TabIndex = 17;
             this.TextBoxTimer.Text = "00:00";
             this.TextBoxTimer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnOpenRecording
             // 
-            this.btnOpenRecording.Location = new System.Drawing.Point(18, 171);
-            this.btnOpenRecording.Margin = new System.Windows.Forms.Padding(2);
+            this.btnOpenRecording.Location = new System.Drawing.Point(555, 448);
             this.btnOpenRecording.Name = "btnOpenRecording";
-            this.btnOpenRecording.Size = new System.Drawing.Size(101, 23);
+            this.btnOpenRecording.Size = new System.Drawing.Size(152, 48);
             this.btnOpenRecording.TabIndex = 18;
             this.btnOpenRecording.Text = "Open Recording";
             this.btnOpenRecording.UseVisualStyleBackColor = true;
@@ -118,10 +116,9 @@
             // 
             // btnSaveRecording
             // 
-            this.btnSaveRecording.Location = new System.Drawing.Point(18, 208);
-            this.btnSaveRecording.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSaveRecording.Location = new System.Drawing.Point(555, 505);
             this.btnSaveRecording.Name = "btnSaveRecording";
-            this.btnSaveRecording.Size = new System.Drawing.Size(101, 24);
+            this.btnSaveRecording.Size = new System.Drawing.Size(152, 48);
             this.btnSaveRecording.TabIndex = 19;
             this.btnSaveRecording.Text = "Save Recording";
             this.btnSaveRecording.UseVisualStyleBackColor = true;
@@ -129,10 +126,9 @@
             // 
             // btnStartCall
             // 
-            this.btnStartCall.Location = new System.Drawing.Point(214, 283);
-            this.btnStartCall.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStartCall.Location = new System.Drawing.Point(250, 644);
             this.btnStartCall.Name = "btnStartCall";
-            this.btnStartCall.Size = new System.Drawing.Size(84, 43);
+            this.btnStartCall.Size = new System.Drawing.Size(126, 86);
             this.btnStartCall.TabIndex = 20;
             this.btnStartCall.Text = "Start Call";
             this.btnStartCall.UseVisualStyleBackColor = true;
@@ -140,10 +136,9 @@
             // 
             // btnDisconnect
             // 
-            this.btnDisconnect.Location = new System.Drawing.Point(324, 283);
-            this.btnDisconnect.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDisconnect.Location = new System.Drawing.Point(415, 644);
             this.btnDisconnect.Name = "btnDisconnect";
-            this.btnDisconnect.Size = new System.Drawing.Size(84, 43);
+            this.btnDisconnect.Size = new System.Drawing.Size(126, 86);
             this.btnDisconnect.TabIndex = 21;
             this.btnDisconnect.Text = "Disconnect";
             this.btnDisconnect.UseVisualStyleBackColor = true;
@@ -152,27 +147,26 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(211, 63);
+            this.label2.Location = new System.Drawing.Point(100, 339);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 13);
+            this.label2.Size = new System.Drawing.Size(148, 20);
             this.label2.TabIndex = 23;
             this.label2.Text = "Problem description";
             // 
             // TextBoxProblemDescription
             // 
-            this.TextBoxProblemDescription.Location = new System.Drawing.Point(214, 78);
-            this.TextBoxProblemDescription.Margin = new System.Windows.Forms.Padding(2);
+            this.TextBoxProblemDescription.Location = new System.Drawing.Point(105, 362);
             this.TextBoxProblemDescription.Name = "TextBoxProblemDescription";
-            this.TextBoxProblemDescription.Size = new System.Drawing.Size(194, 129);
+            this.TextBoxProblemDescription.Size = new System.Drawing.Size(300, 196);
             this.TextBoxProblemDescription.TabIndex = 24;
             this.TextBoxProblemDescription.Text = "";
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(18, 283);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSave.Location = new System.Drawing.Point(109, 682);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(82, 43);
+            this.btnSave.Size = new System.Drawing.Size(105, 48);
             this.btnSave.TabIndex = 25;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -182,57 +176,64 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(471, 72);
+            this.label3.Location = new System.Drawing.Point(137, 143);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 18);
+            this.label3.Size = new System.Drawing.Size(176, 26);
             this.label3.TabIndex = 27;
             this.label3.Text = "Selected client:";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(495, 100);
+            this.textBox1.Location = new System.Drawing.Point(173, 186);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(232, 26);
             this.textBox1.TabIndex = 28;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(495, 126);
+            this.textBox2.Location = new System.Drawing.Point(173, 226);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.Size = new System.Drawing.Size(232, 26);
             this.textBox2.TabIndex = 29;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(496, 152);
+            this.textBox4.Location = new System.Drawing.Point(182, 267);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.Size = new System.Drawing.Size(223, 26);
             this.textBox4.TabIndex = 30;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(471, 103);
+            this.label4.Location = new System.Drawing.Point(137, 190);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(18, 13);
+            this.label4.Size = new System.Drawing.Size(26, 20);
             this.label4.TabIndex = 31;
             this.label4.Text = "ID";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(454, 129);
+            this.label5.Location = new System.Drawing.Point(112, 230);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.Size = new System.Drawing.Size(51, 20);
             this.label5.TabIndex = 32;
             this.label5.Text = "Name";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(446, 155);
+            this.label6.Location = new System.Drawing.Point(100, 270);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 13);
+            this.label6.Size = new System.Drawing.Size(74, 20);
             this.label6.TabIndex = 33;
             this.label6.Text = "Surname";
             // 
@@ -243,9 +244,10 @@
             // 
             // ManageCall
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(609, 337);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(789, 846);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -265,7 +267,6 @@
             this.Controls.Add(this.btnStartRecording);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnnCancel);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ManageCall";
             this.Text = "ManageCall";
             this.Load += new System.EventHandler(this.ManageCall_Load);

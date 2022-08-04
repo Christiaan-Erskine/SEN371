@@ -40,17 +40,19 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(16, 143);
+            this.richTextBox1.Location = new System.Drawing.Point(24, 220);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(309, 223);
+            this.richTextBox1.Size = new System.Drawing.Size(462, 341);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
             // richTextBox2
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(377, 143);
+            this.richTextBox2.Location = new System.Drawing.Point(566, 220);
+            this.richTextBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(309, 223);
+            this.richTextBox2.Size = new System.Drawing.Size(462, 341);
             this.richTextBox2.TabIndex = 1;
             this.richTextBox2.Text = "";
             // 
@@ -58,35 +60,39 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(246, 29);
+            this.label1.Location = new System.Drawing.Point(369, 45);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 31);
+            this.label1.Size = new System.Drawing.Size(303, 46);
             this.label1.TabIndex = 2;
             this.label1.Text = "Run SQL Query";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 127);
+            this.label2.Location = new System.Drawing.Point(20, 195);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 13);
+            this.label2.Size = new System.Drawing.Size(97, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Query Editor";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(374, 127);
+            this.label3.Location = new System.Drawing.Point(561, 195);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 13);
+            this.label3.Size = new System.Drawing.Size(108, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Result Output";
             // 
             // btnSQL
             // 
-            this.btnSQL.Location = new System.Drawing.Point(16, 396);
+            this.btnSQL.Location = new System.Drawing.Point(24, 609);
+            this.btnSQL.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSQL.Name = "btnSQL";
-            this.btnSQL.Size = new System.Drawing.Size(171, 52);
+            this.btnSQL.Size = new System.Drawing.Size(256, 80);
             this.btnSQL.TabIndex = 5;
             this.btnSQL.Text = "Run Query";
             this.btnSQL.UseVisualStyleBackColor = true;
@@ -94,9 +100,10 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(611, 438);
+            this.btnCancel.Location = new System.Drawing.Point(916, 674);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(112, 35);
             this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -106,18 +113,20 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.LinkColor = System.Drawing.Color.Green;
-            this.linkLabel1.Location = new System.Drawing.Point(419, 86);
+            this.linkLabel1.Location = new System.Drawing.Point(628, 132);
+            this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(267, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(399, 20);
             this.linkLabel1.TabIndex = 7;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Result message could appear in a Messagebox instead";
             // 
             // RunQuery
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(714, 473);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1071, 728);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSQL);
@@ -126,6 +135,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.richTextBox2);
             this.Controls.Add(this.richTextBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "RunQuery";
             this.Text = "RunQuery";
             this.ResumeLayout(false);

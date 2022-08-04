@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Runtime.InteropServices;
 
 namespace Project_1.PresentationLayer
 {
@@ -24,7 +25,7 @@ namespace Project_1.PresentationLayer
         public CallCenterEmployee()
         {
             InitializeComponent();
-
+            //CallCenterEmployee.SetShadowFormat(this);
             //BusinessLogicClasses.Call call = new BusinessLogicClasses.Call();
             //SqlDataAdapter adapter = call.GetInfo();
             //DataSet ds = new DataSet();
