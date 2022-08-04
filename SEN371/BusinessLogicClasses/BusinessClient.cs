@@ -15,7 +15,7 @@ namespace Project_1.BusinessLogicClasses
         {
             this.clientInfo = clientInfo;
             this.clientEmail = clientEmail;
-        }
+        }//important security update
 
         public BusinessClient()
         {
