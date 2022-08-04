@@ -217,6 +217,7 @@
             this.lblLogo.Size = new System.Drawing.Size(480, 46);
             this.lblLogo.TabIndex = 2;
             this.lblLogo.Text = "Premier Service Solutions";
+            this.lblLogo.Click += new System.EventHandler(this.lblLogo_Click);
             // 
             // label1
             // 

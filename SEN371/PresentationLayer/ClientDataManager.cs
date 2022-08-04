@@ -359,7 +359,7 @@ namespace Project_1.PresentationLayer
             dgvOutput.DataSource = ds.Tables[0];
             activeTable = "EmployeeDetails";
         }
-
+        //comment
         private void servicesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             dgvOutput.ClearSelection();
@@ -380,6 +380,11 @@ namespace Project_1.PresentationLayer
             adapter.Fill(ds);
             dgvOutput.DataSource = ds.Tables[0];
             activeTable = "EmployeeDetails";
+        }
+
+        private void lblLogo_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("");
         }
     }
 }
